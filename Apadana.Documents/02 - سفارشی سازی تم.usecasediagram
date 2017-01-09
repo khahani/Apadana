@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="0bc28abb-2e8e-4a3e-bd14-7cdcc2105729" name="02 - سفارشی سازی تم" linkedPackageId="5839b866-cc05-4fe7-b4d1-50429eb8ec88" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <ownedCommentsInternal>
+    <comment Id="fcfd5144-c2f8-444a-ba53-2d6f7e2c834c">
+      <elementDefinition Id="b3fa1d4c-df0a-4b47-922f-10400faf9234" />
+      <body>صفحه اباوت برای نمایش کارجویان
+</body>
+      <annotatedElements>
+        <subsystemMoniker Id="dd623dbe-549b-4b6e-ac8b-4f1af8ec8fe6" LastKnownName="کارجویان1" />
+      </annotatedElements>
+    </comment>
+    <comment Id="ea618fba-499b-4f6d-957f-e0c4d66c210a">
+      <elementDefinition Id="df8e9aea-185a-4404-9722-d58b50c5d53b" />
+      <body>بلاگ 2 ستونه برای نمایش فرصت های شغلی
+سنگل پروجکت برای نمایش جزئیات فرصت شغلی 
+کانتک قسمت نقشه برای آدرس کارفرما روی نقشه</body>
+      <annotatedElements>
+        <subsystemMoniker Id="cfae473f-3320-4a70-96b5-8702d8bf3dea" LastKnownName="کارفرمایان1" />
+      </annotatedElements>
+    </comment>
+    <comment Id="d3dfb355-d97c-4330-8b52-a4cf5bc5d7b6">
+      <elementDefinition Id="baf31a8e-a558-476d-b77b-0da5d02f32ea" />
+      <body>کانتکت دارای کنترل های فرم است</body>
+      <annotatedElements>
+        <subsystemMoniker Id="cfae473f-3320-4a70-96b5-8702d8bf3dea" LastKnownName="کارفرمایان1" />
+        <subsystemMoniker Id="dd623dbe-549b-4b6e-ac8b-4f1af8ec8fe6" LastKnownName="کارجویان1" />
+      </annotatedElements>
+    </comment>
+    <comment Id="73ce7e4f-9593-4e87-9303-2e3411a00980">
+      <elementDefinition Id="314f99ee-bbcb-4c07-ae67-05b75fe48a9e" />
+      <body>تماس با ما
+درباره ما
+راهنمای سایت</body>
+      <annotatedElements>
+        <useCaseMoniker Id="7d7964d0-8764-4f29-b307-a01467f73391" LastKnownName="مشاهده صفحات عمومی سایت1" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <useCase Id="7d7964d0-8764-4f29-b307-a01467f73391" name="مشاهده صفحات عمومی سایت1" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="82fe9808-065a-4aa8-bb0b-0d041c40c76e" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="dd623dbe-549b-4b6e-ac8b-4f1af8ec8fe6" name="کارجویان1" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="69eb51d6-cf6b-4fcf-8a80-180a462e6107" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="aeb2fe95-0f53-4033-b229-9eb33dd592bb" name="جستجو کارجو1" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5a9bcae1-b36a-4f8f-b4b7-6fe11a6abaf3" />
+        <subjects>
+          <subsystemMoniker Id="dd623dbe-549b-4b6e-ac8b-4f1af8ec8fe6" LastKnownName="کارجویان1" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="c5a3f7b4-2895-4717-a414-ae35b714cdcc" name="ثبت کارجو1" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0c2c48f5-f02c-4223-98c5-92dbeb24722a" />
+        <subjects>
+          <subsystemMoniker Id="dd623dbe-549b-4b6e-ac8b-4f1af8ec8fe6" LastKnownName="کارجویان1" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="9175a9d5-64c8-4a57-afa1-4c2ca9d94b1b" name="آخرین کارجویان" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c6369e56-4b22-4973-aaad-5892d8fee10b" />
+        <subjects>
+          <subsystemMoniker Id="dd623dbe-549b-4b6e-ac8b-4f1af8ec8fe6" LastKnownName="کارجویان1" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="cfae473f-3320-4a70-96b5-8702d8bf3dea" name="کارفرمایان1" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="de082562-4da4-4bbe-97e6-cea2ad2bc2a6" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="72dd8f8b-a074-4a76-91d4-a24f02d24192" name="جستجو فرصت های شغلی1" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f674faf3-10d5-4b5e-8c3a-6ec519b6112f" />
+        <subjects>
+          <subsystemMoniker Id="cfae473f-3320-4a70-96b5-8702d8bf3dea" LastKnownName="کارفرمایان1" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="4c45f890-313e-45de-976a-6c56827f1c11" name="ایجاد فرصت شغلی1" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="efb69ec4-cd6a-452e-88b1-76e0fc2d401e" />
+        <subjects>
+          <subsystemMoniker Id="cfae473f-3320-4a70-96b5-8702d8bf3dea" LastKnownName="کارفرمایان1" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="f72c1817-f68f-4e23-96d1-c599e2beaced" name="آخرین فرصت های شغلی1" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c629e210-70c9-4dc2-9271-348e8c19e7f2" />
+        <subjects>
+          <subsystemMoniker Id="cfae473f-3320-4a70-96b5-8702d8bf3dea" LastKnownName="کارفرمایان1" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="1299f5db-1468-4ec0-89ef-23c062e26d53" name="جزئیات فرصت شغلی" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1f85da7a-f11d-4632-a335-3fa8a5fc0d44" />
+        <subjects>
+          <subsystemMoniker Id="cfae473f-3320-4a70-96b5-8702d8bf3dea" LastKnownName="کارفرمایان1" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="c09cfca3-3b33-4ed4-9d7b-cf3df3ef1bd3" name="جزئیات کارجو" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4d970288-432c-43f7-b1e5-0f089c98a1dc" />
+        <subjects>
+          <subsystemMoniker Id="dd623dbe-549b-4b6e-ac8b-4f1af8ec8fe6" LastKnownName="کارجویان1" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="1e998b47-4dfd-400c-a794-ae81c46e13ad" name="عمومی" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f95f82fc-13b3-4bee-9bcf-edba57db09db" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="5839b866-cc05-4fe7-b4d1-50429eb8ec88" name="Apadana.Documents">
+    <elementDefinition Id="accb104d-8a5f-42b2-83a3-0847af642b55" />
+    <profileInstances>
+      <packageHasProfileInstances Id="200914bb-4665-448e-80b7-7498d5771305">
+        <profileInstance Id="6e27b696-6ff5-449c-a1e5-1a820d7b8a41" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="670ca595-757d-4aa3-a8cd-9760792fa93e">
+        <profileInstance Id="f07bf8da-0cbc-467f-8841-79c380fe938d" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>

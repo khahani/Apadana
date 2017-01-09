@@ -1,0 +1,1071 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
+  dslVersion="1.0.0.0"
+  Id="accb104d-8a5f-42b2-83a3-0847af642b55"
+  name="Apadana.Documents" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="208fd724-bacc-4641-9fab-2beeb530b6af">
+      <body>اگر عنوان شغلی موجود نیست </body>
+      <annotatedElements>
+        <decisionNodeMoniker
+          Id="81d04bc1-6e65-436b-b889-8903af8e4dcb"
+          LastKnownName="Decision1"
+          LastKnownLocation="Apadana.Documents.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="b3fa1d4c-df0a-4b47-922f-10400faf9234">
+      <body>صفحه اباوت برای نمایش کارجویان
+</body>
+      <annotatedElements>
+        <subsystemMoniker
+          Id="69eb51d6-cf6b-4fcf-8a80-180a462e6107"
+          LastKnownName="کارجویان1"
+          LastKnownLocation="Apadana.Documents.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="df8e9aea-185a-4404-9722-d58b50c5d53b">
+      <body>بلاگ 2 ستونه برای نمایش فرصت های شغلی
+سنگل پروجکت برای نمایش جزئیات فرصت شغلی 
+کانتک قسمت نقشه برای آدرس کارفرما روی نقشه</body>
+      <annotatedElements>
+        <subsystemMoniker
+          Id="de082562-4da4-4bbe-97e6-cea2ad2bc2a6"
+          LastKnownName="کارفرمایان1"
+          LastKnownLocation="Apadana.Documents.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="baf31a8e-a558-476d-b77b-0da5d02f32ea">
+      <body>کانتکت دارای کنترل های فرم است</body>
+      <annotatedElements>
+        <subsystemMoniker
+          Id="de082562-4da4-4bbe-97e6-cea2ad2bc2a6"
+          LastKnownName="کارفرمایان1"
+          LastKnownLocation="Apadana.Documents.uml" />
+        <subsystemMoniker
+          Id="69eb51d6-cf6b-4fcf-8a80-180a462e6107"
+          LastKnownName="کارجویان1"
+          LastKnownLocation="Apadana.Documents.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="314f99ee-bbcb-4c07-ae67-05b75fe48a9e">
+      <body>تماس با ما
+درباره ما
+راهنمای سایت</body>
+      <annotatedElements>
+        <useCaseMoniker
+          Id="82fe9808-065a-4aa8-bb0b-0d041c40c76e"
+          LastKnownName="مشاهده صفحات عمومی سایت1"
+          LastKnownLocation="Apadana.Documents.uml" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <actor
+        Id="500d5fde-5bfc-4f1a-8630-8c734489711d"
+        name="Visitor"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="7bf3c2e2-f7b5-4b99-b174-1a3f93cfc1cc"
+            isDerived="false"
+            sourceEndRoleName="Visitor"
+            targetEndRoleName="ثبت کارجو"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="5ba74467-fcbe-4d1f-95e3-126b8dd7369e"
+              LastKnownName="ثبت کارجو"
+              LastKnownLocation="Apadana.Documents.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9db6564b-717f-4f1c-a785-8917c6557c29"
+                  name="Visitor"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="50ea17d6-ae3c-4ec1-bf66-a409eb552a3d"
+                  name="ثبت کارجو"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="efa0c9b5-3c21-4a2d-ad97-b32153b29458"
+            isDerived="false"
+            sourceEndRoleName="Visitor"
+            targetEndRoleName="جستجو کارجو"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="02ec8f48-766e-4e8e-b4cb-ae32e58a5a8b"
+              LastKnownName="جستجو کارجو"
+              LastKnownLocation="Apadana.Documents.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d517f21c-c791-47cb-965a-249fa9bc63b6"
+                  name="Visitor"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a74bc5d0-694b-454e-a1ac-5252bae52f39"
+                  name="جستجو کارجو"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="6bb2f8fa-c2a8-4647-b732-0d143b07ec8d"
+            isDerived="false"
+            sourceEndRoleName="Visitor"
+            targetEndRoleName="جستجو فرصت های شغلی"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="da56dd53-574c-44d4-99e4-a3cafda2be45"
+              LastKnownName="جستجو فرصت های شغلی"
+              LastKnownLocation="Apadana.Documents.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4be6c0fe-d9cc-4df3-9d84-dfc94905174e"
+                  name="Visitor"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b12ba74d-24f5-4f02-acb8-c5e6ddabbf6b"
+                  name="جستجو فرصت های شغلی"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="1282cd7f-67fb-49d5-9cd2-e1db39f10d30"
+            isDerived="false"
+            sourceEndRoleName="Visitor"
+            targetEndRoleName="ایجاد فرصت شغلی"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="8b9c8a84-4f45-418b-9808-6e028eed1cf4"
+              LastKnownName="ایجاد فرصت شغلی"
+              LastKnownLocation="Apadana.Documents.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="120dadeb-a861-4c4a-bf97-2cc068cce9ce"
+                  name="Visitor"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="86f03166-34e0-46c6-b031-349f07c4e85a"
+                  name="ایجاد فرصت شغلی"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="2a6120e6-9495-41f8-8717-24731034f862"
+            isDerived="false"
+            sourceEndRoleName="Visitor"
+            targetEndRoleName="Visitor"
+            isLeaf="false"
+            isAbstract="false">
+            <actorMoniker
+              Id="500d5fde-5bfc-4f1a-8630-8c734489711d"
+              LastKnownName="Visitor"
+              LastKnownLocation="Apadana.Documents.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="88cfb115-7622-4e84-8b33-cb2b163de337"
+                  name="Visitor"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ddd89dde-2c12-4590-9a46-0cffe0f175d5"
+                  name="Visitor"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="7f045b45-d0b3-4cf8-960a-2a6cf5c376b2"
+            isDerived="false"
+            sourceEndRoleName="Visitor"
+            targetEndRoleName="مشاهده صفحات عمومی سایت"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="281c1c04-c4db-454e-b87a-f8f206d3143c"
+              LastKnownName="مشاهده صفحات عمومی سایت"
+              LastKnownLocation="Apadana.Documents.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3389e1c1-f3ed-423f-a026-27581a1fa194"
+                  name="Visitor"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="79afc5a4-e473-4b1c-a2ca-a69cef29a89c"
+                  name="مشاهده صفحات عمومی سایت"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="04377b63-6b55-4434-a15f-0611d0dc0db5"
+            isDerived="false"
+            sourceEndRoleName="Visitor"
+            targetEndRoleName="آخرین فرصت های شغلی"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="232dd4ff-36d2-4b19-a482-c9f46353ae92"
+              LastKnownName="آخرین فرصت های شغلی"
+              LastKnownLocation="Apadana.Documents.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="009c7522-026a-4999-994d-30446a4f5c01"
+                  name="Visitor"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="589146dd-74e3-454f-804f-df0f460d3ef6"
+                  name="آخرین فرصت های شغلی"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="da56dd53-574c-44d4-99e4-a3cafda2be45"
+        name="جستجو فرصت های شغلی"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="19b067b1-05c3-4ed1-89b4-b81f318a258c"
+            LastKnownName="کارفرمایان"
+            LastKnownLocation="Apadana.Documents.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="02ec8f48-766e-4e8e-b4cb-ae32e58a5a8b"
+        name="جستجو کارجو"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="167a61fe-8d3f-432b-88f9-1e8291f1119c"
+            LastKnownName="کارجویان"
+            LastKnownLocation="Apadana.Documents.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="fbc98d3c-6884-48ad-8bf5-6c3bf4a8733e"
+        name="Actor1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="5ba74467-fcbe-4d1f-95e3-126b8dd7369e"
+        name="ثبت کارجو"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="167a61fe-8d3f-432b-88f9-1e8291f1119c"
+            LastKnownName="کارجویان"
+            LastKnownLocation="Apadana.Documents.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="167a61fe-8d3f-432b-88f9-1e8291f1119c"
+        name="کارجویان"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="19b067b1-05c3-4ed1-89b4-b81f318a258c"
+        name="کارفرمایان"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="8b9c8a84-4f45-418b-9808-6e028eed1cf4"
+        name="ایجاد فرصت شغلی"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="19b067b1-05c3-4ed1-89b4-b81f318a258c"
+            LastKnownName="کارفرمایان"
+            LastKnownLocation="Apadana.Documents.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="281c1c04-c4db-454e-b87a-f8f206d3143c"
+        name="مشاهده صفحات عمومی سایت"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="08f992cf-b7ea-4139-8bf0-938c20f4b727"
+        name="ثبت کارجو"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="a862f450-b631-442c-8d9b-76243bf72c2f"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="48f245ec-0359-4d77-8798-238c24196f2b"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="0ef07a58-ee07-42b3-a65d-4fa252677291"
+                  LastKnownName="پر کردن فرم اطلاعات"
+                  LastKnownLocation="Apadana.Documents.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction
+            Id="0ef07a58-ee07-42b3-a65d-4fa252677291"
+            name="پر کردن فرم اطلاعات"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="9e3d518d-3517-4846-91e0-2da6c3e08bec"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="3c8c23a7-9df4-47f1-a8ae-279cb5edde5e"
+                  LastKnownName="پرداخت وجه"
+                  LastKnownLocation="Apadana.Documents.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="3c8c23a7-9df4-47f1-a8ae-279cb5edde5e"
+            name="پرداخت وجه"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="d2214d77-78af-4160-acfb-3cf727f9bc0c"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="528fe751-201b-4edd-a22c-d27321b6ebae"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="Apadana.Documents.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode
+            Id="528fe751-201b-4edd-a22c-d27321b6ebae"
+            name="ActivityFinal1"
+            isLeaf="false" />
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="3a5bb28d-e086-4cb9-8f03-efb72fc81fdb"
+        name="ثبت فرصت شغلی"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="f82037a9-3bd7-4c9f-9901-1dc19c3e3f36"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="f6e80c6e-8eb9-4cd0-874a-92a485796d93"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="b2b01545-2ee1-407d-ab5b-16a98231c50e"
+                  LastKnownName="پر کردن فرم اطلاعات شغلی"
+                  LastKnownLocation="Apadana.Documents.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction
+            Id="b2b01545-2ee1-407d-ab5b-16a98231c50e"
+            name="پر کردن فرم اطلاعات شغلی"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="d10d2918-285d-45e4-b328-ab8d6a60d7f5"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="81d04bc1-6e65-436b-b889-8903af8e4dcb"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="Apadana.Documents.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="81d04bc1-6e65-436b-b889-8903af8e4dcb"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="2811dbd4-f50a-46f2-a2ba-74ea3df4b94d"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="01ab87b7-51c6-42a9-9f1b-d35dad9f497f"
+                  LastKnownName="افزودن عنوان شغلی"
+                  LastKnownLocation="Apadana.Documents.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="9c7c75a6-96eb-414d-b84d-e9c0c2cef19f"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="23fd1e06-afaf-4191-ba43-8235e67b5c4c"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="Apadana.Documents.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="01ab87b7-51c6-42a9-9f1b-d35dad9f497f"
+            name="افزودن عنوان شغلی"
+            isLeaf="false" />
+          <activityFinalNode
+            Id="23fd1e06-afaf-4191-ba43-8235e67b5c4c"
+            name="ActivityFinal1"
+            isLeaf="false" />
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="654efa31-986c-44bf-9b53-4ad6b88cccd0"
+        name="آخرین متقاضیان"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="167a61fe-8d3f-432b-88f9-1e8291f1119c"
+            LastKnownName="کارجویان"
+            LastKnownLocation="Apadana.Documents.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="232dd4ff-36d2-4b19-a482-c9f46353ae92"
+        name="آخرین فرصت های شغلی"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="19b067b1-05c3-4ed1-89b4-b81f318a258c"
+            LastKnownName="کارفرمایان"
+            LastKnownLocation="Apadana.Documents.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="b88cba15-b118-423e-b6ca-9faa24db222b"
+        name="Visitor1"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="17010bf5-4e56-46a5-aea6-eed980c47813"
+            isDerived="false"
+            sourceEndRoleName="Visitor"
+            targetEndRoleName="ثبت کارجو"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="0c2c48f5-f02c-4223-98c5-92dbeb24722a"
+              LastKnownName="ثبت کارجو1"
+              LastKnownLocation="Apadana.Documents.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="79d071e7-634f-4e52-9b9d-663ba7422c9b"
+                  name="Visitor"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="622d89ba-2825-4594-944b-4454850dc14d"
+                  name="ثبت کارجو"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="e9cc7e33-fbc3-4ec5-b6af-9e7747f9ff73"
+            isDerived="false"
+            sourceEndRoleName="Visitor"
+            targetEndRoleName="جستجو کارجو"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="5a9bcae1-b36a-4f8f-b4b7-6fe11a6abaf3"
+              LastKnownName="جستجو کارجو1"
+              LastKnownLocation="Apadana.Documents.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c2a85160-1dd4-4c1b-a725-8ffa2cf428ac"
+                  name="Visitor"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="072263c4-791a-44c9-9710-4abc36d47070"
+                  name="جستجو کارجو"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="22d0d779-3964-4249-8175-36ae8d477ac8"
+            isDerived="false"
+            sourceEndRoleName="Visitor"
+            targetEndRoleName="جستجو فرصت های شغلی"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="f674faf3-10d5-4b5e-8c3a-6ec519b6112f"
+              LastKnownName="جستجو فرصت های شغلی1"
+              LastKnownLocation="Apadana.Documents.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1d5a2b0b-16b5-47bb-adbe-bf14ee4f11dd"
+                  name="Visitor"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4416ef33-b78e-4060-b5a4-ae3ab940ceb9"
+                  name="جستجو فرصت های شغلی"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="271d38a2-1abf-42c6-a1ad-b88059e9e4c7"
+            isDerived="false"
+            sourceEndRoleName="Visitor"
+            targetEndRoleName="ایجاد فرصت شغلی"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="efb69ec4-cd6a-452e-88b1-76e0fc2d401e"
+              LastKnownName="ایجاد فرصت شغلی1"
+              LastKnownLocation="Apadana.Documents.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d0f830f7-d705-41c0-86b3-3755ec5eb344"
+                  name="Visitor"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="dd77d63f-e2c4-4e8c-90ad-140679066c86"
+                  name="ایجاد فرصت شغلی"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="c7d0621c-ff3e-4a19-b935-737ab6a15c7a"
+            isDerived="false"
+            sourceEndRoleName="Visitor"
+            targetEndRoleName="Visitor"
+            isLeaf="false"
+            isAbstract="false">
+            <actorMoniker
+              Id="b88cba15-b118-423e-b6ca-9faa24db222b"
+              LastKnownName="Visitor1"
+              LastKnownLocation="Apadana.Documents.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f08ced0d-aef2-4e1d-8936-c8fc6d168d78"
+                  name="Visitor"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3ab8905c-5b3f-479b-9c03-03e1aacf18e8"
+                  name="Visitor"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="752858e5-d0b4-4ecb-a4ed-39482c2e1b55"
+            isDerived="false"
+            sourceEndRoleName="Visitor"
+            targetEndRoleName="مشاهده صفحات عمومی سایت"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="82fe9808-065a-4aa8-bb0b-0d041c40c76e"
+              LastKnownName="مشاهده صفحات عمومی سایت1"
+              LastKnownLocation="Apadana.Documents.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3e1399ca-d56f-4efd-9e67-9883f2232831"
+                  name="Visitor"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="740c9deb-071b-4c1a-b12c-b61936af1e68"
+                  name="مشاهده صفحات عمومی سایت"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="84d53082-a781-478c-abda-2b4d383f1129"
+            isDerived="false"
+            sourceEndRoleName="Visitor"
+            targetEndRoleName="آخرین فرصت های شغلی"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="c629e210-70c9-4dc2-9271-348e8c19e7f2"
+              LastKnownName="آخرین فرصت های شغلی1"
+              LastKnownLocation="Apadana.Documents.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ae78ec96-e23f-4e29-92ee-b3b7bcb97fee"
+                  name="Visitor"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2bb899ce-9f22-4d95-a336-d18414353d29"
+                  name="آخرین فرصت های شغلی"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="82fe9808-065a-4aa8-bb0b-0d041c40c76e"
+        name="مشاهده صفحات عمومی سایت1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="69eb51d6-cf6b-4fcf-8a80-180a462e6107"
+        name="کارجویان1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="5a9bcae1-b36a-4f8f-b4b7-6fe11a6abaf3"
+        name="جستجو کارجو1"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="69eb51d6-cf6b-4fcf-8a80-180a462e6107"
+            LastKnownName="کارجویان1"
+            LastKnownLocation="Apadana.Documents.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="0c2c48f5-f02c-4223-98c5-92dbeb24722a"
+        name="ثبت کارجو1"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="69eb51d6-cf6b-4fcf-8a80-180a462e6107"
+            LastKnownName="کارجویان1"
+            LastKnownLocation="Apadana.Documents.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c6369e56-4b22-4973-aaad-5892d8fee10b"
+        name="آخرین کارجویان"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="69eb51d6-cf6b-4fcf-8a80-180a462e6107"
+            LastKnownName="کارجویان1"
+            LastKnownLocation="Apadana.Documents.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="de082562-4da4-4bbe-97e6-cea2ad2bc2a6"
+        name="کارفرمایان1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="f674faf3-10d5-4b5e-8c3a-6ec519b6112f"
+        name="جستجو فرصت های شغلی1"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="de082562-4da4-4bbe-97e6-cea2ad2bc2a6"
+            LastKnownName="کارفرمایان1"
+            LastKnownLocation="Apadana.Documents.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="efb69ec4-cd6a-452e-88b1-76e0fc2d401e"
+        name="ایجاد فرصت شغلی1"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="de082562-4da4-4bbe-97e6-cea2ad2bc2a6"
+            LastKnownName="کارفرمایان1"
+            LastKnownLocation="Apadana.Documents.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c629e210-70c9-4dc2-9271-348e8c19e7f2"
+        name="آخرین فرصت های شغلی1"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="de082562-4da4-4bbe-97e6-cea2ad2bc2a6"
+            LastKnownName="کارفرمایان1"
+            LastKnownLocation="Apadana.Documents.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="1f85da7a-f11d-4632-a335-3fa8a5fc0d44"
+        name="جزئیات فرصت شغلی"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="de082562-4da4-4bbe-97e6-cea2ad2bc2a6"
+            LastKnownName="کارفرمایان1"
+            LastKnownLocation="Apadana.Documents.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="4d970288-432c-43f7-b1e5-0f089c98a1dc"
+        name="جزئیات کارجو"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="69eb51d6-cf6b-4fcf-8a80-180a462e6107"
+            LastKnownName="کارجویان1"
+            LastKnownLocation="Apadana.Documents.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="f95f82fc-13b3-4bee-9bcf-edba57db09db"
+        name="عمومی"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="10d436cf-1277-4039-9f53-0fd7c849320b"
+        name="UseCase1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

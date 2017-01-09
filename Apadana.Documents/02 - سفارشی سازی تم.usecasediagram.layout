@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 13.25, 15.125" name="02 - سفارشی سازی تم">
+  <useCaseModelRootMoniker Id="0bc28abb-2e8e-4a3e-bd14-7cdcc2105729" />
+  <nestedChildShapes>
+    <useCaseShape Id="3ab883d1-8bff-4059-9d27-430409516e11" absoluteBounds="2, 6.75, 1.5, 0.75" customColor="192, 255, 192" heightOffset="0">
+      <useCaseMoniker Id="7d7964d0-8764-4f29-b307-a01467f73391" LastKnownName="مشاهده صفحات عمومی سایت1" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <commentShape Id="d1c09bf1-4061-4778-bb20-0ee9f659f08a" absoluteBounds="10.125, 9.5, 2.75, 2" customColor="251, 247, 200">
+      <commentMoniker Id="fcfd5144-c2f8-444a-ba53-2d6f7e2c834c" />
+      <relativeChildShapes />
+    </commentShape>
+    <commentShape Id="f8d15c00-981c-4290-b989-08af8ff9b917" absoluteBounds="5.125, 9.75, 2.875, 1.25" customColor="251, 247, 200">
+      <commentMoniker Id="ea618fba-499b-4f6d-957f-e0c4d66c210a" />
+      <relativeChildShapes />
+    </commentShape>
+    <commentShape Id="44010e2a-8df0-4680-beac-be195ac74e49" absoluteBounds="8.5, 9.875, 1.25, 1" customColor="251, 247, 200">
+      <commentMoniker Id="d3dfb355-d97c-4330-8b52-a4cf5bc5d7b6" />
+      <relativeChildShapes />
+    </commentShape>
+    <commentShape Id="a22d6936-4c5d-4b02-b6ad-e86a8dd9961c" absoluteBounds="2.125, 8, 1.25, 1.25" customColor="251, 247, 200">
+      <commentMoniker Id="73ce7e4f-9593-4e87-9303-2e3411a00980" />
+      <relativeChildShapes />
+    </commentShape>
+    <commentConnector edgePoints="[(2.75 : 8); (2.75 : 7.5)]" fixedFrom="NotFixed" fixedTo="NotFixed" TargetRelationshipDomainClassId="217d6bd0-42ed-4e7f-ad2b-af3ef5142428" customColor="Black">
+      <relativeChildShapes />
+      <nodes>
+        <commentShapeMoniker Id="a22d6936-4c5d-4b02-b6ad-e86a8dd9961c" />
+        <useCaseShapeMoniker Id="3ab883d1-8bff-4059-9d27-430409516e11" />
+      </nodes>
+    </commentConnector>
+    <SubsystemShape Id="e1842b60-b08a-4271-b4be-b17c94c5a0c3" absoluteBounds="10, 6.5, 3, 2.5" customColor="White">
+      <subsystemMoniker Id="dd623dbe-549b-4b6e-ac8b-4f1af8ec8fe6" LastKnownName="کارجویان1" />
+      <nestedChildShapes>
+        <useCaseShape Id="00788bc8-6772-427b-97b3-cd9d640dc25a" absoluteBounds="10.875, 7, 1, 0.5" customColor="192, 255, 192" heightOffset="0">
+          <useCaseMoniker Id="c5a3f7b4-2895-4717-a414-ae35b714cdcc" LastKnownName="ثبت کارجو1" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="4ec3da63-def9-4fda-a960-614d7d9c51ad" absoluteBounds="11.75, 7.625, 1, 0.5" customColor="192, 255, 192" heightOffset="0">
+          <useCaseMoniker Id="aeb2fe95-0f53-4033-b229-9eb33dd592bb" LastKnownName="جستجو کارجو1" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="06fc6f84-56d8-4346-96e4-3ccd9ffd4f09" absoluteBounds="10.875, 8.375, 1, 0.5" customColor="192, 255, 192" heightOffset="0">
+          <useCaseMoniker Id="9175a9d5-64c8-4a57-afa1-4c2ca9d94b1b" LastKnownName="آخرین کارجویان" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="bcd75766-2755-4262-a9e6-f5c7f4af7855" absoluteBounds="10.375, 7.625, 1, 0.5" customColor="192, 255, 192" heightOffset="0">
+          <useCaseMoniker Id="c09cfca3-3b33-4ed4-9d7b-cf3df3ef1bd3" LastKnownName="جزئیات کارجو" />
+          <relativeChildShapes />
+        </useCaseShape>
+      </nestedChildShapes>
+    </SubsystemShape>
+    <commentConnector edgePoints="[(11.5 : 9.5); (11.5 : 9)]" fixedFrom="NotFixed" fixedTo="NotFixed" TargetRelationshipDomainClassId="217d6bd0-42ed-4e7f-ad2b-af3ef5142428" customColor="Black">
+      <relativeChildShapes />
+      <nodes>
+        <commentShapeMoniker Id="d1c09bf1-4061-4778-bb20-0ee9f659f08a" />
+        <SubsystemShapeMoniker Id="e1842b60-b08a-4271-b4be-b17c94c5a0c3" />
+      </nodes>
+    </commentConnector>
+    <commentConnector edgePoints="[(9.75 : 9.875); (10 : 9)]" fixedFrom="NotFixed" fixedTo="NotFixed" TargetRelationshipDomainClassId="217d6bd0-42ed-4e7f-ad2b-af3ef5142428" customColor="Black">
+      <relativeChildShapes />
+      <nodes>
+        <commentShapeMoniker Id="44010e2a-8df0-4680-beac-be195ac74e49" />
+        <SubsystemShapeMoniker Id="e1842b60-b08a-4271-b4be-b17c94c5a0c3" />
+      </nodes>
+    </commentConnector>
+    <SubsystemShape Id="0c741ccd-d41c-4d02-b91e-e81b2d876d0d" absoluteBounds="5.125, 6.5, 3, 2.75" customColor="White">
+      <subsystemMoniker Id="cfae473f-3320-4a70-96b5-8702d8bf3dea" LastKnownName="کارفرمایان1" />
+      <nestedChildShapes>
+        <useCaseShape Id="2183a9b6-ace2-4b7b-9f28-4bbace34e2a0" absoluteBounds="6.125, 7, 1, 0.625" customColor="192, 255, 192" heightOffset="0">
+          <useCaseMoniker Id="72dd8f8b-a074-4a76-91d4-a24f02d24192" LastKnownName="جستجو فرصت های شغلی1" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="27c6761f-8d83-481a-b8a3-5ce24a0a5e3a" absoluteBounds="6.875, 7.75, 1, 0.5" customColor="192, 255, 192" heightOffset="0">
+          <useCaseMoniker Id="4c45f890-313e-45de-976a-6c56827f1c11" LastKnownName="ایجاد فرصت شغلی1" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="4051d03a-aa93-4d7f-a40d-e472935e46c3" absoluteBounds="6.125, 8.5, 1, 0.625" customColor="192, 255, 192" heightOffset="0">
+          <useCaseMoniker Id="f72c1817-f68f-4e23-96d1-c599e2beaced" LastKnownName="آخرین فرصت های شغلی1" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="9198c3fe-59e0-49cd-acc7-c4b1bd8dc08c" absoluteBounds="5.375, 7.75, 1.125, 0.5" customColor="192, 255, 192" heightOffset="0">
+          <useCaseMoniker Id="1299f5db-1468-4ec0-89ef-23c062e26d53" LastKnownName="جزئیات فرصت شغلی" />
+          <relativeChildShapes />
+        </useCaseShape>
+      </nestedChildShapes>
+    </SubsystemShape>
+    <commentConnector edgePoints="[(6.5625 : 9.75); (6.5625 : 9.25)]" fixedFrom="NotFixed" fixedTo="NotFixed" TargetRelationshipDomainClassId="217d6bd0-42ed-4e7f-ad2b-af3ef5142428" customColor="Black">
+      <relativeChildShapes />
+      <nodes>
+        <commentShapeMoniker Id="f8d15c00-981c-4290-b989-08af8ff9b917" />
+        <SubsystemShapeMoniker Id="0c741ccd-d41c-4d02-b91e-e81b2d876d0d" />
+      </nodes>
+    </commentConnector>
+    <commentConnector edgePoints="[(8.5 : 9.875); (8.125 : 9.25)]" fixedFrom="NotFixed" fixedTo="NotFixed" TargetRelationshipDomainClassId="217d6bd0-42ed-4e7f-ad2b-af3ef5142428" customColor="Black">
+      <relativeChildShapes />
+      <nodes>
+        <commentShapeMoniker Id="44010e2a-8df0-4680-beac-be195ac74e49" />
+        <SubsystemShapeMoniker Id="0c741ccd-d41c-4d02-b91e-e81b2d876d0d" />
+      </nodes>
+    </commentConnector>
+    <SubsystemShape Id="e519a8d3-3e6f-4005-abcc-e157da65734c" absoluteBounds="5.375, 12, 4, 2.875" customColor="White">
+      <subsystemMoniker Id="1e998b47-4dfd-400c-a794-ae81c46e13ad" LastKnownName="عمومی" />
+    </SubsystemShape>
+  </nestedChildShapes>
+</useCaseDiagram>

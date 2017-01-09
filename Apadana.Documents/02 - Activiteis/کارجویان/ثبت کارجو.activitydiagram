@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="46156654-9280-4845-8651-08b36aadb551" name="ثبت کارجو" linkedPackageId="ee865cd5-830c-459e-9260-beaca28b43a5" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="cce77428-4712-422b-9cb7-c340c08b9961">
+      <profileInstance Id="bd269bf6-e2e5-4f36-9ffb-a91a3379403b" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="8bd9b336-9189-49e4-b0f5-998312c56e47">
+      <profileInstance Id="56bd1034-9262-436f-9e16-b41b67c1febc" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="cab7a108-8c93-4c8c-a657-1611aafbc0f0" name="ثبت کارجو" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="08f992cf-b7ea-4139-8bf0-938c20f4b727" />
+        <nodes>
+          <initialNode Id="02bdbfbd-1758-4aab-b5f6-74a50717c728" name="Initial1" isLeaf="false">
+            <elementDefinition Id="a862f450-b631-442c-8d9b-76243bf72c2f" />
+            <flowNodeTargets>
+              <controlFlow Id="bc1dfdc6-a407-4053-80ef-37f34b2f3aed" isLeaf="false">
+                <opaqueActionMoniker Id="2271304b-2945-41e6-a003-b82e5524e7ed" LastKnownName="پر کردن فرم اطلاعات" />
+                <elementDefinition Id="48f245ec-0359-4d77-8798-238c24196f2b" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="2271304b-2945-41e6-a003-b82e5524e7ed" name="پر کردن فرم اطلاعات" isLeaf="false">
+            <elementDefinition Id="0ef07a58-ee07-42b3-a65d-4fa252677291" />
+            <flowNodeTargets>
+              <controlFlow Id="a02f22cd-6c1c-40ac-97ff-0095a2e3f6c2" isLeaf="false">
+                <opaqueActionMoniker Id="4d98aee3-55e0-486e-a215-0f1fd709f1ac" LastKnownName="پرداخت وجه" />
+                <elementDefinition Id="9e3d518d-3517-4846-91e0-2da6c3e08bec" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="4d98aee3-55e0-486e-a215-0f1fd709f1ac" name="پرداخت وجه" isLeaf="false">
+            <elementDefinition Id="3c8c23a7-9df4-47f1-a8ae-279cb5edde5e" />
+            <flowNodeTargets>
+              <controlFlow Id="544d868a-0c33-49e3-9936-e779171c3145" isLeaf="false">
+                <activityFinalNodeMoniker Id="a85d93c5-755d-4388-a6fe-fd6a99490351" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="d2214d77-78af-4160-acfb-3cf727f9bc0c" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode Id="a85d93c5-755d-4388-a6fe-fd6a99490351" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="528fe751-201b-4edd-a22c-d27321b6ebae" />
+          </activityFinalNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="ee865cd5-830c-459e-9260-beaca28b43a5" name="Apadana.Documents">
+    <elementDefinition Id="accb104d-8a5f-42b2-83a3-0847af642b55" />
+  </package>
+</activityRootModel>

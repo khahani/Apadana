@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="01 - Usecases">
+  <useCaseModelRootMoniker Id="058d0dd2-483a-4495-ae83-cb149d28e665" />
+  <nestedChildShapes>
+    <actorShape Id="6b2e06ee-6ae2-4515-8a6e-d5920eba7317" absoluteBounds="3.625, 2.625, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="49cd2dbc-4e23-46d7-a9e7-18a321397820" LastKnownName="Visitor" />
+      <relativeChildShapes />
+    </actorShape>
+    <useCaseAssociationConnector edgePoints="[(3.875 : 2.875); (3.875 : 2.875)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="0e017d84-010f-414b-92ee-f238ec56664b" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="6b2e06ee-6ae2-4515-8a6e-d5920eba7317" />
+        <actorShapeMoniker Id="6b2e06ee-6ae2-4515-8a6e-d5920eba7317" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseShape Id="e33e8c97-c32e-40af-afd9-b5d6ca023d60" absoluteBounds="4.125, 0.75, 1.5, 0.75" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="5d23e762-ca67-499d-8406-607f06d9543b" LastKnownName="مشاهده صفحات عمومی سایت" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseAssociationConnector edgePoints="[(4.01785714285714 : 2.625); (4.66895915407697 : 1.48557148036531)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="600b1a1b-6b63-4805-8f56-a54e45996d69" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="6b2e06ee-6ae2-4515-8a6e-d5920eba7317" />
+        <useCaseShapeMoniker Id="e33e8c97-c32e-40af-afd9-b5d6ca023d60" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <SubsystemShape Id="1b4970f0-aa76-48af-9417-4a3c627da795" absoluteBounds="6.375, 0.5, 3, 2.5" customColor="White">
+      <subsystemMoniker Id="10e817f7-0b2d-4b9d-a571-770b182a98a4" LastKnownName="کارجویان" />
+      <nestedChildShapes>
+        <useCaseShape Id="354cf6b6-3cc5-437a-a631-79e480ae7e56" absoluteBounds="7.25, 1, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="263157e4-55b0-4974-bd96-aca82baadf75" LastKnownName="ثبت کارجو" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="84f342a4-286b-428e-97e0-f3dca8fd2397" absoluteBounds="7.25, 1.625, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="452ab076-ae9d-4c37-bce6-18aae1d851c0" LastKnownName="جستجو کارجو" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="6ebef873-b3cd-48c7-b3b0-0de1d9a89b3c" absoluteBounds="7.25, 2.375, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="fae92546-039f-4661-a6c3-77e49d5857d2" LastKnownName="آخرین متقاضیان" />
+          <relativeChildShapes />
+        </useCaseShape>
+      </nestedChildShapes>
+    </SubsystemShape>
+    <useCaseAssociationConnector edgePoints="[(4.125 : 2.77016129032258); (7.3669042284371 : 1.41065306549412)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="215c5f65-34c0-42ea-aecb-b3b5de2c93aa" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="6b2e06ee-6ae2-4515-8a6e-d5920eba7317" />
+        <useCaseShapeMoniker Id="354cf6b6-3cc5-437a-a631-79e480ae7e56" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseAssociationConnector edgePoints="[(4.125 : 2.81048387096774); (7.30568967147257 : 1.98966072994256)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="773480ad-e19d-44ff-94ed-edd4aaa5e36a" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="6b2e06ee-6ae2-4515-8a6e-d5920eba7317" />
+        <useCaseShapeMoniker Id="84f342a4-286b-428e-97e0-f3dca8fd2397" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <SubsystemShape Id="5dbefc93-9ace-4147-b057-e684e2472ffb" absoluteBounds="6.375, 3.125, 3, 3" customColor="White">
+      <subsystemMoniker Id="7f20fe51-29a7-4868-9a7b-4e1dbbb6b8df" LastKnownName="کارفرمایان" />
+      <nestedChildShapes>
+        <useCaseShape Id="39438b2e-8ad2-49d2-84d5-1f715cbd8a2e" absoluteBounds="7.375, 3.625, 1, 0.625" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="baf7242d-5af6-45a4-b9cd-03ff93f31218" LastKnownName="جستجو فرصت های شغلی" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="6cd89919-ebec-43dd-ba91-a2174a627b4c" absoluteBounds="7.375, 4.375, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="09cd04cf-3b11-4d8c-a98d-3ab20d06da70" LastKnownName="ایجاد فرصت شغلی" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="50a694ff-2d86-40d8-8fd4-0019297c5dac" absoluteBounds="7.375, 5.125, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="9bb0759d-5438-4bf4-a728-9db7074837f6" LastKnownName="آخرین فرصت های شغلی" />
+          <relativeChildShapes />
+        </useCaseShape>
+      </nestedChildShapes>
+    </SubsystemShape>
+    <useCaseAssociationConnector edgePoints="[(4.125 : 2.94140625); (7.41483454077076 : 3.81526854989223)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="acf2ca7c-7af8-4bef-8877-04f4714a3267" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="6b2e06ee-6ae2-4515-8a6e-d5920eba7317" />
+        <useCaseShapeMoniker Id="39438b2e-8ad2-49d2-84d5-1f715cbd8a2e" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseAssociationConnector edgePoints="[(4.125 : 2.984375); (7.49871165264656 : 4.46037384803287)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="d90430db-9e5b-4555-a890-682b242a83c2" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="6b2e06ee-6ae2-4515-8a6e-d5920eba7317" />
+        <useCaseShapeMoniker Id="6cd89919-ebec-43dd-ba91-a2174a627b4c" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseAssociationConnector edgePoints="[(4.125 : 3.03125); (7.56265247622279 : 5.17978279763924)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="0c57ed47-6904-48a5-91a6-cc843ebc7bb4" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="6b2e06ee-6ae2-4515-8a6e-d5920eba7317" />
+        <useCaseShapeMoniker Id="50a694ff-2d86-40d8-8fd4-0019297c5dac" />
+      </nodes>
+    </useCaseAssociationConnector>
+  </nestedChildShapes>
+</useCaseDiagram>

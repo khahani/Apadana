@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="b3c169df-a8e7-42aa-979a-7c6f7fe753e2" name="ثبت فرصت شغلی" linkedPackageId="b9475e9c-75a6-48e3-9202-515b0c7f8c5d" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <ownedCommentsInternal>
+    <comment Id="2c2ae314-66c9-4d01-8ea4-323663f60da9">
+      <elementDefinition Id="208fd724-bacc-4641-9fab-2beeb530b6af" />
+      <body>اگر عنوان شغلی موجود نیست </body>
+      <annotatedElements>
+        <decisionNodeMoniker Id="156ee87c-9fc5-43d6-ba04-858e14dce3d1" LastKnownName="Decision1" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="36955e7e-2d6a-465a-be92-03a885e7f995">
+      <profileInstance Id="25b7922a-f720-4c6c-b4d9-bff3b9006f6e" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="43998080-6c51-4451-bbfc-cdf09bf98e10">
+      <profileInstance Id="85b39b87-d2c6-4059-b55b-0a54b603a1e8" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="7eb537e9-26fb-41c0-a4e2-d23cb9499855" name="ثبت فرصت شغلی" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="3a5bb28d-e086-4cb9-8f03-efb72fc81fdb" />
+        <nodes>
+          <initialNode Id="530feff9-c24e-4af8-804b-8e5b3ad9876b" name="Initial1" isLeaf="false">
+            <elementDefinition Id="f82037a9-3bd7-4c9f-9901-1dc19c3e3f36" />
+            <flowNodeTargets>
+              <controlFlow Id="45463fde-50ac-438a-8b7b-ea416d364b51" isLeaf="false">
+                <opaqueActionMoniker Id="6a6884cf-7971-444d-adf9-ee928164d35e" LastKnownName="پر کردن فرم اطلاعات شغلی" />
+                <elementDefinition Id="f6e80c6e-8eb9-4cd0-874a-92a485796d93" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="6a6884cf-7971-444d-adf9-ee928164d35e" name="پر کردن فرم اطلاعات شغلی" isLeaf="false">
+            <elementDefinition Id="b2b01545-2ee1-407d-ab5b-16a98231c50e" />
+            <flowNodeTargets>
+              <controlFlow Id="05c29bd0-1048-4c43-be8b-97dc1e08b498" isLeaf="false">
+                <decisionNodeMoniker Id="156ee87c-9fc5-43d6-ba04-858e14dce3d1" LastKnownName="Decision1" />
+                <elementDefinition Id="d10d2918-285d-45e4-b328-ab8d6a60d7f5" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="156ee87c-9fc5-43d6-ba04-858e14dce3d1" name="Decision1" isLeaf="false">
+            <elementDefinition Id="81d04bc1-6e65-436b-b889-8903af8e4dcb" />
+            <flowNodeTargets>
+              <controlFlow Id="87ac298d-67e1-4420-a8a1-9dec2aec9adc" isLeaf="false">
+                <opaqueActionMoniker Id="0df5f590-5a4c-463b-822a-34f54b67987d" LastKnownName="افزودن عنوان شغلی" />
+                <elementDefinition Id="2811dbd4-f50a-46f2-a2ba-74ea3df4b94d" />
+              </controlFlow>
+              <controlFlow Id="a4279731-525a-4817-ad1b-765ff5f644fb" isLeaf="false">
+                <activityFinalNodeMoniker Id="359f01a7-0c01-48fe-b041-7e679dbdd21d" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="9c7c75a6-96eb-414d-b84d-e9c0c2cef19f" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="0df5f590-5a4c-463b-822a-34f54b67987d" name="افزودن عنوان شغلی" isLeaf="false">
+            <elementDefinition Id="01ab87b7-51c6-42a9-9f1b-d35dad9f497f" />
+          </opaqueAction>
+          <activityFinalNode Id="359f01a7-0c01-48fe-b041-7e679dbdd21d" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="23fd1e06-afaf-4191-ba43-8235e67b5c4c" />
+          </activityFinalNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="b9475e9c-75a6-48e3-9202-515b0c7f8c5d" name="Apadana.Documents">
+    <elementDefinition Id="accb104d-8a5f-42b2-83a3-0847af642b55" />
+  </package>
+</activityRootModel>

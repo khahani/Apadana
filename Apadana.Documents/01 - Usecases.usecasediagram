@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="058d0dd2-483a-4495-ae83-cb149d28e665" name="01 - Usecases" linkedPackageId="09690d7c-23f5-4314-a59e-68b953e0ac08" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="f1cdf732-e9b4-4b8c-9c3f-6c0c7e8e017c">
+      <profileInstance Id="179c844b-2722-43e0-970a-8e9ab90c10ce" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="e6769a51-9942-474f-8936-b477521fa363">
+      <profileInstance Id="8e049c2a-26a0-48e9-8c6b-5a3e477077d8" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="49cd2dbc-4e23-46d7-a9e7-18a321397820" name="Visitor" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="500d5fde-5bfc-4f1a-8630-8c734489711d" />
+        <targetEnds>
+          <association Id="215c5f65-34c0-42ea-aecb-b3b5de2c93aa" isDerived="false" sourceEndRoleName="Visitor" targetEndRoleName="ثبت کارجو" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="263157e4-55b0-4974-bd96-aca82baadf75" LastKnownName="ثبت کارجو" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4a77bebc-ded5-40b7-8f2c-c0185ce9114e" name="Visitor" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9db6564b-717f-4f1c-a785-8917c6557c29" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="83cf56bb-d46e-46b0-a271-9fb25d7383f3" name="ثبت کارجو" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="50ea17d6-ae3c-4ec1-bf66-a409eb552a3d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7bf3c2e2-f7b5-4b99-b174-1a3f93cfc1cc" />
+          </association>
+          <association Id="773480ad-e19d-44ff-94ed-edd4aaa5e36a" isDerived="false" sourceEndRoleName="Visitor" targetEndRoleName="جستجو کارجو" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="452ab076-ae9d-4c37-bce6-18aae1d851c0" LastKnownName="جستجو کارجو" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fda09538-0941-41e2-b0a2-e0ab3605f755" name="Visitor" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d517f21c-c791-47cb-965a-249fa9bc63b6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="251f9704-9798-4a45-aead-e18033156646" name="جستجو کارجو" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a74bc5d0-694b-454e-a1ac-5252bae52f39" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="efa0c9b5-3c21-4a2d-ad97-b32153b29458" />
+          </association>
+          <association Id="acf2ca7c-7af8-4bef-8877-04f4714a3267" isDerived="false" sourceEndRoleName="Visitor" targetEndRoleName="جستجو فرصت های شغلی" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="baf7242d-5af6-45a4-b9cd-03ff93f31218" LastKnownName="جستجو فرصت های شغلی" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="876c7ef5-2ca4-430c-abe9-f180b68fff94" name="Visitor" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4be6c0fe-d9cc-4df3-9d84-dfc94905174e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f3cdc8c7-2697-4310-bdd8-7b9579e96d04" name="جستجو فرصت های شغلی" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b12ba74d-24f5-4f02-acb8-c5e6ddabbf6b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="6bb2f8fa-c2a8-4647-b732-0d143b07ec8d" />
+          </association>
+          <association Id="d90430db-9e5b-4555-a890-682b242a83c2" isDerived="false" sourceEndRoleName="Visitor" targetEndRoleName="ایجاد فرصت شغلی" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="09cd04cf-3b11-4d8c-a98d-3ab20d06da70" LastKnownName="ایجاد فرصت شغلی" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6d17c584-9f27-43e2-98b1-3a85cc663b49" name="Visitor" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="120dadeb-a861-4c4a-bf97-2cc068cce9ce" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7b5e2927-2924-4cbb-ae2f-eb302ece922d" name="ایجاد فرصت شغلی" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="86f03166-34e0-46c6-b031-349f07c4e85a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1282cd7f-67fb-49d5-9cd2-e1db39f10d30" />
+          </association>
+          <association Id="0e017d84-010f-414b-92ee-f238ec56664b" isDerived="false" sourceEndRoleName="Visitor" targetEndRoleName="Visitor" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="49cd2dbc-4e23-46d7-a9e7-18a321397820" LastKnownName="Visitor" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="92dc2dad-47c0-4362-b863-2402bbce9519" name="Visitor" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="88cfb115-7622-4e84-8b33-cb2b163de337" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c71e6045-87ea-4d21-b32b-56a668e191b0" name="Visitor" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ddd89dde-2c12-4590-9a46-0cffe0f175d5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="2a6120e6-9495-41f8-8717-24731034f862" />
+          </association>
+          <association Id="600b1a1b-6b63-4805-8f56-a54e45996d69" isDerived="false" sourceEndRoleName="Visitor" targetEndRoleName="مشاهده صفحات عمومی سایت" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="5d23e762-ca67-499d-8406-607f06d9543b" LastKnownName="مشاهده صفحات عمومی سایت" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5bef8cc4-7b6f-447b-a8d6-a41e4c2cb7ef" name="Visitor" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3389e1c1-f3ed-423f-a026-27581a1fa194" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="08287104-9f61-4f58-90e0-2368b636a152" name="مشاهده صفحات عمومی سایت" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="79afc5a4-e473-4b1c-a2ca-a69cef29a89c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7f045b45-d0b3-4cf8-960a-2a6cf5c376b2" />
+          </association>
+          <association Id="0c57ed47-6904-48a5-91a6-cc843ebc7bb4" isDerived="false" sourceEndRoleName="Visitor" targetEndRoleName="آخرین فرصت های شغلی" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="9bb0759d-5438-4bf4-a728-9db7074837f6" LastKnownName="آخرین فرصت های شغلی" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="305fbd83-2611-42f3-a2e6-a69429554ecb" name="Visitor" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="009c7522-026a-4999-994d-30446a4f5c01" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f78c7595-c7fd-4667-8090-3eff90968974" name="آخرین فرصت های شغلی" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="589146dd-74e3-454f-804f-df0f460d3ef6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="04377b63-6b55-4434-a15f-0611d0dc0db5" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="baf7242d-5af6-45a4-b9cd-03ff93f31218" name="جستجو فرصت های شغلی" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="da56dd53-574c-44d4-99e4-a3cafda2be45" />
+        <subjects>
+          <subsystemMoniker Id="7f20fe51-29a7-4868-9a7b-4e1dbbb6b8df" LastKnownName="کارفرمایان" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="452ab076-ae9d-4c37-bce6-18aae1d851c0" name="جستجو کارجو" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="02ec8f48-766e-4e8e-b4cb-ae32e58a5a8b" />
+        <subjects>
+          <subsystemMoniker Id="10e817f7-0b2d-4b9d-a571-770b182a98a4" LastKnownName="کارجویان" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="263157e4-55b0-4974-bd96-aca82baadf75" name="ثبت کارجو" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5ba74467-fcbe-4d1f-95e3-126b8dd7369e" />
+        <subjects>
+          <subsystemMoniker Id="10e817f7-0b2d-4b9d-a571-770b182a98a4" LastKnownName="کارجویان" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="10e817f7-0b2d-4b9d-a571-770b182a98a4" name="کارجویان" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="167a61fe-8d3f-432b-88f9-1e8291f1119c" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="7f20fe51-29a7-4868-9a7b-4e1dbbb6b8df" name="کارفرمایان" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="19b067b1-05c3-4ed1-89b4-b81f318a258c" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="09cd04cf-3b11-4d8c-a98d-3ab20d06da70" name="ایجاد فرصت شغلی" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8b9c8a84-4f45-418b-9808-6e028eed1cf4" />
+        <subjects>
+          <subsystemMoniker Id="7f20fe51-29a7-4868-9a7b-4e1dbbb6b8df" LastKnownName="کارفرمایان" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <useCase Id="5d23e762-ca67-499d-8406-607f06d9543b" name="مشاهده صفحات عمومی سایت" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="281c1c04-c4db-454e-b87a-f8f206d3143c" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="fae92546-039f-4661-a6c3-77e49d5857d2" name="آخرین متقاضیان" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="654efa31-986c-44bf-9b53-4ad6b88cccd0" />
+        <subjects>
+          <subsystemMoniker Id="10e817f7-0b2d-4b9d-a571-770b182a98a4" LastKnownName="کارجویان" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="9bb0759d-5438-4bf4-a728-9db7074837f6" name="آخرین فرصت های شغلی" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="232dd4ff-36d2-4b19-a482-c9f46353ae92" />
+        <subjects>
+          <subsystemMoniker Id="7f20fe51-29a7-4868-9a7b-4e1dbbb6b8df" LastKnownName="کارفرمایان" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="09690d7c-23f5-4314-a59e-68b953e0ac08" name="Apadana.Documents">
+    <elementDefinition Id="accb104d-8a5f-42b2-83a3-0847af642b55" />
+  </package>
+</useCaseModelRoot>
