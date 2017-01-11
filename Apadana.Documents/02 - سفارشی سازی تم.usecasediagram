@@ -5,7 +5,8 @@
       <elementDefinition Id="b3fa1d4c-df0a-4b47-922f-10400faf9234" />
       <body>صفحه اباوت برای نمایش کارجویان
 
-ثبت نام کارجو فرم ساده تر و یک مرحله ای باشد</body>
+ثبت نام کارجو فرم ساده تر و یک مرحله ای باشد
+(پشنهاد من اینه که فیلد های اجباری فرم را کم کنیم وگرنه فرم ثبت نام کامل و خوب هست)</body>
       <annotatedElements>
         <subsystemMoniker Id="dd623dbe-549b-4b6e-ac8b-4f1af8ec8fe6" LastKnownName="کارجویان1" />
       </annotatedElements>
@@ -118,7 +119,7 @@
       </useCase>
     </packageHasNamedElement>
     <useCaseModelRootHasTypes>
-      <subsystem Id="1e998b47-4dfd-400c-a794-ae81c46e13ad" name="عمومی" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <subsystem Id="1e998b47-4dfd-400c-a794-ae81c46e13ad" name="پست ها" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="f95f82fc-13b3-4bee-9bcf-edba57db09db" />
       </subsystem>
     </useCaseModelRootHasTypes>
@@ -126,7 +127,7 @@
       <useCase Id="d1b0a7c0-f08d-4f9d-a425-b0ada258d5f6" name="نمایش یک پست" isAbstract="false" isLeaf="false">
         <elementDefinition Id="f4d48fe0-f2c2-4951-9532-c845e05986df" />
         <subjects>
-          <subsystemMoniker Id="1e998b47-4dfd-400c-a794-ae81c46e13ad" LastKnownName="عمومی" />
+          <subsystemMoniker Id="1e998b47-4dfd-400c-a794-ae81c46e13ad" LastKnownName="پست ها" />
         </subjects>
       </useCase>
     </packageHasNamedElement>
@@ -134,7 +135,7 @@
       <useCase Id="1c2bbec2-8cf1-40bb-93a8-9cfe83c466e9" name=" آخرین پست ها" isAbstract="false" isLeaf="false">
         <elementDefinition Id="4e805e6b-f67c-44fd-9066-7cfb78bad1c5" />
         <subjects>
-          <subsystemMoniker Id="1e998b47-4dfd-400c-a794-ae81c46e13ad" LastKnownName="عمومی" />
+          <subsystemMoniker Id="1e998b47-4dfd-400c-a794-ae81c46e13ad" LastKnownName="پست ها" />
         </subjects>
       </useCase>
     </packageHasNamedElement>
@@ -142,15 +143,28 @@
       <useCase Id="0cc488da-9f41-45d2-987c-23efb02cc5da" name="گالری تصاویر" isAbstract="false" isLeaf="false">
         <elementDefinition Id="98e095c8-76ce-4e4a-8bc6-a9505ee545b0" />
         <subjects>
-          <subsystemMoniker Id="1e998b47-4dfd-400c-a794-ae81c46e13ad" LastKnownName="عمومی" />
+          <subsystemMoniker Id="b46367f2-3e37-46a8-920a-df230b10ad09" LastKnownName="گالری" />
         </subjects>
       </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <useCase Id="aadd7474-c464-4725-baaf-8b0e61c1b653" name="گالری تصاویر صفحه اصلی" isAbstract="false" isLeaf="false">
+      <useCase Id="aadd7474-c464-4725-baaf-8b0e61c1b653" name="گالری تصاویر پایین سایت" isAbstract="false" isLeaf="false">
         <elementDefinition Id="0b2732f4-7229-482d-b0e4-4285daa79143" />
         <subjects>
-          <subsystemMoniker Id="1e998b47-4dfd-400c-a794-ae81c46e13ad" LastKnownName="عمومی" />
+          <subsystemMoniker Id="b46367f2-3e37-46a8-920a-df230b10ad09" LastKnownName="گالری" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="b46367f2-3e37-46a8-920a-df230b10ad09" name="گالری" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ac5006dc-18de-43b3-b7ae-5580e1e71178" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="6c5bd502-1465-46dc-9ed4-d66e648495e2" name="پست های منوی راست" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9dffe134-4bff-40a3-a807-a09f51a50bac" />
+        <subjects>
+          <subsystemMoniker Id="1e998b47-4dfd-400c-a794-ae81c46e13ad" LastKnownName="پست ها" />
         </subjects>
       </useCase>
     </packageHasNamedElement>

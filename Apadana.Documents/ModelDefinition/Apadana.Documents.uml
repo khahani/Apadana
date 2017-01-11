@@ -18,7 +18,8 @@
       Id="b3fa1d4c-df0a-4b47-922f-10400faf9234">
       <body>صفحه اباوت برای نمایش کارجویان
 
-ثبت نام کارجو فرم ساده تر و یک مرحله ای باشد</body>
+ثبت نام کارجو فرم ساده تر و یک مرحله ای باشد
+(پشنهاد من اینه که فیلد های اجباری فرم را کم کنیم وگرنه فرم ثبت نام کامل و خوب هست)</body>
       <annotatedElements>
         <subsystemMoniker
           Id="69eb51d6-cf6b-4fcf-8a80-180a462e6107"
@@ -1036,7 +1037,7 @@
     <packageHasNamedElement>
       <subsystem
         Id="f95f82fc-13b3-4bee-9bcf-edba57db09db"
-        name="عمومی"
+        name="پست ها"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false" />
@@ -1057,7 +1058,7 @@
         <subjects>
           <subsystemMoniker
             Id="f95f82fc-13b3-4bee-9bcf-edba57db09db"
-            LastKnownName="عمومی"
+            LastKnownName="پست ها"
             LastKnownLocation="Apadana.Documents.uml" />
         </subjects>
       </useCase>
@@ -1071,7 +1072,7 @@
         <subjects>
           <subsystemMoniker
             Id="f95f82fc-13b3-4bee-9bcf-edba57db09db"
-            LastKnownName="عمومی"
+            LastKnownName="پست ها"
             LastKnownLocation="Apadana.Documents.uml" />
         </subjects>
       </useCase>
@@ -1084,8 +1085,8 @@
         isLeaf="false">
         <subjects>
           <subsystemMoniker
-            Id="f95f82fc-13b3-4bee-9bcf-edba57db09db"
-            LastKnownName="عمومی"
+            Id="ac5006dc-18de-43b3-b7ae-5580e1e71178"
+            LastKnownName="گالری"
             LastKnownLocation="Apadana.Documents.uml" />
         </subjects>
       </useCase>
@@ -1093,13 +1094,35 @@
     <packageHasNamedElement>
       <useCase
         Id="0b2732f4-7229-482d-b0e4-4285daa79143"
-        name="گالری تصاویر صفحه اصلی"
+        name="گالری تصاویر پایین سایت"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="ac5006dc-18de-43b3-b7ae-5580e1e71178"
+            LastKnownName="گالری"
+            LastKnownLocation="Apadana.Documents.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="ac5006dc-18de-43b3-b7ae-5580e1e71178"
+        name="گالری"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="9dffe134-4bff-40a3-a807-a09f51a50bac"
+        name="پست های منوی راست"
         isAbstract="false"
         isLeaf="false">
         <subjects>
           <subsystemMoniker
             Id="f95f82fc-13b3-4bee-9bcf-edba57db09db"
-            LastKnownName="عمومی"
+            LastKnownName="پست ها"
             LastKnownLocation="Apadana.Documents.uml" />
         </subjects>
       </useCase>
