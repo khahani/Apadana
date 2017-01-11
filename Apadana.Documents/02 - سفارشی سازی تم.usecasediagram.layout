@@ -32,7 +32,7 @@
     <SubsystemShape Id="e1842b60-b08a-4271-b4be-b17c94c5a0c3" absoluteBounds="10, 6.5, 3, 2.5" customColor="White">
       <subsystemMoniker Id="dd623dbe-549b-4b6e-ac8b-4f1af8ec8fe6" LastKnownName="کارجویان1" />
       <nestedChildShapes>
-        <useCaseShape Id="00788bc8-6772-427b-97b3-cd9d640dc25a" absoluteBounds="10.875, 7, 1, 0.5" customColor="192, 255, 192" heightOffset="0">
+        <useCaseShape Id="00788bc8-6772-427b-97b3-cd9d640dc25a" absoluteBounds="10.875, 7, 1, 0.5" customColor="255, 224, 192" heightOffset="0">
           <useCaseMoniker Id="c5a3f7b4-2895-4717-a414-ae35b714cdcc" LastKnownName="ثبت کارجو1" />
           <relativeChildShapes />
         </useCaseShape>
@@ -99,8 +99,26 @@
         <SubsystemShapeMoniker Id="0c741ccd-d41c-4d02-b91e-e81b2d876d0d" />
       </nodes>
     </commentConnector>
-    <SubsystemShape Id="e519a8d3-3e6f-4005-abcc-e157da65734c" absoluteBounds="5.375, 12, 4, 2.875" customColor="White">
+    <SubsystemShape Id="e519a8d3-3e6f-4005-abcc-e157da65734c" absoluteBounds="5.375, 11.875, 4, 3" customColor="White">
       <subsystemMoniker Id="1e998b47-4dfd-400c-a794-ae81c46e13ad" LastKnownName="عمومی" />
+      <nestedChildShapes>
+        <useCaseShape Id="c3430f98-8420-4344-8caa-e07e53a660c3" absoluteBounds="6.125, 12.375, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="d1b0a7c0-f08d-4f9d-a425-b0ada258d5f6" LastKnownName="نمایش یک پست" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="312dbc90-24d3-483c-a922-362b44f8fcac" absoluteBounds="6.125, 13.125, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="1c2bbec2-8cf1-40bb-93a8-9cfe83c466e9" LastKnownName=" آخرین پست ها" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="f4733732-bbb6-451b-af28-8616bb7bc186" absoluteBounds="7.75, 12.375, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="0cc488da-9f41-45d2-987c-23efb02cc5da" LastKnownName="گالری تصاویر" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="1a42e103-53a2-426d-8b35-f66dfb68e240" absoluteBounds="7.75, 13.125, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="aadd7474-c464-4725-baaf-8b0e61c1b653" LastKnownName="گالری تصاویر صفحه اصلی" />
+          <relativeChildShapes />
+        </useCaseShape>
+      </nestedChildShapes>
     </SubsystemShape>
   </nestedChildShapes>
 </useCaseDiagram>

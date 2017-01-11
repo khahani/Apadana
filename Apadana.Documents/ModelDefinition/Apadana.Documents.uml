@@ -17,7 +17,8 @@
     <comment
       Id="b3fa1d4c-df0a-4b47-922f-10400faf9234">
       <body>صفحه اباوت برای نمایش کارجویان
-</body>
+
+ثبت نام کارجو فرم ساده تر و یک مرحله ای باشد</body>
       <annotatedElements>
         <subsystemMoniker
           Id="69eb51d6-cf6b-4fcf-8a80-180a462e6107"
@@ -1046,6 +1047,62 @@
         name="UseCase1"
         isAbstract="false"
         isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="f4d48fe0-f2c2-4951-9532-c845e05986df"
+        name="نمایش یک پست"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="f95f82fc-13b3-4bee-9bcf-edba57db09db"
+            LastKnownName="عمومی"
+            LastKnownLocation="Apadana.Documents.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="4e805e6b-f67c-44fd-9066-7cfb78bad1c5"
+        name=" آخرین پست ها"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="f95f82fc-13b3-4bee-9bcf-edba57db09db"
+            LastKnownName="عمومی"
+            LastKnownLocation="Apadana.Documents.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="98e095c8-76ce-4e4a-8bc6-a9505ee545b0"
+        name="گالری تصاویر"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="f95f82fc-13b3-4bee-9bcf-edba57db09db"
+            LastKnownName="عمومی"
+            LastKnownLocation="Apadana.Documents.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="0b2732f4-7229-482d-b0e4-4285daa79143"
+        name="گالری تصاویر صفحه اصلی"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="f95f82fc-13b3-4bee-9bcf-edba57db09db"
+            LastKnownName="عمومی"
+            LastKnownLocation="Apadana.Documents.uml" />
+        </subjects>
+      </useCase>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

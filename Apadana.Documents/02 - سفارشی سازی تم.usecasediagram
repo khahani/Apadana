@@ -4,7 +4,8 @@
     <comment Id="fcfd5144-c2f8-444a-ba53-2d6f7e2c834c">
       <elementDefinition Id="b3fa1d4c-df0a-4b47-922f-10400faf9234" />
       <body>صفحه اباوت برای نمایش کارجویان
-</body>
+
+ثبت نام کارجو فرم ساده تر و یک مرحله ای باشد</body>
       <annotatedElements>
         <subsystemMoniker Id="dd623dbe-549b-4b6e-ac8b-4f1af8ec8fe6" LastKnownName="کارجویان1" />
       </annotatedElements>
@@ -121,6 +122,38 @@
         <elementDefinition Id="f95f82fc-13b3-4bee-9bcf-edba57db09db" />
       </subsystem>
     </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="d1b0a7c0-f08d-4f9d-a425-b0ada258d5f6" name="نمایش یک پست" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f4d48fe0-f2c2-4951-9532-c845e05986df" />
+        <subjects>
+          <subsystemMoniker Id="1e998b47-4dfd-400c-a794-ae81c46e13ad" LastKnownName="عمومی" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="1c2bbec2-8cf1-40bb-93a8-9cfe83c466e9" name=" آخرین پست ها" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4e805e6b-f67c-44fd-9066-7cfb78bad1c5" />
+        <subjects>
+          <subsystemMoniker Id="1e998b47-4dfd-400c-a794-ae81c46e13ad" LastKnownName="عمومی" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="0cc488da-9f41-45d2-987c-23efb02cc5da" name="گالری تصاویر" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="98e095c8-76ce-4e4a-8bc6-a9505ee545b0" />
+        <subjects>
+          <subsystemMoniker Id="1e998b47-4dfd-400c-a794-ae81c46e13ad" LastKnownName="عمومی" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="aadd7474-c464-4725-baaf-8b0e61c1b653" name="گالری تصاویر صفحه اصلی" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0b2732f4-7229-482d-b0e4-4285daa79143" />
+        <subjects>
+          <subsystemMoniker Id="1e998b47-4dfd-400c-a794-ae81c46e13ad" LastKnownName="عمومی" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
   </packagedElements>
   <package Id="5839b866-cc05-4fe7-b4d1-50429eb8ec88" name="Apadana.Documents">
     <elementDefinition Id="accb104d-8a5f-42b2-83a3-0847af642b55" />
