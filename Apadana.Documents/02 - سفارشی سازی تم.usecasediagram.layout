@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 13.25, 14.625" name="02 - سفارشی سازی تم">
+<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 13.25, 14.125" name="02 - سفارشی سازی تم">
   <useCaseModelRootMoniker Id="0bc28abb-2e8e-4a3e-bd14-7cdcc2105729" />
   <nestedChildShapes>
     <useCaseShape Id="3ab883d1-8bff-4059-9d27-430409516e11" absoluteBounds="2, 6.75, 1.5, 0.75" customColor="192, 255, 192" heightOffset="0">
@@ -99,31 +99,31 @@
         <SubsystemShapeMoniker Id="0c741ccd-d41c-4d02-b91e-e81b2d876d0d" />
       </nodes>
     </commentConnector>
-    <SubsystemShape Id="e519a8d3-3e6f-4005-abcc-e157da65734c" absoluteBounds="4.625, 12.25, 3.375, 2.125" customColor="White">
+    <SubsystemShape Id="e519a8d3-3e6f-4005-abcc-e157da65734c" absoluteBounds="4.625, 11.625, 3.375, 2.125" customColor="White">
       <subsystemMoniker Id="1e998b47-4dfd-400c-a794-ae81c46e13ad" LastKnownName="پست ها" />
       <nestedChildShapes>
-        <useCaseShape Id="c3430f98-8420-4344-8caa-e07e53a660c3" absoluteBounds="5.375, 12.75, 1, 0.5" customColor="192, 255, 192" heightOffset="0">
+        <useCaseShape Id="c3430f98-8420-4344-8caa-e07e53a660c3" absoluteBounds="5.375, 12.125, 1, 0.5" customColor="192, 255, 192" heightOffset="0">
           <useCaseMoniker Id="d1b0a7c0-f08d-4f9d-a425-b0ada258d5f6" LastKnownName="نمایش یک پست" />
           <relativeChildShapes />
         </useCaseShape>
-        <useCaseShape Id="312dbc90-24d3-483c-a922-362b44f8fcac" absoluteBounds="5.375, 13.5, 1, 0.5" customColor="192, 255, 192" heightOffset="0">
+        <useCaseShape Id="312dbc90-24d3-483c-a922-362b44f8fcac" absoluteBounds="5.375, 12.875, 1, 0.5" customColor="192, 255, 192" heightOffset="0">
           <useCaseMoniker Id="1c2bbec2-8cf1-40bb-93a8-9cfe83c466e9" LastKnownName=" آخرین پست ها" />
           <relativeChildShapes />
         </useCaseShape>
-        <useCaseShape Id="f084f1cd-8e1d-4452-88cf-d8deeae39f83" absoluteBounds="6.75, 13.25, 1, 0.5" customColor="192, 255, 192" heightOffset="0">
+        <useCaseShape Id="f084f1cd-8e1d-4452-88cf-d8deeae39f83" absoluteBounds="6.75, 12.625, 1, 0.5" customColor="192, 255, 192" heightOffset="0">
           <useCaseMoniker Id="6c5bd502-1465-46dc-9ed4-d66e648495e2" LastKnownName="پست های منوی راست" />
           <relativeChildShapes />
         </useCaseShape>
       </nestedChildShapes>
     </SubsystemShape>
-    <SubsystemShape Id="f563919f-dec4-4088-b369-6a5c2ff0798a" absoluteBounds="8.75, 12.25, 2.625, 2.125" customColor="White">
+    <SubsystemShape Id="f563919f-dec4-4088-b369-6a5c2ff0798a" absoluteBounds="9, 11.75, 2.625, 2.125" customColor="White">
       <subsystemMoniker Id="b46367f2-3e37-46a8-920a-df230b10ad09" LastKnownName="گالری" />
       <nestedChildShapes>
-        <useCaseShape Id="f4733732-bbb6-451b-af28-8616bb7bc186" absoluteBounds="9.625, 12.75, 1, 0.5" customColor="192, 255, 192" heightOffset="0">
+        <useCaseShape Id="f4733732-bbb6-451b-af28-8616bb7bc186" absoluteBounds="9.875, 12.25, 1, 0.5" customColor="192, 255, 192" heightOffset="0">
           <useCaseMoniker Id="0cc488da-9f41-45d2-987c-23efb02cc5da" LastKnownName="گالری تصاویر" />
           <relativeChildShapes />
         </useCaseShape>
-        <useCaseShape Id="1a42e103-53a2-426d-8b35-f66dfb68e240" absoluteBounds="9.625, 13.5, 1, 0.5" customColor="192, 255, 192" heightOffset="0">
+        <useCaseShape Id="1a42e103-53a2-426d-8b35-f66dfb68e240" absoluteBounds="9.875, 13, 1, 0.5" customColor="192, 255, 192" heightOffset="0">
           <useCaseMoniker Id="aadd7474-c464-4725-baaf-8b0e61c1b653" LastKnownName="گالری تصاویر پایین سایت" />
           <relativeChildShapes />
         </useCaseShape>

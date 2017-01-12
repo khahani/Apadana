@@ -90,3 +90,6 @@ C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\System.Web.Mvc.xml
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\obj\Debug\Apadana.Web.csprojResolveAssemblyReference.cache
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\obj\Debug\Apadana.Web.dll
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\obj\Debug\Apadana.Web.pdb
+C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\Microsoft.Owin.dll
+C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\Owin.dll
+C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\Microsoft.Owin.xml
