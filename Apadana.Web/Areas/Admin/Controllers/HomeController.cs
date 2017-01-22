@@ -13,5 +13,23 @@ namespace Apadana.Web.Areas.Admin.Controllers
         {
             return View();
         }
+
+        [AllowAnonymous]
+        public ActionResult Signin()
+        {
+            ViewBag.WrongeUsernameOrPassword = false;
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Signin(string username, string password)
+        {
+            if (username == "admin" && password == "123")
+            {
+                return RedirectToAction("Index"); ;
+            }
+            ViewBag.WrongeUsernameOrPassword = true;
+            return View();
+        }
     }
 }
