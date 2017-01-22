@@ -1127,6 +1127,13 @@
         </subjects>
       </useCase>
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="319a0c5e-4c7d-4fb5-95f7-91666c96fa4b"
+        name="پیاده سازی قالب پنل ادمین"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
   </packagedElements>
   <primitiveType
     Id="220a3521-e091-4221-bae9-3ef9018e845c"

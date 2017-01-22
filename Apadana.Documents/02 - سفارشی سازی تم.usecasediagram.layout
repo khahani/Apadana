@@ -32,7 +32,7 @@
     <SubsystemShape Id="e1842b60-b08a-4271-b4be-b17c94c5a0c3" absoluteBounds="10, 6.5, 3, 2.5" customColor="White">
       <subsystemMoniker Id="dd623dbe-549b-4b6e-ac8b-4f1af8ec8fe6" LastKnownName="کارجویان1" />
       <nestedChildShapes>
-        <useCaseShape Id="00788bc8-6772-427b-97b3-cd9d640dc25a" absoluteBounds="10.875, 7, 1, 0.5" customColor="255, 224, 192" heightOffset="0">
+        <useCaseShape Id="00788bc8-6772-427b-97b3-cd9d640dc25a" absoluteBounds="10.875, 7, 1, 0.5" customColor="192, 255, 192" heightOffset="0">
           <useCaseMoniker Id="c5a3f7b4-2895-4717-a414-ae35b714cdcc" LastKnownName="ثبت کارجو1" />
           <relativeChildShapes />
         </useCaseShape>

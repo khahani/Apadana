@@ -53,6 +53,13 @@
       <SubType>Content</SubType>
       <DependentUpon>02 - سفارشی سازی تم.usecasediagram</DependentUpon>
     </Content>
+    <Content Include="03 - طراحی و پیاده سازی امکانات پنل.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="03 - طراحی و پیاده سازی امکانات پنل.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>03 - طراحی و پیاده سازی امکانات پنل.usecasediagram</DependentUpon>
+    </Content>
     <Content Include="ModelDefinition\Apadana.Documents.uml">
       <SubType>Content</SubType>
     </Content>
