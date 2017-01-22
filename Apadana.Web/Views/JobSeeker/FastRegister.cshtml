@@ -54,7 +54,7 @@
                 </div>
                 <div class="form-group">
                     <label for="latest-degree">آخرین مدرک تحصیلی</label>
-                    <select class="form-control" id="latest-degree">
+                    <select class="form-control" id="latest-degree" required>
                         <option value="" selected disabled>لطفا یک گزینه را انتخاب کنید</option>
                         <option>بیسواد</option>
                         <option>دیپلم</option>
@@ -65,31 +65,31 @@
                 </div>
                 <div class="form-group">
                     <label for="city-of-degree">شهر فارغ التحصیلی</label>
-                    <input type="text" class="form-control" id="city-of-degree" placeholder="شهر فارغ التحصیلی" required>
+                    <input type="text" class="form-control" id="city-of-degree" placeholder="شهر فارغ التحصیلی" >
                 </div>
                 <div class="form-group">
                     <label for="min-related-experience">حداقل مدت سابقه كار در حوزه تحصيلات يا مهارت تخصصي</label>
-                    <input type="text" class="form-control" id="min-related-experience" placeholder="حداقل سابقه مرتبط" required>
+                    <input type="text" class="form-control" id="min-related-experience" placeholder="لطفا مدت سابقه کاری را به ماه و به صورت عدد وارد کنید">
                 </div>
                 <div class="form-group">
                     <label for="year-of-graduation">سال فارغ التحصیلی</label>
-                    <input type="text" class="form-control" id="year-of-graduation" placeholder="سال فارغ التحصیلی" required>
+                    <input type="text" class="form-control" id="year-of-graduation" placeholder="سال فارغ التحصیلی" >
                 </div>
                 <div class="form-group">
                     <label for="grade-point-average">معدل</label>
-                    <input type="text" class="form-control" id="grade-point-average" placeholder="معدل" required>
+                    <input type="text" class="form-control" id="grade-point-average" placeholder="معدل" >
                 </div>
                 <div class="form-group">
                     <label for="about-speciality">کلیه مشاغل , مهارت ها و تخصص ها به صورت کلمات کلیدی</label>
-                    <textarea rows="2" class="form-control" id="about-speciality" placeholder="برنامه نویس ارشد، طراحی سایت، اپلیکیشن موبایل" required></textarea>
+                    <textarea rows="2" class="form-control" id="about-speciality" placeholder="برنامه نویس ارشد، طراحی سایت، اپلیکیشن موبایل" ></textarea>
                 </div>
                 <div class="form-group">
                     <label for="resume">سوابق کاری:</label>
-                    <textarea rows="2" class="form-control" id="resume" placeholder="کاریابی مجازی آپادانا: برنامه نویس ارشد، موسسه فرهنگی آموزشی امام حسین(ع): مدیر تولید نرم افزار" required></textarea>
+                    <textarea rows="2" class="form-control" id="resume" placeholder="کاریابی مجازی آپادانا: برنامه نویس ارشد، موسسه فرهنگی آموزشی امام حسین(ع): مدیر تولید نرم افزار" ></textarea>
                 </div>
                 <div class="form-group">
                     <label for="province">استان</label>
-                    <select class="form-control" id="province">
+                    <select class="form-control" id="province" required>
                         <option value="" selected disabled>لطفا استان خود را انتخاب کنید</option>
                         <option value="2">آذربایجان غربی</option>
                         <option value="32">آذربایجان شرقی</option>
@@ -124,7 +124,7 @@
                 </div>
                 <div class="form-group">
                     <label for="leave-city">شهر محل سکونت</label>
-                    <select class="form-control" id="leave-city">
+                    <select class="form-control" id="leave-city" required>
                         <option value="" selected disabled>لطفا استان خود را انتخاب کنید</option>
                         <option value="2">اطلاعات بر اساس استان انتخاب پر می شود</option>
                         <option value="32">مشهد</option>
@@ -135,15 +135,15 @@
                 </div>
                 <div class="form-group">
                     <label for="address">آدرس</label>
-                    <textarea rows="2" class="form-control" id="address" placeholder="آدرس" required></textarea>
+                    <textarea rows="2" class="form-control" id="address" placeholder="آدرس" ></textarea>
                 </div>
                 <div class="form-group">
                     <label for="email">ایمیل</label>
-                    <input type="text" class="form-control" id="email" placeholder="ایمیل" required>
+                    <input type="text" class="form-control" id="email" placeholder="ایمیل" >
                 </div>
                 <div class="form-group">
                     <label for="phone">تلفن ثابت</label>
-                    <input type="text" class="form-control" id="phone" placeholder="تلفن ثابت" required>
+                    <input type="text" class="form-control" id="phone" placeholder="تلفن ثابت" >
                 </div>
                 <div class="form-group">
                     <label for="mobile">تلفن همراه</label>
@@ -152,8 +152,8 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12">
-                <button type="button" id="register" class="btn btn-success">ثبت نام</button>
+            <div class="col-md-12 text-center">
+                <button type="button" id="register" class="btn btn-danger">ثبت نام</button>
             </div>
         </div>
     </form>
