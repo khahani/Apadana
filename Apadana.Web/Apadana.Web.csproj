@@ -122,6 +122,7 @@
     </Reference>
     <Reference Include="System.Web.Mvc">
       <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -327,7 +328,8 @@
     <Content Include="theme-admin\css\style.rtl.css" />
     <Content Include="theme-admin\font-awesome\css\font-awesome.css" />
     <Content Include="theme-admin\font-awesome\css\font-awesome.min.css" />
-    <Content Include="theme-admin\font-awesome\fonts\fontawesome-webfonte0a5.svg" />
+    <Content Include="theme-admin\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="theme-admin\font-awesome\fonts\fontawesome-webfontba72.svg" />
     <Content Include="theme-admin\fonts\BBCNasim\BBCNasim.svg" />
     <Content Include="theme-admin\fonts\BKoodak\BKoodak.svg" />
     <Content Include="theme-admin\fonts\BNazanin\BNazanin.svg" />
@@ -610,11 +612,6 @@
     <Content Include="theme-admin\css\plugins\footable\fonts\footable.ttf" />
     <Content Include="theme-admin\css\plugins\footable\fonts\footable.woff" />
     <Content Include="theme-admin\css\plugins\footable\fonts\footabled41d.eot" />
-    <Content Include="theme-admin\font-awesome\fonts\fontawesome-webfontd41d.eot" />
-    <Content Include="theme-admin\font-awesome\fonts\fontawesome-webfonte0a5.eot" />
-    <Content Include="theme-admin\font-awesome\fonts\fontawesome-webfonte0a5.ttf" />
-    <Content Include="theme-admin\font-awesome\fonts\fontawesome-webfonte0a5.woff" />
-    <Content Include="theme-admin\font-awesome\fonts\fontawesome-webfonte0a5.woff2" />
     <Content Include="theme-admin\fonts\BBCNasim\BBCNasim.eot" />
     <Content Include="theme-admin\fonts\BBCNasim\BBCNasim.otf" />
     <Content Include="theme-admin\fonts\BBCNasim\BBCNasim.ttf" />
@@ -652,6 +649,16 @@
     <Content Include="theme-admin\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="theme-admin\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="theme-admin\fonts\glyphicons-halflings-regulard41d.eot" />
+    <Content Include="theme-admin\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="theme-admin\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="theme-admin\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="theme-admin\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="theme-admin\font-awesome\fonts\fontawesome-webfontba72.eot" />
+    <Content Include="theme-admin\font-awesome\fonts\fontawesome-webfontba72.ttf" />
+    <Content Include="theme-admin\font-awesome\fonts\fontawesome-webfontba72.woff" />
+    <Content Include="theme-admin\font-awesome\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="theme-admin\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Views\JobSeeker\FastRegister.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

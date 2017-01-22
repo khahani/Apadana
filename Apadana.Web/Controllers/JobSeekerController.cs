@@ -15,7 +15,7 @@ namespace Apadana.Web.Controllers
         }
         public ActionResult Register()
         {
-            return View();
+            return View("FastRegister");
         }
         public ActionResult Check(int id)
         {

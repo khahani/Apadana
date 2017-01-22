@@ -1,0 +1,161 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+}
+
+<div class="box-section banner-section triggerAnimation animated rollIn" data-animate="rollIn">
+    <form data-toggle="validator" role="form">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="name">نام</label>
+                    <input type="text" class="form-control" id="name" placeholder="نام" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastname">نام خانوادگی</label>
+                    <input type="text" class="form-control" id="lastname" placeholder="نام خانوادگی" required>
+                </div>
+                <div class="form-group">
+                    <label>جنسیت:</label><br />
+                    <label class="radio-inline">
+                        <input type="radio" name="optradio">آقا
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="optradio">خانم
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="birth-date">تاریخ تولد</label>
+                    <input type="text" class="form-control persian-date" id="birth-date" placeholder="" required>
+                </div>
+                <div class="form-group">
+                    <label for="national-code"></label>
+                    <input type="text" class="form-control" id="national-code" placeholder="کد ملی" required>
+                </div>
+                <div class="form-group">
+                    <label>وضعیت تاهل</label><br />
+                    <label class="radio-inline">
+                        <input type="radio" name="optradio">مجرد
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="optradio">متاهل
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="military-status">وضعیت خدمت</label>
+                    <select class="form-control" id="military-status">
+                        <option value="" selected disabled>لطفا یک گزینه را انتخاب کنید</option>
+                        <option>پایان خدمت</option>
+                        <option>معافیت پزشکی</option>
+                        <option>معافیت کفالت</option>
+                        <option>معافیت خاص</option>
+                        <option>خدمت نکرده</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="latest-degree">آخرین مدرک تحصیلی</label>
+                    <select class="form-control" id="latest-degree">
+                        <option value="" selected disabled>لطفا یک گزینه را انتخاب کنید</option>
+                        <option>بیسواد</option>
+                        <option>دیپلم</option>
+                        <option>لیسانس</option>
+                        <option>فوق لیسانی</option>
+                        <option>دکتری و بالاتر</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="city-of-degree">شهر فارغ التحصیلی</label>
+                    <input type="text" class="form-control" id="city-of-degree" placeholder="شهر فارغ التحصیلی" required>
+                </div>
+                <div class="form-group">
+                    <label for="min-related-experience">حداقل مدت سابقه كار در حوزه تحصيلات يا مهارت تخصصي</label>
+                    <input type="text" class="form-control" id="min-related-experience" placeholder="حداقل سابقه مرتبط" required>
+                </div>
+                <div class="form-group">
+                    <label for="year-of-graduation">سال فارغ التحصیلی</label>
+                    <input type="text" class="form-control" id="year-of-graduation" placeholder="سال فارغ التحصیلی" required>
+                </div>
+                <div class="form-group">
+                    <label for="grade-point-average">معدل</label>
+                    <input type="text" class="form-control" id="grade-point-average" placeholder="معدل" required>
+                </div>
+                <div class="form-group">
+                    <label for="about-speciality">کلیه مشاغل , مهارت ها و تخصص ها به صورت کلمات کلیدی</label>
+                    <textarea rows="2" class="form-control" id="about-speciality" placeholder="برنامه نویس ارشد، طراحی سایت، اپلیکیشن موبایل" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="resume">سوابق کاری:</label>
+                    <textarea rows="2" class="form-control" id="resume" placeholder="کاریابی مجازی آپادانا: برنامه نویس ارشد، موسسه فرهنگی آموزشی امام حسین(ع): مدیر تولید نرم افزار" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="province">استان</label>
+                    <select class="form-control" id="province">
+                        <option value="" selected disabled>لطفا استان خود را انتخاب کنید</option>
+                        <option value="2">آذربایجان غربی</option>
+                        <option value="32">آذربایجان شرقی</option>
+                        <option value="4">اصفهان</option>
+                        <option value="5">ایلام</option>
+                        <option value="6">بوشهر</option>
+                        <option value="7">تهران</option>
+                        <option value="9">خراسان جنوبی</option>
+                        <option value="30">خراسان رضوی</option>
+                        <option value="10">خراسان شمالی</option>
+                        <option value="11">خوزستان</option>
+                        <option value="12">زنجان</option>
+                        <option value="13">سمنان</option>
+                        <option value="14">سیستان و بلوچستان</option>
+                        <option value="15">فارس</option>
+                        <option value="16">قزوین</option>
+                        <option value="17">قم</option>
+                        <option value="24">لرستان</option>
+                        <option value="25">مازندران</option>
+                        <option value="26">مرکزی</option>
+                        <option value="27">هرمزگان</option>
+                        <option value="28">همدان</option>
+                        <option value="8">چهارمحال بختیاری</option>
+                        <option value="18">کردستان</option>
+                        <option value="19">کرمان</option>
+                        <option value="20">کرمانشاه</option>
+                        <option value="21">کهکیلویه و بویراحمد</option>
+                        <option value="22">گلستان</option>
+                        <option value="23">گیلان</option>
+                        <option value="29">یزد</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="leave-city">شهر محل سکونت</label>
+                    <select class="form-control" id="leave-city">
+                        <option value="" selected disabled>لطفا استان خود را انتخاب کنید</option>
+                        <option value="2">اطلاعات بر اساس استان انتخاب پر می شود</option>
+                        <option value="32">مشهد</option>
+                        <option value="4">گناباد</option>
+                        <option value="5">نیشابور</option>
+                        <option value="6">...</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="address">آدرس</label>
+                    <textarea rows="2" class="form-control" id="address" placeholder="آدرس" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="email">ایمیل</label>
+                    <input type="text" class="form-control" id="email" placeholder="ایمیل" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">تلفن ثابت</label>
+                    <input type="text" class="form-control" id="phone" placeholder="تلفن ثابت" required>
+                </div>
+                <div class="form-group">
+                    <label for="mobile">تلفن همراه</label>
+                    <input type="text" class="form-control" id="mobile" placeholder="تلفن همراه" required>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <button type="button" id="register" class="btn btn-success">ثبت نام</button>
+            </div>
+        </div>
+    </form>
+</div>
+

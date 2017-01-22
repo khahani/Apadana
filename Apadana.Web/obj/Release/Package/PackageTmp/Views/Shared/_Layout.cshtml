@@ -111,18 +111,7 @@
                 <div class="recent-post-box">
                     <h2>پست های اخیر</h2>
                     <ul class="recent-list">
-                        <li>
-                            <img alt="" src="~/upload/thumb1.jpg">
-                            <p><a href="#">لورم ایپسوم متن ساختگی با سادگی از صنعت چاپ  است.</a></p>
-                        </li>
-                        <li>
-                            <img alt="" src="~/upload/thumb2.jpg">
-                            <p><a href="#">لورم ایپسوم متن ساختگی با سادگی از صنعت چاپ  است.</a></p>
-                        </li>
-                        <li>
-                            <img alt="" src="~/upload/thumb3.jpg">
-                            <p><a href="#">لورم ایپسوم متن ساختگی با سادگی از صنعت چاپ  است.</a></p>
-                        </li>
+                        @Html.Action("SimpleListForRightMenu", "Post")
                     </ul>
                 </div>
             </div>
@@ -198,14 +187,7 @@
                             <div class="widget footer-widgets flickr-widget">
                                 <h2>گالری</h2>
                                 <ul class="flickr-list">
-                                    <li><a href="#"><img alt="" src="~/upload/flickr/flickr1.jpg"></a></li>
-                                    <li><a href="#"><img alt="" src="~/upload/flickr/flickr2.jpg"></a></li>
-                                    <li><a href="#"><img alt="" src="~/upload/flickr/flickr3.jpg"></a></li>
-                                    <li><a href="#"><img alt="" src="~/upload/flickr/flickr4.jpg"></a></li>
-                                    <li><a href="#"><img alt="" src="~/upload/flickr/flickr5.jpg"></a></li>
-                                    <li><a href="#"><img alt="" src="~/upload/flickr/flickr6.jpg"></a></li>
-                                    <li><a href="#"><img alt="" src="~/upload/flickr/flickr7.jpg"></a></li>
-                                    <li><a href="#"><img alt="" src="~/upload/flickr/flickr8.jpg"></a></li>
+                                    @Html.Action("ListForSiteFooter", "Gallery")
                                 </ul>
                             </div>
                         </div>
@@ -217,6 +199,7 @@
                 </div>
             </footer>
             <!-- End footer section -->
+            
         </div>
         <!-- End content -->
     </div>
@@ -225,6 +208,7 @@
     <script type="text/javascript" src="~/js/jquery.migrate.js"></script>
     <script type="text/javascript" src="~/js/jquery.appear.js"></script>
     <script type="text/javascript" src="~/js/jquery.magnific-popup.min.js"></script>
+    <script type="text/javascript" src="~/js/jquery.isotope.min.js"></script>
     <script type="text/javascript" src="~/js/bootstrap.js"></script>
 
 
