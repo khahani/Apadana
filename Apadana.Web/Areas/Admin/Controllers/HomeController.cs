@@ -26,7 +26,7 @@ namespace Apadana.Web.Areas.Admin.Controllers
         {
             if (username == "admin" && password == "123")
             {
-                return RedirectToAction("Index"); ;
+                return RedirectToAction("Index"); 
             }
             ViewBag.WrongeUsernameOrPassword = true;
             return View();

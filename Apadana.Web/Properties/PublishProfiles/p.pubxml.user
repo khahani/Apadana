@@ -15,6 +15,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Areas/Admin/Views/Home/Index.cshtml">
       <publishTime>01/14/2017 10:13:49</publishTime>
     </File>
+    <File Include="Areas/Admin/Views/Home/Signin.cshtml">
+      <publishTime>01/22/2017 12:20:11</publishTime>
+    </File>
     <File Include="Areas/Admin/Views/Shared/_Layout.cshtml">
       <publishTime>01/16/2017 13:06:46</publishTime>
     </File>
@@ -25,7 +28,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/11/2017 18:48:34</publishTime>
     </File>
     <File Include="bin/Apadana.Web.dll">
-      <publishTime>01/17/2017 12:05:29</publishTime>
+      <publishTime>01/22/2017 12:35:10</publishTime>
     </File>
     <File Include="bin/ApplicationInsights.config">
       <publishTime>12/29/2016 10:42:24</publishTime>
@@ -1599,11 +1602,14 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Views/JobSeeker/Check.cshtml">
       <publishTime>01/07/2017 10:43:56</publishTime>
     </File>
+    <File Include="Views/JobSeeker/FastRegister.cshtml">
+      <publishTime>01/22/2017 11:21:17</publishTime>
+    </File>
     <File Include="Views/JobSeeker/Index.cshtml">
       <publishTime>01/07/2017 12:33:30</publishTime>
     </File>
     <File Include="Views/JobSeeker/Register.cshtml">
-      <publishTime>01/05/2017 15:02:35</publishTime>
+      <publishTime>01/21/2017 12:51:42</publishTime>
     </File>
     <File Include="Views/JobSeeker/_SimpleList.cshtml">
       <publishTime>01/07/2017 12:30:37</publishTime>
