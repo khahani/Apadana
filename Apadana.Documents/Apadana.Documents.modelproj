@@ -32,6 +32,13 @@
       <SubType>Content</SubType>
       <DependentUpon>01 - Usecases.usecasediagram</DependentUpon>
     </Content>
+    <Content Include="02 - Activiteis\ثبت نام در سایت.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="02 - Activiteis\ثبت نام در سایت.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>02 - Activiteis\ثبت نام در سایت.activitydiagram</DependentUpon>
+    </Content>
     <Content Include="02 - Activiteis\کارجویان\ثبت کارجو.activitydiagram">
       <SubType>Content</SubType>
     </Content>

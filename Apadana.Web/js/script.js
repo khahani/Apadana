@@ -36,7 +36,6 @@ $(document).ready(function ($) {
         altFormat: "YYYY MM DD HH:mm:ss",
         observer: true,
         format: 'YYYY/MM/DD'
-
     });
 });
 /* ---------------------------------------------------------------------- */

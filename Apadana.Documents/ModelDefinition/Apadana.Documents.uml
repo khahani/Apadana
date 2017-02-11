@@ -65,6 +65,37 @@
           LastKnownLocation="Apadana.Documents.uml" />
       </annotatedElements>
     </comment>
+    <comment
+      Id="84614139-efe0-41b3-9f08-82de92b3b7bd">
+      <body>نام و نام خانوادگی
+شماره همراه</body>
+      <annotatedElements>
+        <opaqueActionMoniker
+          Id="40c8cadd-f3f4-4b2b-b784-39e4d2555c01"
+          LastKnownName="کاربر اطلاعات فرم ثبت نام را پر می کند"
+          LastKnownLocation="Apadana.Documents.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="d53d140a-7336-4b6b-895e-7ccfd23a87f4">
+      <body>اگر رمز را دریافت نکردید پس از 2 دقیقه امکان ارسال مجدد رمز فعال می شود</body>
+      <annotatedElements>
+        <decisionNodeMoniker
+          Id="17598fad-26e5-4ba7-b0aa-f13ac39fac5d"
+          LastKnownName="Decision1"
+          LastKnownLocation="Apadana.Documents.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="d8d5770d-4aba-4595-962f-f385b2082687">
+      <body>رمز شما تا حداکثر 2 دقیقه دیگر برایتان ارسال می گردد. </body>
+      <annotatedElements>
+        <opaqueActionMoniker
+          Id="54f38e16-02ae-462b-bc54-c4f89e212cad"
+          LastKnownName="کاربر به صفحه ورود رمز منتقل می شود"
+          LastKnownLocation="Apadana.Documents.uml" />
+      </annotatedElements>
+    </comment>
   </ownedCommentsInternal>
   <profileInstances>
     <packageHasProfileInstances
@@ -1133,6 +1164,180 @@
         name="پیاده سازی قالب پنل ادمین"
         isAbstract="false"
         isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="4277de6a-a507-4a3a-83de-fa91fb8eabf5"
+        name="ثبت نام در سایت"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="1793455a-e662-49ad-960d-70dbef4a1a04"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="e9473ea5-71c5-45e4-a0d6-e88a6a8c5412"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="31b411b5-52ee-4069-a7bc-9336bf1aa4d0"
+                  LastKnownName="کاربر وارد صفحه ثبت نام می شود"
+                  LastKnownLocation="Apadana.Documents.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction
+            Id="31b411b5-52ee-4069-a7bc-9336bf1aa4d0"
+            name="کاربر وارد صفحه ثبت نام می شود"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="da53367a-8409-4d1b-ba65-176d066d3af4"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="40c8cadd-f3f4-4b2b-b784-39e4d2555c01"
+                  LastKnownName="کاربر اطلاعات فرم ثبت نام را پر می کند"
+                  LastKnownLocation="Apadana.Documents.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="40c8cadd-f3f4-4b2b-b784-39e4d2555c01"
+            name="کاربر اطلاعات فرم ثبت نام را پر می کند"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="5aaa2a97-28b6-42d4-b7fa-96501e9295f3"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="be24b3b6-7e7c-4160-9034-be4961fc2c8a"
+                  LastKnownName="رمز کاربر جهت ورود به سیستم به شماره موبایل ارسال می شود"
+                  LastKnownLocation="Apadana.Documents.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="be24b3b6-7e7c-4160-9034-be4961fc2c8a"
+            name="رمز کاربر جهت ورود به سیستم به شماره موبایل ارسال می شود"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="535ab41c-a09f-4ac7-94cd-3f4eedb31d5b"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="54f38e16-02ae-462b-bc54-c4f89e212cad"
+                  LastKnownName="کاربر به صفحه ورود رمز منتقل می شود"
+                  LastKnownLocation="Apadana.Documents.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="65bfd631-bbe3-4320-9ce8-e22fcd3a770f"
+                isLeaf="false">
+                <sendSignalActionMoniker
+                  Id="5e5b0b9c-6d3a-46c8-8cfb-19c267424e1e"
+                  LastKnownName="ارسال رمز کاربر"
+                  LastKnownLocation="Apadana.Documents.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <objectNode
+            Id="3d3d349d-4321-4864-8d85-5335fa734697"
+            name="سامانه پیامکی"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <upperBound>
+              <literalInteger
+                Id="ef7d6642-b9f3-4a0b-9d7f-65dc3f9575e8"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <sendSignalAction
+            Id="5e5b0b9c-6d3a-46c8-8cfb-19c267424e1e"
+            name="ارسال رمز کاربر"
+            isLeaf="false" />
+          <acceptEventAction
+            Id="9b1acddd-12c0-4b97-919b-7109c667e00a"
+            name="وضعیت ارسال پیامک"
+            isLeaf="false"
+            isUnmarshall="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="caeba940-cc0f-4161-8823-4bd5883ab8af"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <objectNodeMoniker
+                  Id="3d3d349d-4321-4864-8d85-5335fa734697"
+                  LastKnownName="سامانه پیامکی"
+                  LastKnownLocation="Apadana.Documents.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+          </acceptEventAction>
+          <opaqueAction
+            Id="54f38e16-02ae-462b-bc54-c4f89e212cad"
+            name="کاربر به صفحه ورود رمز منتقل می شود"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="7acf4ce0-c7d5-452f-a773-4bfb472fe732"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="17598fad-26e5-4ba7-b0aa-f13ac39fac5d"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="Apadana.Documents.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="17598fad-26e5-4ba7-b0aa-f13ac39fac5d"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="e1755366-c766-4da6-b115-ce9a15185e89"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="23a33d24-fe08-4055-92cd-683be90c22e6"
+                  LastKnownName="ارسال مجدد رمز"
+                  LastKnownLocation="Apadana.Documents.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="817ceb32-a4ab-40a5-99b0-9212758378c2"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="44557cc3-eccb-44d2-8236-45cb14c58185"
+                  LastKnownName="ورود رمز توسط کاربر و وارد سیستم می شود"
+                  LastKnownLocation="Apadana.Documents.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="23a33d24-fe08-4055-92cd-683be90c22e6"
+            name="ارسال مجدد رمز"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="5e86b172-8524-47a6-871b-fc3f05e82698"
+                isLeaf="false">
+                <sendSignalActionMoniker
+                  Id="5e5b0b9c-6d3a-46c8-8cfb-19c267424e1e"
+                  LastKnownName="ارسال رمز کاربر"
+                  LastKnownLocation="Apadana.Documents.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="44557cc3-eccb-44d2-8236-45cb14c58185"
+            name="ورود رمز توسط کاربر و وارد سیستم می شود"
+            isLeaf="false" />
+        </nodes>
+      </activity>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

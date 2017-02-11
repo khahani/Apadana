@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="28516881-851b-4824-b8fe-62fed919affe" name="ثبت نام در سایت" linkedPackageId="61cfb34a-def2-4c25-ac46-522d206920c0" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <ownedCommentsInternal>
+    <comment Id="f8d11d87-84fd-46bb-a64e-59389e6a556e">
+      <elementDefinition Id="84614139-efe0-41b3-9f08-82de92b3b7bd" />
+      <body>نام و نام خانوادگی
+شماره همراه</body>
+      <annotatedElements>
+        <opaqueActionMoniker Id="43c99874-4ade-4416-a6ec-57dba7c3047a" LastKnownName="کاربر اطلاعات فرم ثبت نام را پر می کند" />
+      </annotatedElements>
+    </comment>
+    <comment Id="015bfbb7-0e73-4979-a360-d0ba24ed0946">
+      <elementDefinition Id="d53d140a-7336-4b6b-895e-7ccfd23a87f4" />
+      <body>اگر رمز را دریافت نکردید پس از 2 دقیقه امکان ارسال مجدد رمز فعال می شود</body>
+      <annotatedElements>
+        <decisionNodeMoniker Id="ca823ff7-3f96-491e-936e-7e04700791f9" LastKnownName="Decision1" />
+      </annotatedElements>
+    </comment>
+    <comment Id="cd1ce50e-93ab-4dff-a4cf-f78638c88fcc">
+      <elementDefinition Id="d8d5770d-4aba-4595-962f-f385b2082687" />
+      <body>رمز شما تا حداکثر 2 دقیقه دیگر برایتان ارسال می گردد. </body>
+      <annotatedElements>
+        <opaqueActionMoniker Id="f53587ec-0928-47ec-bd97-60069ec44fe6" LastKnownName="کاربر به صفحه ورود رمز منتقل می شود" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="439dac66-178a-4d8c-87de-c3f3c8271181">
+      <profileInstance Id="4683c5f1-d7ea-4b08-abde-25bb3e682b32" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="516658bd-62a8-4481-b33d-88277bb58ec9">
+      <profileInstance Id="0cc762e0-e686-4b72-8998-69f210cffa46" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="d9914920-87bd-4280-8f57-772174c537d7" name="ثبت نام در سایت" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="4277de6a-a507-4a3a-83de-fa91fb8eabf5" />
+        <nodes>
+          <initialNode Id="44faa4b8-4078-4716-8dc3-0b6a7ea33286" name="Initial1" isLeaf="false">
+            <elementDefinition Id="1793455a-e662-49ad-960d-70dbef4a1a04" />
+            <flowNodeTargets>
+              <controlFlow Id="868fbab4-3924-4041-bddc-4da28b6aca7d" isLeaf="false">
+                <opaqueActionMoniker Id="4b8f39e0-8a88-4e38-b2c0-d283c593bb87" LastKnownName="کاربر وارد صفحه ثبت نام می شود" />
+                <elementDefinition Id="e9473ea5-71c5-45e4-a0d6-e88a6a8c5412" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="4b8f39e0-8a88-4e38-b2c0-d283c593bb87" name="کاربر وارد صفحه ثبت نام می شود" isLeaf="false">
+            <elementDefinition Id="31b411b5-52ee-4069-a7bc-9336bf1aa4d0" />
+            <flowNodeTargets>
+              <controlFlow Id="fa9bcda3-c20b-4181-a697-5fe3666cf9e7" isLeaf="false">
+                <opaqueActionMoniker Id="43c99874-4ade-4416-a6ec-57dba7c3047a" LastKnownName="کاربر اطلاعات فرم ثبت نام را پر می کند" />
+                <elementDefinition Id="da53367a-8409-4d1b-ba65-176d066d3af4" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="43c99874-4ade-4416-a6ec-57dba7c3047a" name="کاربر اطلاعات فرم ثبت نام را پر می کند" isLeaf="false">
+            <elementDefinition Id="40c8cadd-f3f4-4b2b-b784-39e4d2555c01" />
+            <flowNodeTargets>
+              <controlFlow Id="619b17de-b7e4-4e15-b25e-66c1b8b52603" isLeaf="false">
+                <opaqueActionMoniker Id="f4609112-0b1d-4813-8ba2-81719f2e2a47" LastKnownName="رمز کاربر جهت ورود به سیستم به شماره موبایل ارسال می شود" />
+                <elementDefinition Id="5aaa2a97-28b6-42d4-b7fa-96501e9295f3" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="f4609112-0b1d-4813-8ba2-81719f2e2a47" name="رمز کاربر جهت ورود به سیستم به شماره موبایل ارسال می شود" isLeaf="false">
+            <elementDefinition Id="be24b3b6-7e7c-4160-9034-be4961fc2c8a" />
+            <flowNodeTargets>
+              <controlFlow Id="c5de652c-db9b-4447-9135-f4dc66e5394d" isLeaf="false">
+                <opaqueActionMoniker Id="f53587ec-0928-47ec-bd97-60069ec44fe6" LastKnownName="کاربر به صفحه ورود رمز منتقل می شود" />
+                <elementDefinition Id="535ab41c-a09f-4ac7-94cd-3f4eedb31d5b" />
+              </controlFlow>
+              <controlFlow Id="92a3aeca-8899-4d31-9fe8-abdbcdc59b8d" isLeaf="false">
+                <sendSignalActionMoniker Id="e6c89b10-74fc-4fa3-a6e8-7ede61f940ab" LastKnownName="ارسال رمز کاربر" />
+                <elementDefinition Id="65bfd631-bbe3-4320-9ce8-e22fcd3a770f" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <objectNode Id="7cbd844b-4f88-4313-8230-08b923426d37" name="سامانه پیامکی" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="3d3d349d-4321-4864-8d85-5335fa734697" />
+            <upperBound>
+              <literalInteger Id="2efe394e-0dba-4805-b237-d5520bdbceeb" name="2147483647" value="2147483647">
+                <elementDefinition Id="ef7d6642-b9f3-4a0b-9d7f-65dc3f9575e8" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <sendSignalAction Id="e6c89b10-74fc-4fa3-a6e8-7ede61f940ab" name="ارسال رمز کاربر" isLeaf="false">
+            <elementDefinition Id="5e5b0b9c-6d3a-46c8-8cfb-19c267424e1e" />
+          </sendSignalAction>
+          <acceptEventAction Id="c39ccf2f-2ce6-4483-92d2-dec391ab7253" name="وضعیت ارسال پیامک" isLeaf="false" isUnmarshall="false">
+            <elementDefinition Id="9b1acddd-12c0-4b97-919b-7109c667e00a" />
+            <objectFlowTargets>
+              <objectFlow Id="85aef067-a026-47b1-983b-5e665412cb3a" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="7cbd844b-4f88-4313-8230-08b923426d37" LastKnownName="سامانه پیامکی" />
+                <elementDefinition Id="caeba940-cc0f-4161-8823-4bd5883ab8af" />
+              </objectFlow>
+            </objectFlowTargets>
+          </acceptEventAction>
+          <opaqueAction Id="f53587ec-0928-47ec-bd97-60069ec44fe6" name="کاربر به صفحه ورود رمز منتقل می شود" isLeaf="false">
+            <elementDefinition Id="54f38e16-02ae-462b-bc54-c4f89e212cad" />
+            <flowNodeTargets>
+              <controlFlow Id="4586b44d-9521-4da5-a73f-f963c25cacb2" isLeaf="false">
+                <decisionNodeMoniker Id="ca823ff7-3f96-491e-936e-7e04700791f9" LastKnownName="Decision1" />
+                <elementDefinition Id="7acf4ce0-c7d5-452f-a773-4bfb472fe732" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="ca823ff7-3f96-491e-936e-7e04700791f9" name="Decision1" isLeaf="false">
+            <elementDefinition Id="17598fad-26e5-4ba7-b0aa-f13ac39fac5d" />
+            <flowNodeTargets>
+              <controlFlow Id="73e78b84-2608-40bb-a33d-63621dfa9e82" isLeaf="false">
+                <opaqueActionMoniker Id="92a74b2d-eec8-48b7-9385-911e540ee5b0" LastKnownName="ارسال مجدد رمز" />
+                <elementDefinition Id="e1755366-c766-4da6-b115-ce9a15185e89" />
+              </controlFlow>
+              <controlFlow Id="a2a038a8-7cb9-4dfd-a703-d472677cad74" isLeaf="false">
+                <opaqueActionMoniker Id="4ec3975c-ad62-418c-ac49-7a1e058008ee" LastKnownName="ورود رمز توسط کاربر و وارد سیستم می شود" />
+                <elementDefinition Id="817ceb32-a4ab-40a5-99b0-9212758378c2" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="92a74b2d-eec8-48b7-9385-911e540ee5b0" name="ارسال مجدد رمز" isLeaf="false">
+            <elementDefinition Id="23a33d24-fe08-4055-92cd-683be90c22e6" />
+            <flowNodeTargets>
+              <controlFlow Id="72324344-ae48-44a8-8628-fdb168e4705c" isLeaf="false">
+                <sendSignalActionMoniker Id="e6c89b10-74fc-4fa3-a6e8-7ede61f940ab" LastKnownName="ارسال رمز کاربر" />
+                <elementDefinition Id="5e86b172-8524-47a6-871b-fc3f05e82698" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="4ec3975c-ad62-418c-ac49-7a1e058008ee" name="ورود رمز توسط کاربر و وارد سیستم می شود" isLeaf="false">
+            <elementDefinition Id="44557cc3-eccb-44d2-8236-45cb14c58185" />
+          </opaqueAction>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="61cfb34a-def2-4c25-ac46-522d206920c0" name="Apadana.Documents">
+    <elementDefinition Id="accb104d-8a5f-42b2-83a3-0847af642b55" />
+  </package>
+</activityRootModel>

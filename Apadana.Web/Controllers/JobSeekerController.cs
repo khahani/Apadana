@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace Apadana.Web.Controllers
 {
+    [AllowAnonymous]
     public class JobSeekerController : Controller
     {
         // GET: JobSeeker

@@ -1,0 +1,45 @@
+﻿@model Apadana.Web.ViewModels.LogInModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آپادانا | ورود</title>
+    <link href="~/theme-admin/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/theme-admin/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link href="~/theme-admin/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="~/theme-admin/css/animate.css" rel="stylesheet">
+    <link href="~/theme-admin/css/style.rtl.css" rel="stylesheet">
+</head>
+<body class="gray-bg">
+    <div class="middle-box text-center loginscreen animated fadeInDown">
+        <div>
+            <div>
+                <h1 class="logo-name">آپادانا</h1>
+            </div>
+            <h3>به کاریابی مجازی آپادانا خوش آمدید</h3>
+            <p>
+                @Html.ValidationSummary(true)
+            </p>
+            <form class="m-t" role="form" action="@Url.Action("Login", "Auth", new { })" method="post">
+                <div class="form-group">
+                    <input id="phonenumber" name="phonenumber" type="text" class="form-control" placeholder="موبایل" required="">
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" name="password" class="form-control" placeholder="رمز عبور" required="">
+                </div>
+                <button type="submit" class="btn btn-primary block full-width m-b">ورود</button>
+                <a href="#"><small>رمزتان را فراموش کرده اید؟</small></a>
+            </form>
+            <p class="m-t"> <small>کلیه حقوق محفوظ است</strong> 1395-1396 &copy; <a href="http://www.apadanajob.ir" target="_blank">کاریابی مجازی آپادانا</a></small> </p>
+        </div>
+    </div>
+    <!-- Mainly scripts -->
+    <script src="~/theme-admin/js/jquery-2.1.1.js"></script>
+    <script src="~/theme-admin/js/bootstrap.min.js"></script>
+</body>
+</html>

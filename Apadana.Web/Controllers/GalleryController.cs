@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace Apadana.Web.Controllers
 {
+    [AllowAnonymous]
     public class GalleryController : Controller
     {
         // GET: Gallary
