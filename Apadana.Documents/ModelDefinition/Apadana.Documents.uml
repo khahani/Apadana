@@ -96,6 +96,69 @@
           LastKnownLocation="Apadana.Documents.uml" />
       </annotatedElements>
     </comment>
+    <comment
+      Id="25afef42-7bed-4e18-a2fc-9f0730102262">
+      <body>کاربر سایت
+کارجو 
+کارفرما
+کاربر سایت حالت پیش فرض است که پس از ثبت نام امکاناتی در اختیارش قرار می گیرد.  زمانی که کاربر توسط پرسنل تایید صلاجیت شود می تواند به عنوان کارفرما یا کارجو از امکانات آن بهره مند شود.</body>
+      <annotatedElements>
+        <actorMoniker
+          Id="a4ee1cd2-3d7d-48f8-91c7-fa8bca3e85c3"
+          LastKnownName="کاربر سایت"
+          LastKnownLocation="Apadana.Documents.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="22411703-95c4-41e4-825b-ddfd28a5785b">
+      <body>پذیرش</body>
+      <annotatedElements>
+        <actorMoniker
+          Id="6b15eba5-b7e9-445d-93b0-5058260567e4"
+          LastKnownName="پرسنل"
+          LastKnownLocation="Apadana.Documents.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="ed7f8bed-dde1-4167-83f8-51b122738057">
+      <body>سایر کاریابی ها که قصد دسترسی به اطلاعات را دارند</body>
+      <annotatedElements>
+        <actorMoniker
+          Id="d83b1d35-b5f9-4cb6-a523-e7a1f8e7f52c"
+          LastKnownName="کاریابی همکار"
+          LastKnownLocation="Apadana.Documents.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="97f746ed-efb7-4f36-8aae-6e1769b1e1fa">
+      <body>دسترسی به تمام بخش های سایت و مدیریت کاربران و تنظیمات سیستم</body>
+      <annotatedElements>
+        <actorMoniker
+          Id="2c0f8613-7643-46b0-8ff8-9f7ba0c8f5cf"
+          LastKnownName="مدیر سایت"
+          LastKnownLocation="Apadana.Documents.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="823cafe6-6c76-4d65-a8e6-6df94b8443f1">
+      <body>تمام اکشن ها با فرمت خاص و توضیحات در بانک ذخیره می شوند و هر اکتر به اکشن های تعریف شده خودش دسترسی خواهد داشت.
+البته برای یک یوزر نیز می توان دسترسی های اختصاصی نیز تعریف کرد
+
+ترکیب ذکر شده به صورت زیر خواهد بود:
+this.GetType() + actionName + HttpMethod
+
+</body>
+    </comment>
+    <comment
+      Id="52299157-8b66-474c-95a1-02df7ff88547">
+      <body>کارفرما یا کارجو </body>
+      <annotatedElements>
+        <useCaseMoniker
+          Id="24c96b1b-380b-48f6-ab53-1b3328e8dbaa"
+          LastKnownName="تعیین دسترسی کاربران سایت"
+          LastKnownLocation="Apadana.Documents.uml" />
+      </annotatedElements>
+    </comment>
   </ownedCommentsInternal>
   <profileInstances>
     <packageHasProfileInstances
@@ -1338,6 +1401,197 @@
             isLeaf="false" />
         </nodes>
       </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="a4ee1cd2-3d7d-48f8-91c7-fa8bca3e85c3"
+        name="کاربر سایت"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="6b15eba5-b7e9-445d-93b0-5058260567e4"
+        name="پرسنل"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="d83b1d35-b5f9-4cb6-a523-e7a1f8e7f52c"
+        name="کاریابی همکار"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="79279f1c-525a-4229-9ad9-8dff64241590"
+            isSubstitutable="false">
+            <actorMoniker
+              Id="6b15eba5-b7e9-445d-93b0-5058260567e4"
+              LastKnownName="پرسنل"
+              LastKnownLocation="Apadana.Documents.uml" />
+          </generalization>
+        </generalsInternal>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="2c0f8613-7643-46b0-8ff8-9f7ba0c8f5cf"
+        name="مدیر سایت"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="40202950-211e-4370-8631-2555c4732eb2"
+            isSubstitutable="false">
+            <actorMoniker
+              Id="d83b1d35-b5f9-4cb6-a523-e7a1f8e7f52c"
+              LastKnownName="کاریابی همکار"
+              LastKnownLocation="Apadana.Documents.uml" />
+          </generalization>
+        </generalsInternal>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="96de13fc-e2b3-42fc-87fb-8f246b5d7072"
+        name="ادمین سیستم"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="fee82c98-b683-418a-897b-82b24ac203aa"
+        name="ثبت نام با سریع"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="83cd1640-af19-4708-bd74-33ea8a2512b7"
+        name="ورود به سایت"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="2c54371b-ec03-4f88-830e-4878261079da"
+        name="ریست کلمه عبور"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="1c287114-9925-4681-8a20-f91d6750b0ad"
+        name="بازیابی رمز عبور"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="81344a67-9c21-49c9-b8e0-a61e46792871"
+        name="ارسال مجدد رمز عبور جدید"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="8186effa-195a-4c36-a001-463dc28c161a"
+        name="تغییر رمز عبور"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="68f759ce-b43a-47eb-85c2-964c6086aefc"
+        name="ثبت پرسنل یا همکار"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a34ed011-75e5-472e-aa1e-a9d1375863f2"
+        name="تعیین دسترسی ها"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="9edef67c-6eb5-481b-a825-f8e7b9ca871a"
+        name="مشاهده عملکرد کاربران در سیستم"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="8243ecee-6f19-4afa-b628-551788f68801"
+        name="بررسی کاربران سایت"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="128ecb68-bc20-4323-be90-efc370f2f54a"
+        name="مدیریت فرصت های شغلی"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="fa96cd87-a444-4d0c-9509-5d81e3751e6f"
+        name="مدیریت کارجویان"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="24e048ef-f909-4aea-bc04-09999c75fcdc"
+        name="کارجو"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="a517566e-b847-4192-a44f-254c274c6b20"
+            isSubstitutable="false">
+            <actorMoniker
+              Id="a4ee1cd2-3d7d-48f8-91c7-fa8bca3e85c3"
+              LastKnownName="کاربر سایت"
+              LastKnownLocation="Apadana.Documents.uml" />
+          </generalization>
+        </generalsInternal>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="d5502867-5519-4a1e-a505-532abc0e5605"
+        name="کارفرما"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="d5987db8-13ec-4344-9f8c-8782cac5501f"
+            isSubstitutable="false">
+            <actorMoniker
+              Id="a4ee1cd2-3d7d-48f8-91c7-fa8bca3e85c3"
+              LastKnownName="کاربر سایت"
+              LastKnownLocation="Apadana.Documents.uml" />
+          </generalization>
+        </generalsInternal>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="24c96b1b-380b-48f6-ab53-1b3328e8dbaa"
+        name="تعیین دسترسی کاربران سایت"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="f32ff9f9-e3e2-48b9-a607-dd75df223838"
+        name="تعیین دسترسی پرسنل"
+        isAbstract="false"
+        isLeaf="false" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

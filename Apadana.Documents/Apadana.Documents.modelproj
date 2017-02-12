@@ -22,6 +22,13 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
+    <Content Include="مدیریت کاربران.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="مدیریت کاربران.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>مدیریت کاربران.usecasediagram</DependentUpon>
+    </Content>
     <Folder Include="02 - Activiteis\کارفرمایان" />
     <Folder Include="02 - Activiteis\کارجویان" />
     <Folder Include="ModelDefinition\" />

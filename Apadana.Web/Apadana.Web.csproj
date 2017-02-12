@@ -349,6 +349,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Areas\Personel\Views\web.config" />
+    <Content Include="Areas\User\Views\web.config" />
+    <Content Include="Areas\Colleague\Views\web.config" />
     <None Include="Properties\PublishProfiles\p.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -699,6 +702,10 @@
     <Compile Include="App_Structure\ServiceProviderExtensions.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Colleague\ColleagueAreaRegistration.cs" />
+    <Compile Include="Areas\Personel\PersonelAreaRegistration.cs" />
+    <Compile Include="Areas\User\Controllers\HomeController.cs" />
+    <Compile Include="Areas\User\UserAreaRegistration.cs" />
     <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\GalleryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -812,6 +819,15 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Colleague\Controllers\" />
+    <Folder Include="Areas\Colleague\Models\" />
+    <Folder Include="Areas\Colleague\Views\Shared\" />
+    <Folder Include="Areas\Personel\Controllers\" />
+    <Folder Include="Areas\Personel\Models\" />
+    <Folder Include="Areas\Personel\Views\Shared\" />
+    <Folder Include="Areas\User\Models\" />
+    <Folder Include="Areas\User\Views\Home\" />
+    <Folder Include="Areas\User\Views\Shared\" />
     <Folder Include="css\images\" />
   </ItemGroup>
   <PropertyGroup>

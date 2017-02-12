@@ -7,6 +7,7 @@ using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.DataProtection;
 using System;
 using System.Linq;
+using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Web;
@@ -260,6 +261,19 @@ namespace Apadana.Web.Controllers
                 userManager.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        [HttpGet]
+        public ActionResult GetAssembly()
+        {
+            Assembly asm = Assembly.GetExecutingAssembly();
+
+            var list = asm.GetTypes()
+                .Where(type => typeof(Controller).IsAssignableFrom(type)) //filter controllers
+                .SelectMany(type => type.GetMethods())
+                .Where(method => method.IsPublic && !method.IsDefined(typeof(NonActionAttribute)));
+
+            return null;
         }
     }
 }
