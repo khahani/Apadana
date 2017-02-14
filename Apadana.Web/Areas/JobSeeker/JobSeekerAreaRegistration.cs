@@ -1,22 +1,22 @@
 ﻿using System.Web.Mvc;
 
-namespace Apadana.Web.Areas.User
+namespace Apadana.Web.Areas.JobSeeker
 {
-    public class UserAreaRegistration : AreaRegistration 
+    public class JobSeekerAreaRegistration : AreaRegistration 
     {
         public override string AreaName 
         {
             get 
             {
-                return "User";
+                return "JobSeeker";
             }
         }
 
         public override void RegisterArea(AreaRegistrationContext context) 
         {
             context.MapRoute(
-                "User_default",
-                "User/{controller}/{action}/{id}",
+                "JobSeeker_default",
+                "JobSeeker/{controller}/{action}/{id}",
                 new { action = "Index", id = UrlParameter.Optional }
             );
         }

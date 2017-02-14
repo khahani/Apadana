@@ -159,6 +159,10 @@ this.GetType() + actionName + HttpMethod
           LastKnownLocation="Apadana.Documents.uml" />
       </annotatedElements>
     </comment>
+    <comment
+      Id="3c4b90a0-614e-43cc-90a2-c8c74b6ceda8">
+      <body>سطوح دسترسی سیستم (رول های سیستم)</body>
+    </comment>
   </ownedCommentsInternal>
   <profileInstances>
     <packageHasProfileInstances
@@ -1592,6 +1596,21 @@ this.GetType() + actionName + HttpMethod
         name="تعیین دسترسی پرسنل"
         isAbstract="false"
         isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <artifact
+        Id="445f8af1-b147-4950-b4a3-b7cdafd462aa"
+        name="Artifact1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="becebda0-2e01-49c7-b0ab-bd7202432e44"
+        name="Subsystem1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

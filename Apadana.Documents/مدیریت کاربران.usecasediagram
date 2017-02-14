@@ -49,6 +49,10 @@ this.GetType() + actionName + HttpMethod
         <useCaseMoniker Id="13ad35ca-96bc-44cc-bcbf-3bea003e58de" LastKnownName="تعیین دسترسی کاربران سایت" />
       </annotatedElements>
     </comment>
+    <comment Id="4b2b0aa8-8898-4b46-a008-07fa25822b43">
+      <elementDefinition Id="3c4b90a0-614e-43cc-90a2-c8c74b6ceda8" />
+      <body>سطوح دسترسی سیستم (رول های سیستم)</body>
+    </comment>
   </ownedCommentsInternal>
   <profileInstances>
     <packageHasProfileInstances Id="12af98b9-c334-4c1a-9ef9-b32d9109c9e8">
