@@ -47,6 +47,8 @@ namespace Apadana.Web.App_Start
                 return usermanager;
             };
 
+            CreateRolesandUsers();
+
             //Implement dependency injection for services like mvc core
             var services = new ServiceCollection();
             ConfigureServices(services);
@@ -68,6 +70,47 @@ namespace Apadana.Web.App_Start
                   || t.Name.EndsWith("Controller", StringComparison.OrdinalIgnoreCase)));
 
 
+        }
+
+        private void CreateRolesandUsers()
+        {
+            AppDbContext context = new AppDbContext();
+
+            var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
+            var UserManager = UserManagerFactory.Invoke();
+
+            // creating Creating Employer role  and default user
+            if (!roleManager.RoleExists(AppDefaults.ROLE_EMPLOYER))
+            {
+                var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();
+                role.Name = AppDefaults.ROLE_EMPLOYER;
+                roleManager.Create(role);
+            }
+
+            var user = UserManager.Users.Where(m => m.PhoneNumber == "09394412792").FirstOrDefault();
+
+            if (user == null)
+            {
+                user = new AppUser();
+                user.PhoneNumber = "09394412792";
+                user.UserName = "محمدرضا خواهانی";
+
+                string password = "123456";
+
+                var chkUser = UserManager.Create(user, password);
+
+                if (chkUser.Succeeded)
+                {
+                    UserManager.AddToRole(user.Id, AppDefaults.ROLE_EMPLOYER);
+                }
+            }
+            else
+            {
+                if (!UserManager.IsInRole(user.Id, AppDefaults.ROLE_EMPLOYER))
+                {
+                    IdentityResult result = UserManager.AddToRole(user.Id, AppDefaults.ROLE_EMPLOYER);
+                }
+            }
         }
     }
 }

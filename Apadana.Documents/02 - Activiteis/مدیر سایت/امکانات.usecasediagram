@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="dbb9a697-0815-4c54-a532-1dcd71a5fea3" name="امکانات" linkedPackageId="63156e9e-7e68-4519-bca1-c2349e7529e7" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="8d4ecd8a-073a-4f24-9f46-33418c4e732e">
+      <profileInstance Id="10cf97fb-edc2-48b9-b590-021191545710" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="a57fe78c-09ed-438f-b136-e30075d335b5">
+      <profileInstance Id="866ce111-4236-4397-87e9-12d367fb7c11" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="e4f724cf-5bd1-444e-85c1-6f23225483e1" name="مدیر سایت" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ec80c88f-96e0-44e3-bbfd-3cefc5b2e363" />
+        <targetEnds>
+          <association Id="08fb2cba-609a-4b7a-8464-4b3788e0636b" isDerived="false" sourceEndRoleName="کاربر سایت" targetEndRoleName="پنل" isLeaf="false" isAbstract="false">
+            <subsystemMoniker Id="440485fc-2c8c-4f2f-9ccc-6e5574c4ef56" LastKnownName="پنل" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="76f1349b-3112-4871-8998-71a75f220830" name="کاربر سایت" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="6fb43689-fd98-4a0a-93b9-af263ee045cf" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fa96295c-ea20-4616-9566-5db1ebd32d68" name="پنل" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="afe58af2-4c8d-487e-a2e6-d7268cf1ecf8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="6124ce26-1e05-48a9-9343-abc155b1480f" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="440485fc-2c8c-4f2f-9ccc-6e5574c4ef56" name="پنل" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="332f32a4-5d66-4bd8-9c5c-58fabf93ce0a" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="5962abee-6958-4b17-946a-0e5e8bb7a689" name="تغییر رمز عبور" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b4834c72-7186-4312-8b41-27386ea212bd" />
+        <subjects>
+          <subsystemMoniker Id="440485fc-2c8c-4f2f-9ccc-6e5574c4ef56" LastKnownName="پنل" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="63156e9e-7e68-4519-bca1-c2349e7529e7" name="Apadana.Documents">
+    <elementDefinition Id="accb104d-8a5f-42b2-83a3-0847af642b55" />
+  </package>
+</useCaseModelRoot>

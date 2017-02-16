@@ -22,6 +22,27 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
+    <Content Include="02 - Activiteis\مدیر سایت\امکانات.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="02 - Activiteis\مدیر سایت\امکانات.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>02 - Activiteis\مدیر سایت\امکانات.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="02 - Activiteis\پرسنل\امکانات.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="02 - Activiteis\پرسنل\امکانات.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>02 - Activiteis\پرسنل\امکانات.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="02 - Activiteis\کارفرمایان\امکانات.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="02 - Activiteis\کارفرمایان\امکانات.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>02 - Activiteis\کارفرمایان\امکانات.usecasediagram</DependentUpon>
+    </Content>
     <Content Include="مدیریت کاربران.usecasediagram">
       <SubType>Content</SubType>
     </Content>
@@ -29,6 +50,9 @@
       <SubType>Content</SubType>
       <DependentUpon>مدیریت کاربران.usecasediagram</DependentUpon>
     </Content>
+    <Folder Include="02 - Activiteis\مدیر سایت" />
+    <Folder Include="02 - Activiteis\کاریابی همکار" />
+    <Folder Include="02 - Activiteis\پرسنل" />
     <Folder Include="02 - Activiteis\کارفرمایان" />
     <Folder Include="02 - Activiteis\کارجویان" />
     <Folder Include="ModelDefinition\" />

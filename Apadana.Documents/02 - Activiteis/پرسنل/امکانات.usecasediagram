@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="dea78763-25f9-4ec6-9022-1f489c75a817" name="امکانات" linkedPackageId="43079d48-0f49-4f5b-8d00-7fbe1ef984fc" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="58d5f218-6597-4428-a039-6f5bc4937a63">
+      <profileInstance Id="3238172d-92d7-41f8-8d19-da72326ff6d7" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="203a3bd2-fd35-4343-9eb7-6800012f5925">
+      <profileInstance Id="089c8b04-63a3-4960-87d2-63c29b39f185" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="2ac61556-c384-4aa2-a596-c72084f004fc" name="پرسنل" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b08da2c8-4d9d-4b46-8f47-03b0db87760e" />
+        <targetEnds>
+          <association Id="a2150a7c-87b7-4ad6-8f7b-813463e819ba" isDerived="false" sourceEndRoleName="پرسنل" targetEndRoleName="پنل" isLeaf="false" isAbstract="false">
+            <subsystemMoniker Id="b09d5dac-08dc-4062-8a28-94899d07b555" LastKnownName="پنل" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d0198f80-82a4-417b-8c46-d0665410b2d7" name="پرسنل" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9f5f4f97-57d6-4dd1-ac8c-784ac12e6728" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8d6482c6-d850-47cd-a9fb-9692af2dfdc6" name="پنل" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="7d3483ae-2b3f-4414-8df4-80b791c8cb64" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d0426992-7b66-4cba-b243-95145f4dfb49" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="b09d5dac-08dc-4062-8a28-94899d07b555" name="پنل" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="18c43b13-59b0-4b5d-96f3-13d7e6cdd511" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="39c49847-502c-461c-a1eb-9cf83477d6ba" name="تایید یا رد صلاحیت کارفرما" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3210def7-e80c-4c6b-b102-abfe3cddf4c9" />
+        <subjects>
+          <subsystemMoniker Id="b09d5dac-08dc-4062-8a28-94899d07b555" LastKnownName="پنل" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="43079d48-0f49-4f5b-8d00-7fbe1ef984fc" name="Apadana.Documents">
+    <elementDefinition Id="accb104d-8a5f-42b2-83a3-0847af642b55" />
+  </package>
+</useCaseModelRoot>

@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="c295e36d-aca0-4d30-8419-9c2d882777cd" name="امکانات" linkedPackageId="297e662b-c688-4e33-ab2e-0bcaf49918fd" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="c9253678-f5f1-43ee-b762-c37a9dda8b20" name="کارفرما" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="23b37cd0-6906-4c23-9604-2994b2b56264" />
+        <targetEnds>
+          <association Id="4d9ae64b-a933-49aa-bfae-43504c8a2a9b" isDerived="false" sourceEndRoleName="کارفرما" targetEndRoleName="پنل" isLeaf="false" isAbstract="false">
+            <subsystemMoniker Id="dcf1cdfb-38f0-46e4-80ca-ec1ebb46a8f9" LastKnownName="پنل" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="957320b4-e927-4d44-95c4-75cd68db6a6c" name="کارفرما" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="cb761431-a3ae-4437-843e-27c49b9ee1a1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="970f17ce-179a-4d84-9549-3e177e5fe98f" name="پنل" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ea41f114-8a55-4651-971d-2e78decb2e72" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="0bc4500f-5b1d-4063-9b28-db0b2a23b174" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="dcf1cdfb-38f0-46e4-80ca-ec1ebb46a8f9" name="پنل" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="58195855-e83b-400f-a8b9-6fb7783cf1df" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="f2054314-ffe4-4676-ae71-1c0b55962ec8" name="افزودن فرصت شغلی" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ae515765-d7ef-4b1a-9b90-2cda20c85129" />
+        <subjects>
+          <subsystemMoniker Id="dcf1cdfb-38f0-46e4-80ca-ec1ebb46a8f9" LastKnownName="پنل" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="40e6916a-3041-4e67-ba00-4d6e57af4c40" name="ویرایش اطلاعات کارفرما" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2a35fa00-4072-4a63-a904-8db405255284" />
+        <subjects>
+          <subsystemMoniker Id="dcf1cdfb-38f0-46e4-80ca-ec1ebb46a8f9" LastKnownName="پنل" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="522b4305-9adb-4678-8671-0a31217b7734" name="لیست فرصت های شغلی" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b736b52d-d6ed-4213-9d88-1c53a2809d3d" />
+        <subjects>
+          <subsystemMoniker Id="dcf1cdfb-38f0-46e4-80ca-ec1ebb46a8f9" LastKnownName="پنل" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="1fb747b8-e4a8-430d-93e3-65aaf31dd788" name="ویرایش فرصت شغلی" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5d924c40-d9bf-43f0-98b2-00889e24a089" />
+        <subjects>
+          <subsystemMoniker Id="dcf1cdfb-38f0-46e4-80ca-ec1ebb46a8f9" LastKnownName="پنل" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="7090b6c0-af52-433f-aad2-29730ddc0c1f" name="حذف فرصت شغلی" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0f832de2-30b5-4db4-bf98-8586e18d986a" />
+        <subjects>
+          <subsystemMoniker Id="dcf1cdfb-38f0-46e4-80ca-ec1ebb46a8f9" LastKnownName="پنل" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="f4564213-0b05-45b6-8744-d75e713bf514" name="تغییر رمز عبور" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="bae541e1-1dc1-432d-90dc-5f0fe8fd52aa" />
+        <subjects>
+          <subsystemMoniker Id="dcf1cdfb-38f0-46e4-80ca-ec1ebb46a8f9" LastKnownName="پنل" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="297e662b-c688-4e33-ab2e-0bcaf49918fd" name="Apadana.Documents">
+    <elementDefinition Id="accb104d-8a5f-42b2-83a3-0847af642b55" />
+    <profileInstances>
+      <packageHasProfileInstances Id="6f9ae273-456d-4b90-8461-389c42704dc4">
+        <profileInstance Id="7439c2cc-2012-417f-956f-f6a3e4e4948d" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="3a033a8c-8702-4979-8bd6-092a82f90852">
+        <profileInstance Id="999e0fd0-07d3-42d4-85a4-098d00743087" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>

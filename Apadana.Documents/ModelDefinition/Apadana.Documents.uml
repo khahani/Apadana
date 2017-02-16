@@ -1612,6 +1612,609 @@ this.GetType() + actionName + HttpMethod
         isLeaf="false"
         isActiveClass="false" />
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="ca50039e-e323-45a3-a67f-aa492e586dd5"
+        name="ثبت نام با سریع1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="663e86b1-4226-4a78-bfde-6d5ec2c8dc9f"
+        name="ورود به سایت1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="9647c231-8890-4aa4-a2d3-213a8d235f17"
+        name="ریست کلمه عبور1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="fef98b63-9c30-4b75-8c25-0d922541dbd3"
+        name="بازیابی رمز عبور1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="af185277-c430-4a27-8f10-240086a0d348"
+        name="ارسال مجدد رمز عبور جدید1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="56edc151-2d65-4fd6-9f55-11b19abf60f1"
+        name="کاربر سایت1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="35094c82-0dba-4460-85e9-e25d60a861d9"
+        name="سایت"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="e8d4ce7f-f8bf-4bde-9539-4e8c812a5741"
+        name="سطوح دسترسی سیستم (رول های سیستم)"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d1b24f42-560f-439f-8d6d-363cce8be27a"
+        name="ثبت نام با سریع"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="35094c82-0dba-4460-85e9-e25d60a861d9"
+            LastKnownName="سایت"
+            LastKnownLocation="Apadana.Documents.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="dce16072-db02-4ef0-aec2-c0dd308d18bb"
+        name="ورود به سایت"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="35094c82-0dba-4460-85e9-e25d60a861d9"
+            LastKnownName="سایت"
+            LastKnownLocation="Apadana.Documents.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="32ba08f8-2597-4c7f-865f-2bff9a032c8c"
+        name="ریست کلمه عبور"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="35094c82-0dba-4460-85e9-e25d60a861d9"
+            LastKnownName="سایت"
+            LastKnownLocation="Apadana.Documents.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="cba331bf-8029-448d-9bfb-c04b0b1397a8"
+        name="بازیابی رمز عبور"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="35094c82-0dba-4460-85e9-e25d60a861d9"
+            LastKnownName="سایت"
+            LastKnownLocation="Apadana.Documents.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="dcee2ab8-3b8f-4ee6-b68a-e56d6102ba74"
+        name="ارسال مجدد رمز عبور جدید"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="35094c82-0dba-4460-85e9-e25d60a861d9"
+            LastKnownName="سایت"
+            LastKnownLocation="Apadana.Documents.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="fba7b792-e168-4aac-bd16-93b730c78323"
+        name="کاربر سایت"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="1ceed047-6664-4776-8367-5166f4ae1189"
+            isDerived="false"
+            sourceEndRoleName="کاربر سایت"
+            targetEndRoleName="سایت"
+            isLeaf="false"
+            isAbstract="false">
+            <subsystemMoniker
+              Id="35094c82-0dba-4460-85e9-e25d60a861d9"
+              LastKnownName="سایت"
+              LastKnownLocation="Apadana.Documents.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6f968e5f-6476-43cf-b1dd-ac7880ff2afb"
+                  name="کاربر سایت"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="44f950c2-7080-4f45-96f9-22b6be5d1d28"
+                  name="سایت"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="1d621930-6ebe-41b2-9ac1-6fedcbf9f1a9"
+            isDerived="false"
+            sourceEndRoleName="کاربر سایت"
+            targetEndRoleName="پنل"
+            isLeaf="false"
+            isAbstract="false">
+            <subsystemMoniker
+              Id="daf1950b-8e81-4a8f-bc25-cceb96d3deb0"
+              LastKnownName="پنل"
+              LastKnownLocation="Apadana.Documents.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bf94505a-a1ce-4a67-8ff3-1fdea81716e2"
+                  name="کاربر سایت"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5c036948-fe2d-49b9-808b-d49b8417ef0b"
+                  name="پنل"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="daf1950b-8e81-4a8f-bc25-cceb96d3deb0"
+        name="پنل"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="1bc239ca-a134-4d5b-b253-8dce568bb193"
+        name="تغییر رمز عبور"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="daf1950b-8e81-4a8f-bc25-cceb96d3deb0"
+            LastKnownName="پنل"
+            LastKnownLocation="Apadana.Documents.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="ec80c88f-96e0-44e3-bbfd-3cefc5b2e363"
+        name="مدیر سایت"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="ca986edf-3622-441c-9133-fe6f096906c8"
+            isDerived="false"
+            sourceEndRoleName="کاربر سایت"
+            targetEndRoleName="سایت"
+            isLeaf="false"
+            isAbstract="false">
+            <subsystemMoniker
+              Id="4e5c0f71-b70b-49ba-ac82-67977562ab73"
+              LastKnownName="سایت1"
+              LastKnownLocation="Apadana.Documents.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ed2c42ef-cc84-47e4-8c6d-a3c9bd53b5e2"
+                  name="کاربر سایت"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="865956be-e253-417e-bbad-9a28655005f6"
+                  name="سایت"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="6124ce26-1e05-48a9-9343-abc155b1480f"
+            isDerived="false"
+            sourceEndRoleName="کاربر سایت"
+            targetEndRoleName="پنل"
+            isLeaf="false"
+            isAbstract="false">
+            <subsystemMoniker
+              Id="332f32a4-5d66-4bd8-9c5c-58fabf93ce0a"
+              LastKnownName="پنل"
+              LastKnownLocation="Apadana.Documents.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6fb43689-fd98-4a0a-93b9-af263ee045cf"
+                  name="کاربر سایت"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="afe58af2-4c8d-487e-a2e6-d7268cf1ecf8"
+                  name="پنل"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="4e5c0f71-b70b-49ba-ac82-67977562ab73"
+        name="سایت1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="597656aa-5f79-4bb2-8d29-97d05e67c430"
+        name="ثبت نام با سریع2"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="75408895-7ddc-4fb7-af9b-58f90c568577"
+        name="ورود به سایت2"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="94626744-8406-4525-a5bb-65f80a244946"
+        name="ریست کلمه عبور2"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="1eb7d494-455b-42cb-a495-6480eb7d10e7"
+        name="ارسال مجدد رمز عبور جدید2"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="9efcd2cd-72b3-4ef9-b020-c869809596e4"
+        name="بازیابی رمز عبور2"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="332f32a4-5d66-4bd8-9c5c-58fabf93ce0a"
+        name="پنل"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b4834c72-7186-4312-8b41-27386ea212bd"
+        name="تغییر رمز عبور"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="332f32a4-5d66-4bd8-9c5c-58fabf93ce0a"
+            LastKnownName="پنل"
+            LastKnownLocation="Apadana.Documents.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="23b37cd0-6906-4c23-9604-2994b2b56264"
+        name="کارفرما"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="0bc4500f-5b1d-4063-9b28-db0b2a23b174"
+            isDerived="false"
+            sourceEndRoleName="کارفرما"
+            targetEndRoleName="پنل"
+            isLeaf="false"
+            isAbstract="false">
+            <subsystemMoniker
+              Id="58195855-e83b-400f-a8b9-6fb7783cf1df"
+              LastKnownName="پنل"
+              LastKnownLocation="Apadana.Documents.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="cb761431-a3ae-4437-843e-27c49b9ee1a1"
+                  name="کارفرما"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ea41f114-8a55-4651-971d-2e78decb2e72"
+                  name="پنل"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="58195855-e83b-400f-a8b9-6fb7783cf1df"
+        name="پنل"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="ae515765-d7ef-4b1a-9b90-2cda20c85129"
+        name="افزودن فرصت شغلی"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="58195855-e83b-400f-a8b9-6fb7783cf1df"
+            LastKnownName="پنل"
+            LastKnownLocation="Apadana.Documents.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="2a35fa00-4072-4a63-a904-8db405255284"
+        name="ویرایش اطلاعات کارفرما"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="58195855-e83b-400f-a8b9-6fb7783cf1df"
+            LastKnownName="پنل"
+            LastKnownLocation="Apadana.Documents.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b736b52d-d6ed-4213-9d88-1c53a2809d3d"
+        name="لیست فرصت های شغلی"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="58195855-e83b-400f-a8b9-6fb7783cf1df"
+            LastKnownName="پنل"
+            LastKnownLocation="Apadana.Documents.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="5d924c40-d9bf-43f0-98b2-00889e24a089"
+        name="ویرایش فرصت شغلی"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="58195855-e83b-400f-a8b9-6fb7783cf1df"
+            LastKnownName="پنل"
+            LastKnownLocation="Apadana.Documents.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="0f832de2-30b5-4db4-bf98-8586e18d986a"
+        name="حذف فرصت شغلی"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="58195855-e83b-400f-a8b9-6fb7783cf1df"
+            LastKnownName="پنل"
+            LastKnownLocation="Apadana.Documents.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="b08da2c8-4d9d-4b46-8f47-03b0db87760e"
+        name="پرسنل"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="d0426992-7b66-4cba-b243-95145f4dfb49"
+            isDerived="false"
+            sourceEndRoleName="پرسنل"
+            targetEndRoleName="پنل"
+            isLeaf="false"
+            isAbstract="false">
+            <subsystemMoniker
+              Id="18c43b13-59b0-4b5d-96f3-13d7e6cdd511"
+              LastKnownName="پنل"
+              LastKnownLocation="Apadana.Documents.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9f5f4f97-57d6-4dd1-ac8c-784ac12e6728"
+                  name="پرسنل"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7d3483ae-2b3f-4414-8df4-80b791c8cb64"
+                  name="پنل"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="18c43b13-59b0-4b5d-96f3-13d7e6cdd511"
+        name="پنل"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="3210def7-e80c-4c6b-b102-abfe3cddf4c9"
+        name="تایید یا رد صلاحیت کارفرما"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="18c43b13-59b0-4b5d-96f3-13d7e6cdd511"
+            LastKnownName="پنل"
+            LastKnownLocation="Apadana.Documents.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="bae541e1-1dc1-432d-90dc-5f0fe8fd52aa"
+        name="تغییر رمز عبور"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="58195855-e83b-400f-a8b9-6fb7783cf1df"
+            LastKnownName="پنل"
+            LastKnownLocation="Apadana.Documents.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
   </packagedElements>
   <primitiveType
     Id="220a3521-e091-4221-bae9-3ef9018e845c"

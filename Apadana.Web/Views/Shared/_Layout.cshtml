@@ -81,6 +81,8 @@
                         <li><a class="@(ViewContext.RouteData.Values["Action"].ToString() == "Contact" ? "active" : "")" href="@Url.Action("Contact", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)"><i class="fa fa-envelope"></i>ارتباط با ما</a></li>
 
                         <li><a class="@(ViewContext.RouteData.Values["Action"].ToString() == "Help" ? "active" : "")" href="@Url.Action("Help", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)"><i class="fa fa-info"></i>راهنما</a></li>
+
+                        <li><a class="" style="background-color:#03375e; border-right: 2px solid #8ab928;" href="@Url.Action("register", null, new { area = string.Empty, controller = "auth" }, Request.Url.Scheme)"><i class="fa fa-sign-in"></i>ثبت نام در آپادانا</a></li>
                     </ul>
                 </div>
             </header>

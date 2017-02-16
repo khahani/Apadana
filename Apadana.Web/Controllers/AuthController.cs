@@ -2,6 +2,7 @@
 using Apadana.Web.Models;
 using Apadana.Web.ViewModels;
 using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.DataProtection;
@@ -169,6 +170,11 @@ namespace Apadana.Web.Controllers
 
                 GetAuthenticationManager().SignIn(identity);
 
+                if (userManager.IsInRole(user.Id, AppDefaults.ROLE_EMPLOYER))
+                {
+                    return RedirectToAction("Index", "Home", new { area = AppDefaults.AREA_EMPLOYER });
+                }
+
                 return Redirect(GetRedirectUrl(model.ReturnUrl));
             }
 
@@ -263,17 +269,6 @@ namespace Apadana.Web.Controllers
             base.Dispose(disposing);
         }
 
-        [HttpGet]
-        public ActionResult GetAssembly()
-        {
-            Assembly asm = Assembly.GetExecutingAssembly();
-
-            var list = asm.GetTypes()
-                .Where(type => typeof(Controller).IsAssignableFrom(type)) //filter controllers
-                .SelectMany(type => type.GetMethods())
-                .Where(method => method.IsPublic && !method.IsDefined(typeof(NonActionAttribute)));
-
-            return null;
-        }
+      
     }
 }

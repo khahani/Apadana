@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="امکانات">
+  <useCaseModelRootMoniker Id="c295e36d-aca0-4d30-8419-9c2d882777cd" />
+  <nestedChildShapes>
+    <actorShape Id="fa5f7c79-80dd-4585-b5aa-eb3033388285" absoluteBounds="1.5, 2.25, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="c9253678-f5f1-43ee-b762-c37a9dda8b20" LastKnownName="کارفرما" />
+      <relativeChildShapes />
+    </actorShape>
+    <SubsystemShape Id="cdcdca04-f040-46f3-b757-d49e6a6e8660" absoluteBounds="3.375, 1.375, 7.375, 2.625" customColor="White">
+      <subsystemMoniker Id="dcf1cdfb-38f0-46e4-80ca-ec1ebb46a8f9" LastKnownName="پنل" />
+      <nestedChildShapes>
+        <useCaseShape Id="332976fe-db45-4014-b115-9e84d8372643" absoluteBounds="5.625, 2, 1.125, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="f2054314-ffe4-4676-ae71-1c0b55962ec8" LastKnownName="افزودن فرصت شغلی" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="28e14461-a0d8-42f6-97a2-4c642ea90603" absoluteBounds="3.75, 2, 1.375, 0.625" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="40e6916a-3041-4e67-ba00-4d6e57af4c40" LastKnownName="ویرایش اطلاعات کارفرما" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="91e1ebd1-b43a-45dc-904b-7e7243ecd01a" absoluteBounds="7.375, 2, 1.25, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="522b4305-9adb-4678-8671-0a31217b7734" LastKnownName="لیست فرصت های شغلی" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="3ed5e9b2-b378-4c53-b4fb-f55031089468" absoluteBounds="9.125, 2, 1.25, 0.625" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="1fb747b8-e4a8-430d-93e3-65aaf31dd788" LastKnownName="ویرایش فرصت شغلی" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="d4d05995-5689-41df-8103-fd93b20cb7d2" absoluteBounds="3.875, 3, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="7090b6c0-af52-433f-aad2-29730ddc0c1f" LastKnownName="حذف فرصت شغلی" />
+          <relativeChildShapes />
+        </useCaseShape>
+        <useCaseShape Id="9183b55c-cdc8-4ef1-bf98-900bbc963c95" absoluteBounds="5.625, 3, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="f4564213-0b05-45b6-8744-d75e713bf514" LastKnownName="تغییر رمز عبور" />
+          <relativeChildShapes />
+        </useCaseShape>
+      </nestedChildShapes>
+    </SubsystemShape>
+    <useCaseAssociationConnector edgePoints="[(2 : 2.50882352941176); (3.375 : 2.55735294117647)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="4d9ae64b-a933-49aa-bfae-43504c8a2a9b" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="fa5f7c79-80dd-4585-b5aa-eb3033388285" />
+        <SubsystemShapeMoniker Id="cdcdca04-f040-46f3-b757-d49e6a6e8660" />
+      </nodes>
+    </useCaseAssociationConnector>
+  </nestedChildShapes>
+</useCaseDiagram>
