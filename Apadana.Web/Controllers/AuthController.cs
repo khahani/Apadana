@@ -260,6 +260,18 @@ namespace Apadana.Web.Controllers
             GetAuthenticationManager().SignIn(identity);
         }
 
+        [HttpGet]
+        public ActionResult RedirectToPanel()
+        {
+            if (!CurrentUser.Identity.IsAuthenticated)
+                return RedirectToAction("index", "home");
+
+            if (CurrentUser.IsInRole(AppDefaults.ROLE_EMPLOYER))
+                return RedirectToAction("index", "home", new { area = AppDefaults.AREA_EMPLOYER });
+
+            return RedirectToAction("index", "home");
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing && userManager != null)

@@ -52,6 +52,13 @@ namespace Apadana.Web.Areas.Employer.Controllers
 
             IdentityResult result = await _userManager.ChangePasswordAsync(CurrentUser.Identity.GetUserId(), model.CurrentPassword, model.NewPassword);
 
+            System.Threading.Thread.Sleep(3000);
+
+            if (Request.IsAjaxRequest())
+            {
+                return Json(new { success = result.Succeeded }, JsonRequestBehavior.AllowGet);
+            }
+
             if (!result.Succeeded)
             {
                 ViewBag.Message = "امکان تغییر رمز وجود ندارد.";

@@ -6,6 +6,10 @@
       <actorMoniker Id="c9253678-f5f1-43ee-b762-c37a9dda8b20" LastKnownName="کارفرما" />
       <relativeChildShapes />
     </actorShape>
+    <commentShape Id="646a8c9b-ea82-45db-b514-272ec580eaae" absoluteBounds="1.75, 0.875, 1.25, 0.75" customColor="251, 247, 200">
+      <commentMoniker Id="08a003a0-d774-4541-bcfc-a7006416e4f3" />
+      <relativeChildShapes />
+    </commentShape>
     <SubsystemShape Id="cdcdca04-f040-46f3-b757-d49e6a6e8660" absoluteBounds="3.375, 1.375, 7.375, 2.625" customColor="White">
       <subsystemMoniker Id="dcf1cdfb-38f0-46e4-80ca-ec1ebb46a8f9" LastKnownName="پنل" />
       <nestedChildShapes>

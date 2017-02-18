@@ -1,8 +1,6 @@
-﻿
-@{
+﻿@{
     Layout = null;
 }
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>آپادانا | داشبورد</title>
     @Styles.Render("~/content/styles")
-    @Scripts.Render("~/scripts/top")
     <link href="~/theme-admin/css/bootstrap.min.css" rel="stylesheet">
     <link href="~/theme-admin/css/bootstrap.rtl.min.css" rel="stylesheet">
     <link href="~/theme-admin/font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -20,6 +17,7 @@
     <link href="~/theme-admin/js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
     <link href="~/theme-admin/css/animate.css" rel="stylesheet">
     <link href="~/theme-admin/css/style.rtl.css" rel="stylesheet">
+    <link href="~/theme-admin/css/plugins/sweetalert/sweetalert.css" rel="stylesheet" />
 </head>
 <body>
     <div id="wrapper">
@@ -537,7 +535,7 @@
             </div>
         </div>
     </div>
-    <!-- Mainly scripts -->
+    @*<!-- Mainly scripts -->
     <script src="~/theme-admin/js/jquery-2.1.1.js"></script>
     <script src="~/theme-admin/js/bootstrap.min.js"></script>
     <script src="~/theme-admin/js/plugins/metisMenu/jquery.metisMenu.js"></script>
@@ -565,21 +563,23 @@
     <!-- ChartJS-->
     <script src="~/theme-admin/js/plugins/chartJs/Chart.min.js"></script>
     <!-- Toastr -->
-    <script src="~/theme-admin/js/plugins/toastr/toastr.min.js"></script>
+    <script src="~/theme-admin/js/plugins/toastr/toastr.min.js"></script>*@
+
+    @Scripts.Render("~/bundles/bottom-panel")
 
     <script>
             $(document).ready(function() {
-                setTimeout(function() {
-                    toastr.options = {
-                        closeButton: true,
-                        progressBar: true,
-                        showMethod: 'slideDown',
-                        positionClass: 'toast-top-left',
-                        timeOut: 4000
-                    };
-                    toastr.success('لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ', 'به قسمت مدیریت خوش آمدید');
+                //setTimeout(function() {
+                //    toastr.options = {
+                //        closeButton: true,
+                //        progressBar: true,
+                //        showMethod: 'slideDown',
+                //        positionClass: 'toast-top-left',
+                //        timeOut: 4000
+                //    };
+                //    toastr.success('لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ', 'به قسمت مدیریت خوش آمدید');
 
-                }, 1300);
+                //}, 1300);
 
 
                 var data1 = [

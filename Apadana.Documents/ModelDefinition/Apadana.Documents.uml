@@ -163,6 +163,10 @@ this.GetType() + actionName + HttpMethod
       Id="3c4b90a0-614e-43cc-90a2-c8c74b6ceda8">
       <body>سطوح دسترسی سیستم (رول های سیستم)</body>
     </comment>
+    <comment
+      Id="68ac8f98-3059-49bd-a019-363ba14a9298">
+      <body>کنترل دسترسی به فایل های اسکریپتی شامل اطلاعات سیستمی</body>
+    </comment>
   </ownedCommentsInternal>
   <profileInstances>
     <packageHasProfileInstances
