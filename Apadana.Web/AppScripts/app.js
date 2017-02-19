@@ -61,17 +61,17 @@ $(function () {
 function serverConnectingFailed(jqXHR, exception) {
 
     if (jqXHR.status === 0) {
-        show_message(false, "Not connect. Verify Network.", "error");
+        show_message(false, "لطفا اتصال به اینترنت را بررسی کنید..", "عدم اتصال به شبکه");
     } else if (jqXHR.status == 404) {
-        show_message(false, 'Requested page not found. [404]', "error");
+        show_message(false, 'صفحه مورد نظر وجود ندارد. [404]', "خطا 404");
     } else if (jqXHR.status == 500) {
-        show_message(false, 'Internal Server Error [500].', "error");
+        show_message(false, 'خطا داخلی سرور رخ داده است [500].', "خطا 500");
     } else if (exception === 'parsererror') {
-        show_message(false, 'Requested JSON parse failed.', "error");
+        show_message(false, 'نتیجه دریافتی غیر قابل قبول است.', "خطا");
     } else if (exception === 'timeout') {
         show_message(false, "اتصال به سرور خارج از محدوده زمان تعیین شده می باشد. لطفا دوباره تلاش کنید.", "اتمام زمان اتصال");
     } else if (exception === 'abort') {
-        show_message(false, 'Ajax request aborted.', "error");
+        show_message(false, 'درخواست شما توسط سرور رد شد.', "خطا");
     } else {
         show_message(false, "در ایجاد ارتباط با سرور مشکل بوجود آمده است. لطفا دوباره تلاش کنید.", "خطا نا مشخص");
     }
