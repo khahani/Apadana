@@ -738,6 +738,11 @@
     <Compile Include="Areas\Employer\Controllers\HomeController.cs" />
     <Compile Include="Areas\Employer\EmployerAreaRegistration.cs" />
     <Compile Include="Areas\Employer\ViewModels\ViewModelChangePassword.cs" />
+    <Compile Include="Areas\Employer\Localization\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Areas\JobSeeker\JobSeekerAreaRegistration.cs" />
     <Compile Include="Areas\Personel\PersonelAreaRegistration.cs" />
     <Compile Include="Controllers\AuthController.cs" />
@@ -865,6 +870,12 @@
     <Folder Include="Areas\Personel\Models\" />
     <Folder Include="Areas\Personel\Views\Shared\" />
     <Folder Include="css\images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Areas\Employer\Localization\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
