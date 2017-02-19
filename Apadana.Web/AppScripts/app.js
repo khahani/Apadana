@@ -4,6 +4,7 @@
 var config_message_type = "sweetalert"; //options: toast, sweetalert
 var config_loading_type = "double-bounce"; // options: wave, double-bounce
 var config_ajax_timeout = 4000;
+var config_disable_form_type = "button"; //options: form, button
 /*-----------------     END         --------------------------/
 
 /* ---------------- Submit form through Ajax ------------------------------*/
@@ -67,13 +68,31 @@ function serverConnectingFailed(jqXHR, exception) {
 var form_is_disable = false;
 
 function disable_form() {
-    $("form[data-ajax='true'] :input").attr("disabled", true);
+    switch(config_disable_form_type)
+    {
+        case "form":
+            $("form[data-ajax='true'] :input").attr("disabled", true);
+            break;
+        case "button":
+            $("form[data-ajax='true'] :button[data-disable-onsubmit='true']").attr("disabled", true);
+            break;
+    }
+    
     form_is_disable = true;
 }
 
 function enable_form() {
-    if (form_is_disable)
-        $("form[data-ajax='true'] :input").attr("disabled", false);
+    if (!form_is_disable)
+        return;
+    switch (config_disable_form_type) {
+        case "form":
+            $("form[data-ajax='true'] :input").attr("disabled", false);
+            break;
+        case "button":
+            $("form[data-ajax='true'] :button[data-disable-onsubmit='true']").attr("disabled", false);
+            break;
+    }
+        
 }
 
 /* ---------------- END    -----------------------------*/
