@@ -386,6 +386,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="theme-admin\css\animate.css" />
+    <Content Include="theme-admin\css\app-style.css" />
     <Content Include="theme-admin\css\bootstrap.css" />
     <Content Include="theme-admin\css\bootstrap.min.css" />
     <Content Include="theme-admin\css\bootstrap.rtl.css" />

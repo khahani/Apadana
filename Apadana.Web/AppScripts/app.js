@@ -12,26 +12,39 @@ var config_disable_form_type = "button"; //options: form, button
 $(function () {
 
     function ajaxFormSubmit(e) {
+        try{
+            $.validator.unobtrusive.parse($("form[data-ajax='true']"));
 
-        var $form = $(this);
+            var isValid = $(this).valid();
 
-        var options = {
-            url: $form.attr("action"),
-            type: $form.attr("method"),
-            data: $form.serialize(),
-            timeout: config_ajax_timeout,
-            fail: serverConnectingFailed
-        };
+            if (!isValid) {
+                return false;
+            }
+            var $form = $(this);
 
-        $.ajax(options);
+            var options = {
+                beforeSend: disable_form,
+                url: $form.attr("action"),
+                type: $form.attr("method"),
+                data: $form.serialize(),
+                timeout: config_ajax_timeout,
+                fail: serverConnectingFailed
+            };
 
-        e.preventDefault(); // avoid to execute the actual submit of the form.
+            $.ajax(options);
+
+            e.preventDefault(); // avoid to execute the actual submit of the form.
+
+        }catch(error){
+            console.log(error);
+        }finally{
+            enable_form();
+        }
     }
 
     $("form[data-ajax='true']").submit(ajaxFormSubmit);
    
 });
-
 /* ---------------- END     -----------------------------*/
 
 /* ---------------- Server Connection Failure ------------------------------*/
@@ -74,11 +87,13 @@ function disable_form() {
             $("form[data-ajax='true'] :input").attr("disabled", true);
             break;
         case "button":
-            $("form[data-ajax='true'] :button[data-disable-onsubmit='true']").attr("disabled", true);
+            setTimeout(function () { $("form[data-ajax='true'] :button[data-disable-onsubmit='true']").attr("disabled", true); }, 0);
             break;
     }
     
     form_is_disable = true;
+
+    setTimeout(function () { }, 0);
 }
 
 function enable_form() {

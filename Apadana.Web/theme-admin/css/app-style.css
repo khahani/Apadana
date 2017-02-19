@@ -1,0 +1,6 @@
+﻿.input-validation-error {
+    border-color: #ed5565;
+}
+.field-validation-error {
+    color: #ed5565;
+}
