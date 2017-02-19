@@ -33,7 +33,7 @@
           <useCaseMoniker Id="7090b6c0-af52-433f-aad2-29730ddc0c1f" LastKnownName="حذف فرصت شغلی" />
           <relativeChildShapes />
         </useCaseShape>
-        <useCaseShape Id="9183b55c-cdc8-4ef1-bf98-900bbc963c95" absoluteBounds="5.625, 3, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+        <useCaseShape Id="9183b55c-cdc8-4ef1-bf98-900bbc963c95" absoluteBounds="5.625, 3, 1, 0.5" customColor="192, 255, 192" heightOffset="0">
           <useCaseMoniker Id="f4564213-0b05-45b6-8744-d75e713bf514" LastKnownName="تغییر رمز عبور" />
           <relativeChildShapes />
         </useCaseShape>
