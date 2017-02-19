@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<componentModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="569fffae-d0f6-49dd-9c96-2233887c0bb5" name="Ajax communitation" linkedPackageId="980e3828-0dfb-4109-a989-0e4c29a2e065" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner">
+  <ownedCommentsInternal>
+    <comment Id="39091a50-d255-46cb-b7f9-6e1969339765">
+      <elementDefinition Id="08b279a1-11da-4f9d-9e25-e22ab419bc83" />
+      <body>File structure:
+	jquery.unobtrusive.js	not mini version!
+	app.js
+	userFunctions.js
+</body>
+    </comment>
+    <comment Id="a30c399d-94a4-4b87-b93f-bd9f6a8dde08">
+      <elementDefinition Id="7794c24a-0e09-4c1b-98d7-b61f91099d4b" />
+      <body>in config section define configuration
+
+A request made by jQuery Ajax Unobtrusive. For that in the view should use data attribute tag:
+Form attributes:
+	- data-ajax="true"
+	- data-ajax-method="post" 
+	- data-ajax-begin="disable_form"
+	- data-ajax-complete="userFunction" 
+	- data-ajax-loading=".loading"	
+Button attributes:
+	- data-disable-onsubmit="true"
+
+data-ajax is the main attribute that make a form submit with our ajax implementation. it will use ajaxFormSubmit and serialize form data and send it to the server. when ajax complete it will call userFunction
+
+loading functionality injected into jquery.ajax.unobtrusive.js file by editing that file and change its default functionality. new way is that it call show_loading and hide_loading method in the app.js file.
+
+data-ajax-complete must define at the userFunction.js file.
+data-ajax-begin must use disable_form method that is in app.js file. type of disabling is defined in the config section of app.js.
+
+data-disable-onsubmit use for buttons that when a ajax communication in the form happend this buttons will disable.</body>
+    </comment>
+    <comment Id="46312f9f-2e55-4c51-9f14-8727f28f7b29">
+      <elementDefinition Id="6e315ecc-3a93-48c1-9891-7fad6cbf4923" />
+      <body>Tip1: userFunction at the end:
+	1- call show_message
+	2- call enable_form</body>
+    </comment>
+    <comment Id="eb49af73-0c7b-43b8-9d20-e9fa0b94f378">
+      <elementDefinition Id="f84a8213-8350-4cfe-b7a3-4192a54ce714" />
+      <body>return json data</body>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="b3db6ae2-7d92-4a9b-9606-0b501010296d">
+      <profileInstance Id="b3298bfa-abb9-44e6-aebe-09dfcc853f23" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="51124a24-0b27-4ae1-94ba-0ec18803dfc6">
+      <profileInstance Id="8880bcc2-2fcc-4baf-8d10-401eed1865f8" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <componentModelHasComponents>
+      <component Id="bd5ac848-091a-49d0-b599-075e88374f9f" name="Server" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c8e68a2d-164e-46b0-ab6c-491dee88dac2" />
+        <suppliersInternal>
+          <dependency Id="b43bde87-adae-4621-9279-65971e6829b7">
+            <componentMoniker Id="4ae9dbd4-5b68-4594-b339-605a5ae886c1" LastKnownName="Client" />
+            <elementDefinition Id="2c22ebd0-69dd-4819-ab53-75b599613512" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="4ae9dbd4-5b68-4594-b339-605a5ae886c1" name="Client" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="0e7ef1ce-6d85-43cd-8979-35c36037d84f" />
+        <suppliersInternal>
+          <dependency Id="af559121-782c-405a-84d4-4fd0fa30eb06">
+            <componentMoniker Id="bd5ac848-091a-49d0-b599-075e88374f9f" LastKnownName="Server" />
+            <elementDefinition Id="c14cb924-edd3-4de9-8087-caef29847463" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+  </packagedElements>
+  <package Id="980e3828-0dfb-4109-a989-0e4c29a2e065" name="Apadana.Documents">
+    <elementDefinition Id="accb104d-8a5f-42b2-83a3-0847af642b55" />
+  </package>
+</componentModel>

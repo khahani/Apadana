@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner"
   dslVersion="1.0.0.0"
   Id="accb104d-8a5f-42b2-83a3-0847af642b55"
   name="Apadana.Documents" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -166,6 +166,47 @@ this.GetType() + actionName + HttpMethod
     <comment
       Id="68ac8f98-3059-49bd-a019-363ba14a9298">
       <body>کنترل دسترسی به فایل های اسکریپتی شامل اطلاعات سیستمی</body>
+    </comment>
+    <comment
+      Id="08b279a1-11da-4f9d-9e25-e22ab419bc83">
+      <body>File structure:
+	jquery.unobtrusive.js	not mini version!
+	app.js
+	userFunctions.js
+</body>
+    </comment>
+    <comment
+      Id="7794c24a-0e09-4c1b-98d7-b61f91099d4b">
+      <body>in config section define configuration
+
+A request made by jQuery Ajax Unobtrusive. For that in the view should use data attribute tag:
+Form attributes:
+	- data-ajax="true"
+	- data-ajax-method="post" 
+	- data-ajax-begin="disable_form"
+	- data-ajax-complete="userFunction" 
+	- data-ajax-loading=".loading"	
+Button attributes:
+	- data-disable-onsubmit="true"
+
+data-ajax is the main attribute that make a form submit with our ajax implementation. it will use ajaxFormSubmit and serialize form data and send it to the server. when ajax complete it will call userFunction
+
+loading functionality injected into jquery.ajax.unobtrusive.js file by editing that file and change its default functionality. new way is that it call show_loading and hide_loading method in the app.js file.
+
+data-ajax-complete must define at the userFunction.js file.
+data-ajax-begin must use disable_form method that is in app.js file. type of disabling is defined in the config section of app.js.
+
+data-disable-onsubmit use for buttons that when a ajax communication in the form happend this buttons will disable.</body>
+    </comment>
+    <comment
+      Id="6e315ecc-3a93-48c1-9891-7fad6cbf4923">
+      <body>Tip1: userFunction at the end:
+	1- call show_message
+	2- call enable_form</body>
+    </comment>
+    <comment
+      Id="f84a8213-8350-4cfe-b7a3-4192a54ce714">
+      <body>return json data</body>
     </comment>
   </ownedCommentsInternal>
   <profileInstances>
@@ -2218,6 +2259,42 @@ this.GetType() + actionName + HttpMethod
             LastKnownLocation="Apadana.Documents.uml" />
         </subjects>
       </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="c8e68a2d-164e-46b0-ab6c-491dee88dac2"
+        name="Server"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="2c22ebd0-69dd-4819-ab53-75b599613512">
+            <componentMoniker
+              Id="0e7ef1ce-6d85-43cd-8979-35c36037d84f"
+              LastKnownName="Client"
+              LastKnownLocation="Apadana.Documents.uml" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="0e7ef1ce-6d85-43cd-8979-35c36037d84f"
+        name="Client"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="c14cb924-edd3-4de9-8087-caef29847463">
+            <componentMoniker
+              Id="c8e68a2d-164e-46b0-ab6c-491dee88dac2"
+              LastKnownName="Server"
+              LastKnownLocation="Apadana.Documents.uml" />
+          </dependency>
+        </suppliersInternal>
+      </component>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

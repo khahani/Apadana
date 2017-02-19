@@ -43,6 +43,13 @@
       <SubType>Content</SubType>
       <DependentUpon>02 - Activiteis\کارفرمایان\امکانات.usecasediagram</DependentUpon>
     </Content>
+    <Content Include="System Documents\Ajax communitation.componentdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="System Documents\Ajax communitation.componentdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>System Documents\Ajax communitation.componentdiagram</DependentUpon>
+    </Content>
     <Content Include="مدیریت کاربران.usecasediagram">
       <SubType>Content</SubType>
     </Content>
@@ -102,5 +109,6 @@
       <SubType>Content</SubType>
     </Content>
     <Folder Include="02 - Activiteis" />
+    <Folder Include="System Documents" />
   </ItemGroup>
 </Project>
