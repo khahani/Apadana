@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace Apadana.Web.Models
+namespace Apadana.Web.Infrastructure
 {
     public static class AppSettings
     {

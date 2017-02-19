@@ -759,9 +759,13 @@
     </Compile>
     <Compile Include="Infrastructure\ISMS_Service.cs" />
     <Compile Include="Infrastructure\SMS_Service_Demo.cs" />
-    <Compile Include="Models\AppSettings.cs" />
+    <Compile Include="Infrastructure\AppSettings.cs" />
     <Compile Include="Models\Job.cs" />
     <Compile Include="Models\JobSeeker.cs" />
+    <Compile Include="Models\StaticObjects\Education.cs" />
+    <Compile Include="Models\StaticObjects\ITypeObject.cs" />
+    <Compile Include="Models\StaticObjects\SimpleTypeObject.cs" />
+    <Compile Include="Models\StaticObjects\TypeObject.cs" />
     <Compile Include="ViewModels\LogInModel.cs" />
     <Compile Include="Models\SiteIndexPageModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
