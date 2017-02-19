@@ -17,7 +17,7 @@ namespace Apadana.Web.Areas.Admin
             context.MapRoute(
                 "Admin_default",
                 "Admin/{controller}/{action}/{id}",
-                new { action = "Index", id = UrlParameter.Optional },
+                new {controller = "Home",  action = "Signin", id = UrlParameter.Optional },
                 namespaces: new[] { "Apadana.Web.Areas.Admin.Controllers" }
             );
         }

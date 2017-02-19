@@ -7,7 +7,8 @@ using Apadana.Web.Models;
 
 namespace Apadana.Web.Controllers
 {
-    public class HomeController : Controller
+    [AllowAnonymous]
+    public class HomeController : AppController
     {
         private SiteIndexPageModel Model;
 

@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace Apadana.Web.Controllers
 {
+    [AllowAnonymous]
     public class JobSeekerController : Controller
     {
         // GET: JobSeeker
@@ -15,7 +16,7 @@ namespace Apadana.Web.Controllers
         }
         public ActionResult Register()
         {
-            return View();
+            return View("FastRegister");
         }
         public ActionResult Check(int id)
         {

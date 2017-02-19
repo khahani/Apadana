@@ -22,6 +22,44 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
+    <Content Include="02 - Activiteis\مدیر سایت\امکانات.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="02 - Activiteis\مدیر سایت\امکانات.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>02 - Activiteis\مدیر سایت\امکانات.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="02 - Activiteis\پرسنل\امکانات.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="02 - Activiteis\پرسنل\امکانات.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>02 - Activiteis\پرسنل\امکانات.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="02 - Activiteis\کارفرمایان\امکانات.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="02 - Activiteis\کارفرمایان\امکانات.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>02 - Activiteis\کارفرمایان\امکانات.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="System Documents\Ajax communitation.componentdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="System Documents\Ajax communitation.componentdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>System Documents\Ajax communitation.componentdiagram</DependentUpon>
+    </Content>
+    <Content Include="مدیریت کاربران.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="مدیریت کاربران.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>مدیریت کاربران.usecasediagram</DependentUpon>
+    </Content>
+    <Folder Include="02 - Activiteis\مدیر سایت" />
+    <Folder Include="02 - Activiteis\کاریابی همکار" />
+    <Folder Include="02 - Activiteis\پرسنل" />
     <Folder Include="02 - Activiteis\کارفرمایان" />
     <Folder Include="02 - Activiteis\کارجویان" />
     <Folder Include="ModelDefinition\" />
@@ -31,6 +69,13 @@
     <Content Include="01 - Usecases.usecasediagram.layout">
       <SubType>Content</SubType>
       <DependentUpon>01 - Usecases.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="02 - Activiteis\ثبت نام در سایت.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="02 - Activiteis\ثبت نام در سایت.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>02 - Activiteis\ثبت نام در سایت.activitydiagram</DependentUpon>
     </Content>
     <Content Include="02 - Activiteis\کارجویان\ثبت کارجو.activitydiagram">
       <SubType>Content</SubType>
@@ -53,9 +98,17 @@
       <SubType>Content</SubType>
       <DependentUpon>02 - سفارشی سازی تم.usecasediagram</DependentUpon>
     </Content>
+    <Content Include="03 - طراحی و پیاده سازی امکانات پنل.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="03 - طراحی و پیاده سازی امکانات پنل.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>03 - طراحی و پیاده سازی امکانات پنل.usecasediagram</DependentUpon>
+    </Content>
     <Content Include="ModelDefinition\Apadana.Documents.uml">
       <SubType>Content</SubType>
     </Content>
     <Folder Include="02 - Activiteis" />
+    <Folder Include="System Documents" />
   </ItemGroup>
 </Project>

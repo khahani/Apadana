@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "ResetCompleted";
+}
+
+<div class="box-section banner-section triggerAnimation animated rollIn" data-animate="rollIn">
+    <div class="alert alert-info">رمز جدید به شماره موبایلتان با پیامک ارسال شد. از این پس با رمز جدید وارد شوید.</div>
+    <p>در صورتی که پیامک را دریافت نکرده اید روی دکمه ارسال مجدد کلیک کنید.</p>
+    @Html.ValidationSummary(false)
+    <form data-toggle="validator" role="form" action="@Url.Action("ResendPassword", "Auth", new { })" method="post">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <button type="submit" id="resend-password" class="btn btn-danger">ارسال مجدد</button>
+            </div>
+        </div>
+    </form>
+</div>
+

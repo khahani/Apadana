@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="امکانات">
+  <useCaseModelRootMoniker Id="dbb9a697-0815-4c54-a532-1dcd71a5fea3" />
+  <nestedChildShapes>
+    <actorShape Id="4d007221-8872-41af-8f0e-6626263423e7" absoluteBounds="0.75, 2.375, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="e4f724cf-5bd1-444e-85c1-6f23225483e1" LastKnownName="مدیر سایت" />
+      <relativeChildShapes />
+    </actorShape>
+    <SubsystemShape Id="ec9a1208-ba8c-4636-a4a7-57461cf8e628" absoluteBounds="2.75, 1, 7.625, 3.25" customColor="White">
+      <subsystemMoniker Id="440485fc-2c8c-4f2f-9ccc-6e5574c4ef56" LastKnownName="پنل" />
+      <nestedChildShapes>
+        <useCaseShape Id="737bd61c-1ec1-4aa6-ae71-594b0542ba98" absoluteBounds="3, 1.5, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+          <useCaseMoniker Id="5962abee-6958-4b17-946a-0e5e8bb7a689" LastKnownName="تغییر رمز عبور" />
+          <relativeChildShapes />
+        </useCaseShape>
+      </nestedChildShapes>
+    </SubsystemShape>
+    <useCaseAssociationConnector edgePoints="[(1.25 : 2.625); (2.75 : 2.625)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="08fb2cba-609a-4b7a-8464-4b3788e0636b" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="4d007221-8872-41af-8f0e-6626263423e7" />
+        <SubsystemShapeMoniker Id="ec9a1208-ba8c-4636-a4a7-57461cf8e628" />
+      </nodes>
+    </useCaseAssociationConnector>
+  </nestedChildShapes>
+</useCaseDiagram>

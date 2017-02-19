@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="f7798b1b-2233-435b-8343-fbefbc00aa9d" name="مدیریت کاربران" linkedPackageId="e4b214b2-f03a-422b-bba9-8257106d7cff" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <ownedCommentsInternal>
+    <comment Id="f99bd1c5-f339-4846-8d85-f1dc3d6af705">
+      <elementDefinition Id="25afef42-7bed-4e18-a2fc-9f0730102262" />
+      <body>کاربر سایت
+کارجو 
+کارفرما
+کاربر سایت حالت پیش فرض است که پس از ثبت نام امکاناتی در اختیارش قرار می گیرد.  زمانی که کاربر توسط پرسنل تایید صلاجیت شود می تواند به عنوان کارفرما یا کارجو از امکانات آن بهره مند شود.</body>
+      <annotatedElements>
+        <actorMoniker Id="f5f5565e-4531-4366-b8a7-845b850542f0" LastKnownName="کاربر سایت" />
+      </annotatedElements>
+    </comment>
+    <comment Id="c1a8beb7-978b-4f04-b229-589d956bb2c3">
+      <elementDefinition Id="22411703-95c4-41e4-825b-ddfd28a5785b" />
+      <body>پذیرش</body>
+      <annotatedElements>
+        <actorMoniker Id="700aeeaa-2d16-4128-bade-2bc94657285d" LastKnownName="پرسنل" />
+      </annotatedElements>
+    </comment>
+    <comment Id="2f7c79da-d82f-4c34-a8c9-89b844e2d8ce">
+      <elementDefinition Id="ed7f8bed-dde1-4167-83f8-51b122738057" />
+      <body>سایر کاریابی ها که قصد دسترسی به اطلاعات را دارند</body>
+      <annotatedElements>
+        <actorMoniker Id="09a0419c-2a1a-4414-90a4-517c3b4029dc" LastKnownName="کاریابی همکار" />
+      </annotatedElements>
+    </comment>
+    <comment Id="b34c6f8f-4bd9-42c7-adc1-e18a290d0578">
+      <elementDefinition Id="97f746ed-efb7-4f36-8aae-6e1769b1e1fa" />
+      <body>دسترسی به تمام بخش های سایت و مدیریت کاربران و تنظیمات سیستم</body>
+      <annotatedElements>
+        <actorMoniker Id="2f824ea1-963a-4662-af5b-838c1e32800e" LastKnownName="مدیر سایت" />
+      </annotatedElements>
+    </comment>
+    <comment Id="e188dce7-80fa-48f6-9f8b-f022a5bf1299">
+      <elementDefinition Id="823cafe6-6c76-4d65-a8e6-6df94b8443f1" />
+      <body>تمام اکشن ها با فرمت خاص و توضیحات در بانک ذخیره می شوند و هر اکتر به اکشن های تعریف شده خودش دسترسی خواهد داشت.
+البته برای یک یوزر نیز می توان دسترسی های اختصاصی نیز تعریف کرد
+
+ترکیب ذکر شده به صورت زیر خواهد بود:
+this.GetType() + actionName + HttpMethod
+
+</body>
+    </comment>
+    <comment Id="3935a274-4305-4502-98c3-c27774a21c2b">
+      <elementDefinition Id="52299157-8b66-474c-95a1-02df7ff88547" />
+      <body>کارفرما یا کارجو </body>
+      <annotatedElements>
+        <useCaseMoniker Id="13ad35ca-96bc-44cc-bcbf-3bea003e58de" LastKnownName="تعیین دسترسی کاربران سایت" />
+      </annotatedElements>
+    </comment>
+    <comment Id="4b2b0aa8-8898-4b46-a008-07fa25822b43">
+      <elementDefinition Id="3c4b90a0-614e-43cc-90a2-c8c74b6ceda8" />
+      <body>سطوح دسترسی سیستم (رول های سیستم)</body>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="12af98b9-c334-4c1a-9ef9-b32d9109c9e8">
+      <profileInstance Id="d4d22615-69f7-44e4-b0ed-e42b7061b43f" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="79527cb0-6581-434d-9caf-596cb3990619">
+      <profileInstance Id="dec53a16-d131-4f9a-86af-452c8f068603" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="f5f5565e-4531-4366-b8a7-845b850542f0" name="کاربر سایت" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a4ee1cd2-3d7d-48f8-91c7-fa8bca3e85c3" />
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="700aeeaa-2d16-4128-bade-2bc94657285d" name="پرسنل" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6b15eba5-b7e9-445d-93b0-5058260567e4" />
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="09a0419c-2a1a-4414-90a4-517c3b4029dc" name="کاریابی همکار" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d83b1d35-b5f9-4cb6-a523-e7a1f8e7f52c" />
+        <generalsInternal>
+          <generalization Id="03539ce9-6ac3-4e86-ad1d-5c0b0c88a4a5" isSubstitutable="false">
+            <actorMoniker Id="700aeeaa-2d16-4128-bade-2bc94657285d" LastKnownName="پرسنل" />
+            <elementDefinition Id="79279f1c-525a-4229-9ad9-8dff64241590" />
+          </generalization>
+        </generalsInternal>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="2f824ea1-963a-4662-af5b-838c1e32800e" name="مدیر سایت" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2c0f8613-7643-46b0-8ff8-9f7ba0c8f5cf" />
+        <generalsInternal>
+          <generalization Id="0f190fad-2652-4d75-970e-3f24050486ba" isSubstitutable="false">
+            <actorMoniker Id="09a0419c-2a1a-4414-90a4-517c3b4029dc" LastKnownName="کاریابی همکار" />
+            <elementDefinition Id="40202950-211e-4370-8631-2555c4732eb2" />
+          </generalization>
+        </generalsInternal>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="ae3ad8f7-a543-4f7a-a2b9-13324edd7f06" name="ثبت نام با سریع" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="fee82c98-b683-418a-897b-82b24ac203aa" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="19b48e2f-9d36-4893-b780-47cd6d786b01" name="ورود به سایت" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="83cd1640-af19-4708-bd74-33ea8a2512b7" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="7d28e4f7-94f3-4cff-8232-43526dbd97c5" name="ریست کلمه عبور" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2c54371b-ec03-4f88-830e-4878261079da" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="80b5625a-21f3-411b-af41-4cb6c2b8e883" name="بازیابی رمز عبور" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1c287114-9925-4681-8a20-f91d6750b0ad" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="21439500-98a7-4d39-a341-b478b7614a11" name="ارسال مجدد رمز عبور جدید" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="81344a67-9c21-49c9-b8e0-a61e46792871" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="eb7de8f4-1039-4892-a8dc-e2e63478ee00" name="تغییر رمز عبور" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8186effa-195a-4c36-a001-463dc28c161a" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="dede0efe-efa1-49e0-acb2-0178aa1f6ed3" name="ثبت پرسنل یا همکار" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="68f759ce-b43a-47eb-85c2-964c6086aefc" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="a94eb11a-02c3-469b-acf2-e5dbc3996ee2" name="تعیین دسترسی ها" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a34ed011-75e5-472e-aa1e-a9d1375863f2" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="e14fbe38-0038-455d-9287-b4aef74b0b9d" name="مشاهده عملکرد کاربران در سیستم" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9edef67c-6eb5-481b-a825-f8e7b9ca871a" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="14be4940-2cb7-4d53-bc0e-ab72a5a6e157" name="بررسی کاربران سایت" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8243ecee-6f19-4afa-b628-551788f68801" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="e958775e-c45d-4247-a7bc-0143f6956ecb" name="مدیریت فرصت های شغلی" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="128ecb68-bc20-4323-be90-efc370f2f54a" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="557f355e-67c6-40f2-bf7e-60813dbe25f5" name="مدیریت کارجویان" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="fa96cd87-a444-4d0c-9509-5d81e3751e6f" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="b487c5df-1a7c-40a4-bc0f-33d3a61f6bea" name="کارجو" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="24e048ef-f909-4aea-bc04-09999c75fcdc" />
+        <generalsInternal>
+          <generalization Id="3e81a0a1-0f5b-488c-9966-23a504a7a519" isSubstitutable="false">
+            <actorMoniker Id="f5f5565e-4531-4366-b8a7-845b850542f0" LastKnownName="کاربر سایت" />
+            <elementDefinition Id="a517566e-b847-4192-a44f-254c274c6b20" />
+          </generalization>
+        </generalsInternal>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="0b89071d-05ad-436f-b166-e260931e254c" name="کارفرما" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d5502867-5519-4a1e-a505-532abc0e5605" />
+        <generalsInternal>
+          <generalization Id="99d28852-0887-4398-ad3f-3dba6214d374" isSubstitutable="false">
+            <actorMoniker Id="f5f5565e-4531-4366-b8a7-845b850542f0" LastKnownName="کاربر سایت" />
+            <elementDefinition Id="d5987db8-13ec-4344-9f8c-8782cac5501f" />
+          </generalization>
+        </generalsInternal>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="13ad35ca-96bc-44cc-bcbf-3bea003e58de" name="تعیین دسترسی کاربران سایت" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="24c96b1b-380b-48f6-ab53-1b3328e8dbaa" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="a84995a7-fef1-4cf8-bfd0-de08c30009a1" name="تعیین دسترسی پرسنل" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f32ff9f9-e3e2-48b9-a607-dd75df223838" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="e4b214b2-f03a-422b-bba9-8257106d7cff" name="Apadana.Documents">
+    <elementDefinition Id="accb104d-8a5f-42b2-83a3-0847af642b55" />
+  </package>
+</useCaseModelRoot>
