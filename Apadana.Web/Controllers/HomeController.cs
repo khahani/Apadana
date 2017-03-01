@@ -10,17 +10,15 @@ namespace Apadana.Web.Controllers
     [AllowAnonymous]
     public class HomeController : AppController
     {
-        private SiteIndexPageModel Model;
 
         public HomeController()
         {
-            Model = new SiteIndexPageModel();
         }
 
         // GET: Home
         public ActionResult Index()
         {
-            return View(Model);
+            return View();
         }
         public ActionResult About()
         {

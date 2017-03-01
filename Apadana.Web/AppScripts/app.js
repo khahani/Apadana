@@ -5,7 +5,12 @@ var config_message_type = "sweetalert"; //options: toast, sweetalert
 var config_loading_type = "double-bounce"; // options: wave, double-bounce
 var config_ajax_timeout = 4000;
 var config_disable_form_type = "button"; //options: form, button
-/*-----------------     END         --------------------------/
+/*-----------------     END         --------------------------*/
+
+$.validator.setDefaults({ 
+    ignore: [],
+    // any other default options and/or rules
+});
 
 /* ---------------- Submit form through Ajax ------------------------------*/
 /* ---------------- START    -----------------------------*/

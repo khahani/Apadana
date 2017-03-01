@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.Mvc;
 
-namespace Apadana.Web.Models.StaticObjects
+namespace Apadana.Entities.StaticObjects
 {
     public class EducationType : ITypeObject
     {

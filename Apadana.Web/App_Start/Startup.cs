@@ -10,6 +10,7 @@ using System;
 using System.Web.Mvc;
 using System.Linq;
 using Apadana.Web.Infrastructure;
+using Apadana.Web.DataContext;
 
 [assembly: OwinStartup(typeof(Apadana.Web.App_Start.Startup))]
 

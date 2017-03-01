@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Apadana.Web.Models.StaticObjects
+namespace Apadana.Entities.StaticObjects
 {
     public class SalaryType : ITypeObject
     {

@@ -9,6 +9,8 @@ Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "Apadana.Documents", "Apadan
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apadana.Api", "Apadana.Api\Apadana.Api.csproj", "{F137E00F-EB59-4655-AD59-7139793F0864}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apadana.Entities", "Apadana.Entities\Apadana.Entities.csproj", "{2FCB7581-7570-462B-8D4C-1B6C8A9368A9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{F137E00F-EB59-4655-AD59-7139793F0864}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F137E00F-EB59-4655-AD59-7139793F0864}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F137E00F-EB59-4655-AD59-7139793F0864}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FCB7581-7570-462B-8D4C-1B6C8A9368A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FCB7581-7570-462B-8D4C-1B6C8A9368A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FCB7581-7570-462B-8D4C-1B6C8A9368A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FCB7581-7570-462B-8D4C-1B6C8A9368A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

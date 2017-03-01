@@ -141,3 +141,6 @@ C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\obj\Debug\Apadana.Web.pdb
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\obj\Debug\Apadana.Web.csprojResolveAssemblyReference.cache
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\obj\Debug\Apadana.Web.Areas.Employer.Localization.Resources.resources
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\obj\Debug\Apadana.Web.csproj.GenerateResource.Cache
+C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\Apadana.Entities.dll
+C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\Apadana.Entities.pdb
+C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\obj\Debug\Apadana.Web.ViewModels.Resources.resources

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Apadana.Web.Models.StaticObjects
+namespace Apadana.Entities.StaticObjects
 {
     public interface ITypeObject
     {

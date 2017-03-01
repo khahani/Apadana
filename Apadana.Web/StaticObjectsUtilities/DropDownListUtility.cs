@@ -1,4 +1,4 @@
-﻿using Apadana.Web.Models.StaticObjects;
+﻿using Apadana.Entities.StaticObjects;
 using System.Collections.Generic;
 using System.Web.Mvc;
 
