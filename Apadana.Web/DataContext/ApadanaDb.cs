@@ -13,10 +13,10 @@ using Apadana.Web.Security;
 namespace Apadana.Web.DataContext
 {
 
-    public class ApadanaDb :  DbContext
+    public class ApadanaDb : DbContext
     {
         public ApadanaDb()
-            :base ("DefaultConnection")
+            : base("DefaultConnection")
         {
         }
 
@@ -60,7 +60,7 @@ namespace Apadana.Web.DataContext
                 if (syncUser != null)
                     syncUser.Sync(entity);
             }
-            
+
         }
 
         private void SaveUserInfoAndTimeForEachTuple()
@@ -79,7 +79,7 @@ namespace Apadana.Web.DataContext
                 {
                     ((BaseObject)entity.Entity).CreatedBy = userId;
                     ((BaseObject)entity.Entity).CreatedDate = currentDate;
-                   
+
                 }
                 ((BaseObject)entity.Entity).UpdatedBy = userId;
                 ((BaseObject)entity.Entity).UpdatedDate = currentDate;

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using Apadana.Entities.Security;
 using System.Threading.Tasks;
+using System.Data.Entity.Infrastructure;
 
 namespace Apadana.Web.Security
 {
@@ -14,9 +15,9 @@ namespace Apadana.Web.Security
         {
         }
 
-        public void Sync(object entity)
+        public void Sync(DbEntityEntry entity)
         {
-            Employer employer = (Employer)entity;
+            Employer employer = (Employer)entity.Entity;
 
             //Update user information if neccessery
             var user = appDb.Users.Where(m => m.UserName == CurrentUser.Name).FirstOrDefault();
@@ -41,9 +42,9 @@ namespace Apadana.Web.Security
             //#Feature_Email_Confirm
         }
 
-        public async Task SyncAsync(object entity)
+        public async Task SyncAsync(DbEntityEntry entity)
         {
-            Employer employer = (Employer)entity;
+            Employer employer = (Employer)entity.Entity;
 
             //Update user information if neccessery
             var user = appDb.Users.Where(m => m.UserName == CurrentUser.Name).FirstOrDefault();

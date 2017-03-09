@@ -67,8 +67,7 @@ namespace Apadana.Web.Areas.Employer.Controllers
         [HttpPost]
         public async Task<ActionResult> Create([Bind(Include = "Id,UnitName,Applicant,Mobile,Address,UserName,FieldOfAcivity,ProvinceId,Email,HeadOfTheUnit,Phone,City")] Ent.Employer employer)
         {
-            if (!IsValidOnSystem(employer))
-                return View(employer);
+            CheckSystemRules(employer);
 
             ViewData["SelectedProvince"] = employer.ProvinceId;
 
@@ -118,7 +117,7 @@ namespace Apadana.Web.Areas.Employer.Controllers
             return View(employer);
         }
 
-        private bool IsValidOnSystem(Ent.Employer employer)
+        private void CheckSystemRules(Ent.Employer employer)
         {
             //Email must be unique
             //Mobile fill with user mobile number as default
@@ -132,9 +131,6 @@ namespace Apadana.Web.Areas.Employer.Controllers
             {
                 ModelState.AddModelError("duplicate_mobile", "موبایل قبلا ثبت شده است");
             }
-
-            return ModelState.Count <= 0;
-            
         }
 
         // POST: Employer/Employers/Edit/5
@@ -145,11 +141,19 @@ namespace Apadana.Web.Areas.Employer.Controllers
         {
             //username can not change
 
-            if (!IsValidOnSystem(employer))
-                return View(employer);
+            CheckSystemRules(employer);
+
+            ViewData["SelectedProvince"] = employer.ProvinceId;
 
             if (!ModelState.IsValid)
+            {
+                if (Request.IsAjaxRequest())
+                {
+                    return Json(new { success = false }, JsonRequestBehavior.AllowGet);
+                }
                 return View(employer);
+            }
+
             bool result = false;
 
             try

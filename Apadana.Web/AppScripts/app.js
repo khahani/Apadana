@@ -7,17 +7,18 @@ var config_ajax_timeout = 4000;
 var config_disable_form_type = "button"; //options: form, button
 /*-----------------     END         --------------------------*/
 
-$.validator.setDefaults({ 
-    ignore: [],
-    // any other default options and/or rules
-});
 
 /* ---------------- Submit form through Ajax ------------------------------*/
 /* ---------------- START    -----------------------------*/
 $(function () {
 
+        $.validator.setDefaults({
+            ignore: []
+        });
+
     function ajaxFormSubmit(e) {
-        try{
+        try {
+
             $.validator.unobtrusive.parse($("form[data-ajax='true']"));
 
             var isValid = $(this).valid();
