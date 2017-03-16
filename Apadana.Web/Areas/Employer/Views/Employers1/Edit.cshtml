@@ -1,7 +1,7 @@
-﻿@model Apadana.Entities.ViewModels.Employer.VmCreate
+﻿@model Apadana.Entities.ViewModels.Employer.VmEdit
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Edit";
 }
 
 <div class="wrapper wrapper-content animated fadeInRight">
@@ -25,11 +25,17 @@
                 <div class="ibox-content">
 
 
-                    <form method="post" action="@Url.Action("create")" data-ajax="true" data-ajax-method="post"
-                          data-ajax-complete="createEmployer" data-ajax-loading=".loading" class="form-horizontal">
+
+
+
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
 
                         <div class="form-horizontal">
                             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            @Html.HiddenFor(model => model.Id)
+
                             <div class="form-group">
                                 @Html.LabelFor(model => model.UnitName, htmlAttributes: new { @class = "control-label col-md-2" })
                                 <div class="col-md-10">
@@ -81,7 +87,7 @@
                             <div class="form-group">
                                 @Html.LabelFor(model => model.ProvinceId, htmlAttributes: new { @class = "control-label col-md-2" })
                                 <div class="col-md-10">
-                                    @Html.EditorFor(model => model.ProvinceId, new { Selected = ViewData["SelectedProvince"] })
+                                    @Html.EditorFor(model => model.ProvinceId, new { htmlAttributes = new { @class = "form-control" } })
                                     @Html.ValidationMessageFor(model => model.ProvinceId, "", new { @class = "text-danger" })
                                 </div>
                             </div>
@@ -120,13 +126,16 @@
 
                             <div class="form-group">
                                 <div class="col-md-offset-2 col-md-10">
-                                    <button class="btn btn-primary" type="submit" data-disable-onsubmit="true" value="save" name="create">ذخیره</button>
-                                    <div id="loading" class="loading"></div>
+                                    <input type="submit" value="ذخیره" class="btn btn-primary" />
                                 </div>
                             </div>
                         </div>
-                        @*}*@
-                    </form>
+                    }
+
+
+
+
+
 
                 </div>
             </div>

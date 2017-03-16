@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Web;
 using Apadana.Entities.Security;
 using Apadana.Web.Security;
+using System.Data.Entity.Infrastructure;
 
 namespace Apadana.Web.DataContext
 {
@@ -48,7 +49,7 @@ namespace Apadana.Web.DataContext
         private void EntityChangeRequiredChangesOnUser()
         {
             var selectedEntityList = ChangeTracker.Entries()
-                                   .Where(x => x.Entity is BaseObject && x.Entity is IUserSyncable &&
+                                   .Where(x => x.Entity is IBaseObject && x.Entity is IUserSyncable &&
                                    (x.State == EntityState.Added || x.State == EntityState.Modified));
 
             AppUserPrincipal currentUser = new AppUserPrincipal(HttpContext.Current.User as ClaimsPrincipal);
@@ -66,23 +67,30 @@ namespace Apadana.Web.DataContext
         private void SaveUserInfoAndTimeForEachTuple()
         {
             var selectedEntityList = ChangeTracker.Entries()
-                                    .Where(x => x.Entity is BaseObject &&
+                                    .Where(x => x.Entity is IBaseObject &&
                                     (x.State == EntityState.Added || x.State == EntityState.Modified));
 
             var userId = new Guid(HttpContext.Current.User.Identity.GetUserId());
 
             var currentDate = DateTime.Now;
-
+            
             foreach (var entity in selectedEntityList)
             {
+                Employer emp = Employers.Where(m => m.Id == ((IBaseObject)entity.Entity).Id).FirstOrDefault<Employer>();
+
                 if (entity.State == EntityState.Added)
                 {
-                    ((BaseObject)entity.Entity).CreatedBy = userId;
-                    ((BaseObject)entity.Entity).CreatedDate = currentDate;
+                    ((IBaseObject)entity.Entity).CreatedBy = userId.ToString();
+                    ((IBaseObject)entity.Entity).CreatedDate = currentDate;
 
                 }
-                ((BaseObject)entity.Entity).UpdatedBy = userId;
-                ((BaseObject)entity.Entity).UpdatedDate = currentDate;
+                if (entity.State == EntityState.Modified)
+                {
+                    var originalValues = entity.OriginalValues;
+                    
+                }
+                ((IBaseObject)entity.Entity).UpdatedBy = userId.ToString();
+                ((IBaseObject)entity.Entity).UpdatedDate = currentDate;
             }
         }
 
@@ -90,6 +98,21 @@ namespace Apadana.Web.DataContext
         {
             Database.SetInitializer<ApadanaDb>(null);
             base.OnModelCreating(modelBuilder);
+        }
+
+        private T CreateWithValues<T>(DbPropertyValues values)
+            where T : new()
+        {
+            T entity = new T();
+            Type type = typeof(T);
+
+            foreach (var name in values.PropertyNames)
+            {
+                var property = type.GetProperty(name);
+                property.SetValue(entity, values.GetValue<object>(name));
+            }
+
+            return entity;
         }
     }
 }

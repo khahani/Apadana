@@ -379,6 +379,11 @@
     <Content Include="Areas\Employer\Views\Employers\Edit.cshtml" />
     <Content Include="Areas\Employer\Views\Employers\Index.cshtml" />
     <Content Include="Areas\Employer\Views\Shared\EditorTemplates\Province.cshtml" />
+    <Content Include="Areas\Employer\Views\Employers1\Create.cshtml" />
+    <Content Include="Areas\Employer\Views\Employers1\Delete.cshtml" />
+    <Content Include="Areas\Employer\Views\Employers1\Details.cshtml" />
+    <Content Include="Areas\Employer\Views\Employers1\Edit.cshtml" />
+    <Content Include="Areas\Employer\Views\Employers1\Index.cshtml" />
     <None Include="Properties\PublishProfiles\p.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -740,6 +745,7 @@
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Colleague\ColleagueAreaRegistration.cs" />
     <Compile Include="Areas\Employer\Controllers\AuthController.cs" />
+    <Compile Include="Areas\Employer\Controllers\Employers1Controller.cs" />
     <Compile Include="Areas\Employer\Controllers\EmployersController.cs" />
     <Compile Include="Areas\Employer\Controllers\HomeController.cs" />
     <Compile Include="Areas\Employer\EmployerAreaRegistration.cs" />
@@ -768,6 +774,15 @@
     <Compile Include="Infrastructure\ISMS_Service.cs" />
     <Compile Include="Infrastructure\SMS_Service_Demo.cs" />
     <Compile Include="Infrastructure\AppSettings.cs" />
+    <Compile Include="Migrations\201702260717417_InitialCreate.cs" />
+    <Compile Include="Migrations\201702260717417_InitialCreate.Designer.cs">
+      <DependentUpon>201702260717417_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703130559244_asdfasdf.cs" />
+    <Compile Include="Migrations\201703130559244_asdfasdf.Designer.cs">
+      <DependentUpon>201703130559244_asdfasdf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\JobSeeker.cs" />
     <Compile Include="Security\BaseSyncUser.cs" />
     <Compile Include="Security\ISyncUser.cs" />
@@ -893,6 +908,12 @@
     <EmbeddedResource Include="Areas\Employer\Localization\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702260717417_InitialCreate.resx">
+      <DependentUpon>201702260717417_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703130559244_asdfasdf.resx">
+      <DependentUpon>201703130559244_asdfasdf.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewModels\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

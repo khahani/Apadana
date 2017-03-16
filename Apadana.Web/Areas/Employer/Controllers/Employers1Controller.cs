@@ -8,22 +8,21 @@ using System.Web;
 using System.Web.Mvc;
 using Ent = Apadana.Entities;
 using Apadana.Web.DataContext;
-using System.Security.Claims;
 
 namespace Apadana.Web.Areas.Employer.Controllers
 {
-    public class EmployersController : AppController
+    public class Employers1Controller : AppController
     {
-        private ApadanaDb db = new ApadanaDb();
         private AppDbContext appDb = new AppDbContext();
+        private ApadanaDb db = new ApadanaDb();
 
-        // GET: Employer/Employers
+        // GET: Employer/Employers1
         public async Task<ActionResult> Index()
         {
             return View(await db.Employers.ToListAsync());
         }
 
-        // GET: Employer/Employers/Details/5
+        // GET: Employer/Employers1/Details/5
         public async Task<ActionResult> Details(int? id)
         {
             if (id == null)
@@ -38,10 +37,9 @@ namespace Apadana.Web.Areas.Employer.Controllers
             return View(employer);
         }
 
-        // GET: Employer/Employers/Create
+        // GET: Employer/Employers1/Create
         public ActionResult Create()
         {
-
             var existsEmployer = db.Employers.Where(m => m.UserName == CurrentUser.Identity.Name).FirstOrDefault();
 
             if (existsEmployer != null)
@@ -61,10 +59,11 @@ namespace Apadana.Web.Areas.Employer.Controllers
             return View(model);
         }
 
-        // POST: Employer/Employers/Create
+        // POST: Employer/Employers1/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<ActionResult> Create([Bind(Include = "Id,UnitName,Applicant,Mobile,Address,UserName,FieldOfAcivity,ProvinceId,Email,HeadOfTheUnit,Phone,City")] Ent.ViewModels.Employer.VmCreate model)
         {
             var existsEmployer = db.Employers.Where(m => m.UserName == CurrentUser.Identity.Name).FirstOrDefault();
@@ -73,56 +72,18 @@ namespace Apadana.Web.Areas.Employer.Controllers
             {
                 return RedirectToAction("Edit", new { id = existsEmployer.Id });
             }
-
             Ent.Employer employer = (Ent.Employer)model;
 
             CheckSystemRules(employer);
 
             ViewData["SelectedProvince"] = employer.ProvinceId;
-
-            if (!ModelState.IsValid)
-                return View(model);
-
-            bool result = false;
-
-            try
+            if (ModelState.IsValid)
             {
                 db.Employers.Add(employer);
-
                 await db.SaveChangesAsync();
-
-                result = true;
-            }
-            catch (Exception ex)
-            {
-                result = false;
+                return RedirectToAction("Index");
             }
 
-            if (Request.IsAjaxRequest())
-            {
-                return Json(new { success = result }, JsonRequestBehavior.AllowGet);
-            }
-
-            return View();
-
-        }
-
-        // GET: Employer/Employers/Edit/5
-        public async Task<ActionResult> Edit(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-
-            Ent.Employer employer = await db.Employers.FindAsync(id);
-
-            ViewData["SelectedProvince"] = employer.ProvinceId;
-
-            if (employer == null)
-            {
-                return HttpNotFound();
-            }
             return View(employer);
         }
 
@@ -142,13 +103,50 @@ namespace Apadana.Web.Areas.Employer.Controllers
             }
         }
 
-        // POST: Employer/Employers/Edit/5
+
+        // GET: Employer/Employers1/Edit/5
+        public async Task<ActionResult> Edit(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            Ent.Employer employer = await db.Employers.FindAsync(id);
+
+            ViewData["SelectedProvince"] = employer.ProvinceId;
+
+            if (employer == null)
+            {
+                return HttpNotFound();
+            }
+
+            Ent.ViewModels.Employer.VmEdit model = new Ent.ViewModels.Employer.VmEdit
+            {
+                Address = employer.Address,
+                Applicant = employer.Applicant,
+                City = employer.City,
+                Email = employer.Email,
+                FieldOfAcivity = employer.FieldOfAcivity,
+                HeadOfTheUnit = employer.HeadOfTheUnit,
+                Mobile = employer.Mobile,
+                Phone = employer.Phone,
+                ProvinceId = employer.ProvinceId,
+                UnitName = employer.UnitName,
+                UserName = employer.UserName
+            };
+
+            return View(model);
+        }
+
+        // POST: Employer/Employers1/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        public async Task<ActionResult> Edit([Bind(Include = "Id,UnitName,Applicant,Mobile,Address,UserName,FieldOfAcivity,ProvinceId,Email,HeadOfTheUnit,Phone,City")] Ent.Employer employer)
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> Edit([Bind(Include = "Id,UnitName,Applicant,Mobile,Address,UserName,FieldOfAcivity,ProvinceId,Email,HeadOfTheUnit,Phone,City")] Ent.ViewModels.Employer.VmEdit model)
         {
-            //username can not change
+            Ent.Employer employer = (Ent.Employer)model;
 
             CheckSystemRules(employer);
 
@@ -156,36 +154,23 @@ namespace Apadana.Web.Areas.Employer.Controllers
 
             if (!ModelState.IsValid)
             {
-                if (Request.IsAjaxRequest())
-                {
-                    return Json(new { success = false }, JsonRequestBehavior.AllowGet);
-                }
-                return View(employer);
+                return View(model);
             }
-
-            bool result = false;
-
+            
             try
             {
                 db.Entry(employer).State = EntityState.Modified;
                 await db.SaveChangesAsync();
-
-                result = true;
+                return RedirectToAction("Index");
             }
             catch (Exception ex)
             {
-                result = false;
             }
 
-            if (Request.IsAjaxRequest())
-            {
-                return Json(new { success = result }, JsonRequestBehavior.AllowGet);
-            }
-            
-            return View(employer);
+            return View(model);
         }
 
-        // GET: Employer/Employers/Delete/5
+        // GET: Employer/Employers1/Delete/5
         public async Task<ActionResult> Delete(int? id)
         {
             if (id == null)
@@ -200,7 +185,7 @@ namespace Apadana.Web.Areas.Employer.Controllers
             return View(employer);
         }
 
-        // POST: Employer/Employers/Delete/5
+        // POST: Employer/Employers1/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> DeleteConfirmed(int id)

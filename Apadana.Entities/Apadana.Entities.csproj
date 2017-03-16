@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="BaseObject.cs" />
     <Compile Include="Employer.cs" />
+    <Compile Include="Job.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -72,6 +73,8 @@
     <Compile Include="StaticObjects\TypeObject.cs" />
     <Compile Include="StaticObjects\WorkingHoursType.cs" />
     <Compile Include="StaticObjects\YesOrNoType.cs" />
+    <Compile Include="ViewModels\Employer\VmCreate.cs" />
+    <Compile Include="ViewModels\Employer\VmEdit.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

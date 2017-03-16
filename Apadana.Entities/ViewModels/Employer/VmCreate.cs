@@ -1,18 +1,15 @@
-﻿using Apadana.Entities.Security;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Apadana.Entities
+namespace Apadana.Entities.ViewModels.Employer
 {
-    public class Employer : IBaseObject, IUserSyncable
+    public class VmCreate
     {
-        public Employer()
-        {
-            Jobs = new List<Job>();
-        }
-
         [Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "Val_this_field_is_required", AllowEmptyStrings = false)]
         [DataType(DataType.Text)]
         [Display(ResourceType = typeof(Resources), Name = "DisName_UnitName")]
@@ -71,20 +68,22 @@ namespace Apadana.Entities
         [Display(ResourceType = typeof(Resources), Name = "DisName_City")]
         public string City { get; set; }
 
-        public virtual ICollection<Job> Jobs { get; set; }
-
-        [Key]
-        public int Id { get; set; }
-
-        [Required]
-        public string CreatedBy { get; set; }
-        [Required]
-        [DataType(DataType.DateTime)]
-        public DateTime CreatedDate { get; set; }
-        [Required]
-        public string UpdatedBy { get; set; }
-        [Required]
-        [DataType(DataType.DateTime)]
-        public DateTime UpdatedDate { get; set; }
+        public static explicit operator Entities.Employer(VmCreate instance)
+        {
+            return new Entities.Employer
+            {
+                UnitName = instance.UnitName,
+                Applicant = instance.Applicant,
+                Mobile = instance.Mobile,
+                Address = instance.Address,
+                UserName = instance.UserName,
+                FieldOfAcivity = instance.FieldOfAcivity,
+                ProvinceId = instance.ProvinceId,
+                Email = instance.Email,
+                HeadOfTheUnit = instance.HeadOfTheUnit,
+                Phone = instance.Phone,
+                City = instance.City
+            };
+        }
     }
 }

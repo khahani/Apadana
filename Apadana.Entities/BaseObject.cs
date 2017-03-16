@@ -8,20 +8,16 @@ using System.Threading.Tasks;
 
 namespace Apadana.Entities
 {
-    public abstract class BaseObject
+    public interface IBaseObject
     {
-        [Key]
-        public int Id { get; set; }
+        int Id { get; set; }
+   
+        string CreatedBy { get; set; }
 
-        [Required]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public Guid CreatedBy { get; set; }
-        [Required]
-        public DateTime CreatedDate { get; set; }
-        [Required]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public Guid UpdatedBy { get; set; }
-        [Required]
-        public DateTime UpdatedDate { get; set; }
+        DateTime CreatedDate { get; set; }
+        
+        string UpdatedBy { get; set; }
+        
+        DateTime UpdatedDate { get; set; }
     }
 }

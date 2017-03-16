@@ -17,7 +17,7 @@
           <useCaseMoniker Id="f2054314-ffe4-4676-ae71-1c0b55962ec8" LastKnownName="افزودن فرصت شغلی" />
           <relativeChildShapes />
         </useCaseShape>
-        <useCaseShape Id="28e14461-a0d8-42f6-97a2-4c642ea90603" absoluteBounds="3.75, 2, 1.375, 0.625" customColor="238, 237, 131" heightOffset="0">
+        <useCaseShape Id="28e14461-a0d8-42f6-97a2-4c642ea90603" absoluteBounds="3.75, 2, 1.375, 0.625" customColor="192, 255, 192" heightOffset="0">
           <useCaseMoniker Id="40e6916a-3041-4e67-ba00-4d6e57af4c40" LastKnownName="ویرایش اطلاعات کارفرما" />
           <relativeChildShapes />
         </useCaseShape>
