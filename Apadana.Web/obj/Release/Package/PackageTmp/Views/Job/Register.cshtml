@@ -38,14 +38,7 @@
                         </div>
                         <div class="form-group">
                             <label for="province">استان:</label>
-                            <select class="form-control" id="province">
-                                <option selected>آذربایجان شرقی</option>
-                                <option>خراسان رضوی</option>
-                                <option>خراسان جنوبی</option>
-                                <option>تهران</option>
-                                <option>کرمان</option>
-                                <option>...</option>
-                            </select>
+                            @Html.DropDownList("province", DropDownListUtility.GetStaticObjectDropDown(0, ProvinceType.Instance), new { @class = "form-control" })
                         </div>
                         <div class="form-group">
                             <label for="email">ایمیل:</label>
@@ -106,25 +99,11 @@
                         </div>
                         <div class="form-group">
                             <label for="salary">میزان حقوق:</label>
-                            <select class="form-control" id="salary">
-                                <option selected value="" disabled>لطفا یک گزینه را انتخاب نمایید</option>
-                                <option>کمتر از قانون کار</option>
-                                <option>پایه قانون کار</option>
-                                <option>قانون کار با مزایا</option>
-                                <option>پروژه ای</option>
-                                <option>ساعتی</option>
-                                <option>روزمزد</option>
-                                <option>توافقی</option>
-                            </select>
+                            @Html.DropDownList("salary", DropDownListUtility.GetStaticObjectDropDown(0, SalaryType.Instance), new {@class="form-control"})
                         </div>
                         <div class="form-group">
                             <label for="insurance-status">وضعیت بیمه:</label>
-                            <select class="form-control" id="insurance-status">
-                                <option selected value="" disabled>لطفا یک گزینه را انتخاب نمایید</option>
-                                <option>دارد</option>
-                                <option>ندارد</option>
-                                <option>پس از دوره آزمایشی</option>
-                            </select>
+                            @Html.DropDownList("insurance-status", DropDownListUtility.GetStaticObjectDropDown(0,InsuranceStatusType.Instance), new {@class="form-control"})
                         </div>
                         <div class="form-group">
                             <label for="address">آدرس:</label>
@@ -144,67 +123,24 @@
                         </div>
                         <div class="form-group">
                             <label for="related-work-experience">سابقه کار مرتبط</label>
-                            <select class="form-control" id="related-work-experience">
-                                <option selected value="" disabled>لطفا یک گزینه را انتخاب نمایید</option>
-                                <option>داشته باشد</option>
-                                <option>نداشته باشد</option>
-                                <option>مهم نیست</option>
-                            </select>
+                           @Html.DropDownList("related-work-experience", DropDownListUtility.GetStaticObjectDropDown(0, RelatedWorkExperienceType.Instance), new { @class="form-control"})
                         </div>
 
                         <div class="form-group">
                             <label for="max-age">حداکثر سن</label>
-                            <select class="form-control" id="max-age">
-                                <option selected value="" disabled>لطفا یک گزینه را انتخاب نمایید</option>
-                                <option>بین 20 تا 25</option>
-                                <option>بین 25 تا 30</option>
-                                <option>بین 30 تا 35</option>
-                                <option>بین 35 تا 40</option>
-                                <option>مهم نیست</option>
-                            </select>
+                           @Html.DropDownList("max-age", DropDownListUtility.GetStaticObjectDropDown(0, MaximumAgeType.Instance), new { @class="form-control"})
                         </div>
                         <div class="form-group">
                             <label for="marital-status">وضعیت تاهل</label>
-                            <select class="form-control" id="marital-status">
-                                <option selected value="" disabled>لطفا یک گزینه را انتخاب نمایید</option>
-                                <option>مجرد</option>
-                                <option>متاهل</option>
-                                <option>مهم نیست</option>
-                            </select>
+                            @Html.DropDownList("marital-status", DropDownListUtility.GetStaticObjectDropDown(0, MaritalStatusType.Instance), new { @class="form-control"})
                         </div>
                         <div class="form-group">
                             <label>سرویس دارد:</label><br />
-                            <label class="radio-inline">
-                                <input type="radio" name="has-service">بله
-                            </label>
-                            <label class="radio-inline">
-                                <input type="radio" name="no-service">خیر
-                            </label>
+                            @Html.RadioButtonListHorizontalForStaticTypes("has-service", YesOrNoType.Instance, 0)
                         </div>
                         <div class="form-group">
                             <label for="ads-validity-period">مدت اعتبار آگهی</label>
-                            <select class="form-control" id="ads-validity-period">
-                                <option selected value="" disabled>لطفا یک گزینه را انتخاب نمایید</option>
-                                <option>1 روز</option>
-                                <option>2 روز</option>
-                                <option>3 روز</option>
-                                <option>4 روز</option>
-                                <option>5  روز</option>
-                                <option>6 روز</option>
-                                <option>7 روز</option>
-                                <option>8 روز</option>
-                                <option>9 روز</option>
-                                <option>10 روز</option>
-                                <option>11 روز</option>
-                                <option>12 روز</option>
-                                <option>13 روز</option>
-                                <option>14 روز</option>
-                                <option>15 روز</option>
-                                <option>16 روز</option>
-                                <option>17 روز</option>
-                                <option>18 روز</option>
-                                <option>19 روز</option>
-                            </select>
+                            @Html.DropDownList("ads-validity-period", DropDownListUtility.GetStaticObjectDropDown(0, AdsValidityPeriodType.Instance), new { @class = "form-control" })
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -220,35 +156,15 @@
                         </div>
                         <div class="form-group">
                             <label for="minimum-education">حداقل تحصیلات</label>
-                            <select class="form-control" id="minimum-education">
-                                <option selected value="" disabled>لطفا یک گزینه را انتخاب نمایید</option>
-                                <option>ابتدایی</option>
-                                <option>راهنمایی</option>
-                                <option>دیپلم</option>
-                                <option>کاردانی</option>
-                                <option>کارشناسی</option>
-                                <option>کارشناسی ارشد</option>
-                                <option>دکتری و بالاتر</option>
-                            </select>
+                           @Html.DropDownList("minimum-education", DropDownListUtility.GetStaticObjectDropDown(0, EducationType.Instance), new { @class = "form-control" })
                         </div>
                         <div class="form-group">
                             <label for="working-hours">ساعات کاری</label>
-                            <select class="form-control" id="working-hours">
-                                <option selected value="" disabled>لطفا یک گزینه را انتخاب نمایید</option>
-                                <option>8 ساعت</option>
-                                <option>12 ساعت</option>
-                                <option>شیفتی</option>
-                                <option>سایر</option>
-                            </select>
+                           @Html.DropDownList("working-hours", DropDownListUtility.GetStaticObjectDropDown(0, WorkingHoursType.Instance), new { @class = "form-control" })
                         </div>
                         <div class="form-group">
                             <label for="gender">جنسیت</label>
-                            <select class="form-control" id="gender">
-                                <option selected value="" disabled>لطفا یک گزینه را انتخاب نمایید</option>
-                                <option>آقا</option>
-                                <option>خانم</option>
-                                <option>مهم نیست</option>
-                            </select>
+                            @Html.DropDownList("gender", DropDownListUtility.GetStaticObjectDropDown(0, GenderType.Instance), new {@class="form-control"})
                         </div>
                         <div class="form-group">
                             <label for="service-description">توضیحات سرویس:</label>

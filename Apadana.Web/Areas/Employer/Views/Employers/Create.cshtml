@@ -133,3 +133,12 @@
         </div>
     </div>
 </div>
+
+@section BeforeEndBody {
+    @if (ViewData["SystemMessage"] != null)
+    {
+        <script type="text/javascript">
+            show_message(false, '@ViewData["SystemMessage"]', 'پیام سیستمی');
+        </script>
+    }
+}

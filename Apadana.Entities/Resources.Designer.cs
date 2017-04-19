@@ -70,6 +70,15 @@ namespace Apadana.Entities {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to مدت اعتبار آگهی.
+        /// </summary>
+        public static string DisName_AdsValidityPeriod {
+            get {
+                return ResourceManager.GetString("DisName_AdsValidityPeriod", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to درخواست دهنده.
         /// </summary>
         public static string DisName_Applicant {
@@ -84,6 +93,15 @@ namespace Apadana.Entities {
         public static string DisName_City {
             get {
                 return ResourceManager.GetString("DisName_City", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to تعداد.
+        /// </summary>
+        public static string DisName_Count {
+            get {
+                return ResourceManager.GetString("DisName_Count", resourceCulture);
             }
         }
         
@@ -106,11 +124,74 @@ namespace Apadana.Entities {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to رشته تحصیلی.
+        /// </summary>
+        public static string DisName_FieldOfStudy {
+            get {
+                return ResourceManager.GetString("DisName_FieldOfStudy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to جنسیت.
+        /// </summary>
+        public static string DisName_Gender {
+            get {
+                return ResourceManager.GetString("DisName_Gender", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to سرویس.
+        /// </summary>
+        public static string DisName_HasService {
+            get {
+                return ResourceManager.GetString("DisName_HasService", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to مسئول واحد.
         /// </summary>
         public static string DisName_HeadOfTheUnit {
             get {
                 return ResourceManager.GetString("DisName_HeadOfTheUnit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to وضعیت بیمه.
+        /// </summary>
+        public static string DisName_InsuranceStatus {
+            get {
+                return ResourceManager.GetString("DisName_InsuranceStatus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to عنوان شغلی.
+        /// </summary>
+        public static string DisName_JobTitle {
+            get {
+                return ResourceManager.GetString("DisName_JobTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to حداکثر سن.
+        /// </summary>
+        public static string DisName_MaxAge {
+            get {
+                return ResourceManager.GetString("DisName_MaxAge", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to حداقل تحصیلات.
+        /// </summary>
+        public static string DisName_MinimumEducation {
+            get {
+                return ResourceManager.GetString("DisName_MinimumEducation", resourceCulture);
             }
         }
         
@@ -142,6 +223,33 @@ namespace Apadana.Entities {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to سابقه کار مرتبط.
+        /// </summary>
+        public static string DisName_RelatedWorkExperience {
+            get {
+                return ResourceManager.GetString("DisName_RelatedWorkExperience", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to میزان حقوق.
+        /// </summary>
+        public static string DisName_Salary {
+            get {
+                return ResourceManager.GetString("DisName_Salary", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to توضیحات سرویس.
+        /// </summary>
+        public static string DisName_ServiceDescription {
+            get {
+                return ResourceManager.GetString("DisName_ServiceDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to نام واحد.
         /// </summary>
         public static string DisName_UnitName {
@@ -160,11 +268,29 @@ namespace Apadana.Entities {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ساعات کاری.
+        /// </summary>
+        public static string DisName_WorkingHours {
+            get {
+                return ResourceManager.GetString("DisName_WorkingHours", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {0} و {1} یکسان نیستند.
         /// </summary>
         public static string Val_confirm_is_not_the_same {
             get {
                 return ResourceManager.GetString("Val_confirm_is_not_the_same", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to باید بین {0} و {1} باشد.
+        /// </summary>
+        public static string Val_enter_a_valid_number {
+            get {
+                return ResourceManager.GetString("Val_enter_a_valid_number", resourceCulture);
             }
         }
         

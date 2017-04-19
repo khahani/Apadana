@@ -35,10 +35,11 @@ var createEmployer = function (data, status, xhr) {
 
         var message = "", header = "";
 
-        header = " ذخیره شد"
         if (data.responseJSON.success == true) {
+            header = " ذخیره شد"
             message = "اطلاعات کارفرما با موفقیت ذخیره شد.";
         } else {
+            header = " ذخیره نشد"
             message = "خطا: عملیات ذخیره اطلاعات کارفرما خطا دارد. لطفا دوباره تلاش کنید.";
         }
 

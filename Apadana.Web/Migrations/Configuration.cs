@@ -9,8 +9,7 @@ namespace Apadana.Web.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
-            ContextKey = "Apadana.Web.DataContext.ApadanaDb";
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(Apadana.Web.DataContext.ApadanaDb context)

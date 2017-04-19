@@ -90,7 +90,17 @@ namespace Apadana.Web.Controllers
             
             string password = GeneratePassword();
 
+            bool smsResult = await _smsService.SendAsync(model.Mobile, "::مشخصات کاریابی آپادانا::\nنام کاربری:\n{0}\nرمز عبور:\n{1}", new string[] { model.Name, password });
+
+            if (smsResult != true)
+            {
+                ModelState.AddModelError("SMS Failed", "بدلیل اینکه پیامک برایتان ارسال نشد ثبت نام شما لغو شده است. لطفا مجددا امتحان کنید.");
+                return View();
+            }
+
             var result = await userManager.CreateAsync(user, password);
+
+            userManager.AddToRole(user.Id, AppDefaults.ROLE_EMPLOYER);
 
             if (result.Succeeded)
             {

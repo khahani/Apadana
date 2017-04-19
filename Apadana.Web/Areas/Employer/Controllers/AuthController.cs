@@ -51,7 +51,7 @@ namespace Apadana.Web.Areas.Employer.Controllers
             }
 
             IdentityResult result = await _userManager.ChangePasswordAsync(CurrentUser.Identity.GetUserId(), model.CurrentPassword, model.NewPassword);
-            
+
             if (Request.IsAjaxRequest())
             {
                 return Json(new { success = result.Succeeded }, JsonRequestBehavior.AllowGet);

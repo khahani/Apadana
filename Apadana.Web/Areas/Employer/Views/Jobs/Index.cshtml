@@ -1,0 +1,141 @@
+﻿@model IEnumerable<Apadana.Entities.Job>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.JobTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Count)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RelatedWorkExperience)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MinimumEducation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FieldOfStudy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaxAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WorkingHours)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Salary)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaritalStatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InsuranceStatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HasService)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ServiceDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AdsValidityPeriod)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UpdatedBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UpdatedDate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.JobTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Count)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RelatedWorkExperience)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MinimumEducation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FieldOfStudy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaxAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WorkingHours)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Salary)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaritalStatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gender)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InsuranceStatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HasService)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ServiceDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AdsValidityPeriod)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UpdatedBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UpdatedDate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

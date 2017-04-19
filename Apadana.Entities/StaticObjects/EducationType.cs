@@ -9,6 +9,9 @@ namespace Apadana.Entities.StaticObjects
     {
         private static readonly EducationType instance = new EducationType();
 
+        public const int GetMinimumId = 1;
+        public const int GetMaximumId = 7;
+        
         // Explicit static constructor to tell C# compiler
         // not to mark type as beforefieldinit
         static EducationType()
@@ -17,6 +20,10 @@ namespace Apadana.Entities.StaticObjects
 
         private EducationType()
         {
+            if (GetMaximumId != Objects.Last().Id)
+                throw new Exception(this.GetType().Name + " GetMaximumId is wrong");
+            if (GetMinimumId != Objects.First().Id)
+                throw new Exception(this.GetType().Name + " GetMinimumId is wrong");
         }
 
         public static EducationType Instance

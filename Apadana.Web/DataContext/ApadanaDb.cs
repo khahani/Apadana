@@ -22,10 +22,12 @@ namespace Apadana.Web.DataContext
         }
 
         public DbSet<Employer> Employers { get; set; }
+        public DbSet<Job> Jobs { get; set; }
 
 
         public override int SaveChanges()
         {
+            //Before running update-database must comment SaveChangesSequence()
             SaveChangesSequence();
             return base.SaveChanges();
         }

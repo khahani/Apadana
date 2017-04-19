@@ -39,7 +39,7 @@ namespace Apadana.Web.Areas.Employer.Controllers
         }
 
         // GET: Employer/Employers/Create
-        public ActionResult Create()
+        public ActionResult Create(string systemMessage)
         {
 
             var existsEmployer = db.Employers.Where(m => m.UserName == CurrentUser.Identity.Name).FirstOrDefault();
@@ -58,6 +58,7 @@ namespace Apadana.Web.Areas.Employer.Controllers
             };
 
             ViewData["SelectedProvince"] = 0;
+            ViewData["SystemMessage"] = systemMessage;
             return View(model);
         }
 
@@ -123,7 +124,10 @@ namespace Apadana.Web.Areas.Employer.Controllers
             {
                 return HttpNotFound();
             }
-            return View(employer);
+
+            Ent.ViewModels.Employer.VmEdit model = (Ent.ViewModels.Employer.VmEdit)employer;
+
+            return View(model);
         }
 
         private void CheckSystemRules(Ent.Employer employer)
@@ -146,9 +150,13 @@ namespace Apadana.Web.Areas.Employer.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        public async Task<ActionResult> Edit([Bind(Include = "Id,UnitName,Applicant,Mobile,Address,UserName,FieldOfAcivity,ProvinceId,Email,HeadOfTheUnit,Phone,City")] Ent.Employer employer)
+        public async Task<ActionResult> Edit([Bind(Include = "Id,UnitName,Applicant,Mobile,Address,UserName,FieldOfAcivity,ProvinceId,Email,HeadOfTheUnit,Phone,City")] Ent.ViewModels.Employer.VmEdit model)
         {
             //username can not change
+
+            //Ent.Employer employer = (Ent.Employer)model;
+
+            Ent.Employer employer = db.Employers.Where(m => m.Id == model.Id).FirstOrDefault();
 
             CheckSystemRules(employer);
 
@@ -160,7 +168,7 @@ namespace Apadana.Web.Areas.Employer.Controllers
                 {
                     return Json(new { success = false }, JsonRequestBehavior.AllowGet);
                 }
-                return View(employer);
+                return View(model);
             }
 
             bool result = false;
@@ -182,7 +190,7 @@ namespace Apadana.Web.Areas.Employer.Controllers
                 return Json(new { success = result }, JsonRequestBehavior.AllowGet);
             }
             
-            return View(employer);
+            return View(model);
         }
 
         // GET: Employer/Employers/Delete/5

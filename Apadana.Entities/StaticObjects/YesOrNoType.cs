@@ -7,6 +7,8 @@ namespace Apadana.Entities.StaticObjects
 {
     public class YesOrNoType : ITypeObject
     {
+        public const int GetMaximumId = 2;
+        public const int GetMinimumId = 1;
         private static readonly YesOrNoType instance = new YesOrNoType();
 
         // Explicit static constructor to tell C# compiler
@@ -17,6 +19,10 @@ namespace Apadana.Entities.StaticObjects
 
         private YesOrNoType()
         {
+            if (GetMaximumId != Objects.Last().Id)
+                throw new Exception(this.GetType().Name + " GetMaximumId is wrong");
+            if (GetMinimumId != Objects.First().Id)
+                throw new Exception(this.GetType().Name + " GetMinimumId is wrong");
         }
 
         public static YesOrNoType Instance

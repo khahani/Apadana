@@ -17,6 +17,7 @@ namespace Apadana.Entities.StaticObjects
 
         private ProvinceType()
         {
+           
         }
 
         public static ProvinceType Instance

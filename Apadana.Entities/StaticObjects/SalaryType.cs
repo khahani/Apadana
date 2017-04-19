@@ -7,9 +7,17 @@ namespace Apadana.Entities.StaticObjects
 {
     public class SalaryType : ITypeObject
     {
+        public const int GetMaximumId = 7;
+        public const int GetMinimumId = 1;
         private static readonly SalaryType instance = new SalaryType();
         static SalaryType() { }
-        private SalaryType() { }
+        private SalaryType()
+        {
+            if (GetMaximumId != Objects.Last().Id)
+                throw new Exception(this.GetType().Name + " GetMaximumId is wrong");
+            if (GetMinimumId != Objects.First().Id)
+                throw new Exception(this.GetType().Name + " GetMinimumId is wrong");
+        }
         public static SalaryType Instance { get { return instance; } }
 
         public List<TypeObject> Objects
@@ -23,8 +31,8 @@ namespace Apadana.Entities.StaticObjects
                     new SimpleTypeObject {Id = 3, Value = "قانون کار با مزایا" },
                     new SimpleTypeObject { Id = 4, Value = "پروژه ای" },
                     new SimpleTypeObject { Id = 5, Value = "ساعتی" },
-                    new SimpleTypeObject { Id = 5, Value = "روزمزد" },
-                    new SimpleTypeObject { Id = 5, Value = "توافقی" }
+                    new SimpleTypeObject { Id = 6, Value = "روزمزد" },
+                    new SimpleTypeObject { Id = 7, Value = "توافقی" }
                 };
 
                 List<TypeObject> objects = new List<TypeObject>();

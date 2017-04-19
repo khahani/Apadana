@@ -37,7 +37,9 @@ namespace Apadana.Entities
         [Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "Val_this_field_is_required", AllowEmptyStrings = false)]
         [DataType(DataType.Text)]
         [Display(ResourceType = typeof(Resources), Name = "DisName_UserName")]
-        [Index(IsUnique = true)]
+        [Column(TypeName = "VARCHAR")]
+        [StringLength(36)]
+        [Index]
         public string UserName { get; set; }
 
         [Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "Val_this_field_is_required", AllowEmptyStrings = false)]
@@ -52,7 +54,9 @@ namespace Apadana.Entities
 
         [DataType(DataType.EmailAddress, ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "Val_wrong_type")]
         [Display(ResourceType = typeof(Resources), Name = "DisName_Email")]
-        [Index(IsUnique = true)]
+        [Column(TypeName = "VARCHAR")]
+        [StringLength(254)]
+        [Index]
         public string Email { get; set; }
 
         [Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "Val_this_field_is_required", AllowEmptyStrings = false)]
@@ -86,5 +90,24 @@ namespace Apadana.Entities
         [Required]
         [DataType(DataType.DateTime)]
         public DateTime UpdatedDate { get; set; }
+
+        public static explicit operator ViewModels.Employer.VmEdit(Employer instance)
+        {
+            return new ViewModels.Employer.VmEdit
+            {
+                Id = instance.Id,
+                Address = instance.Address,
+                Applicant = instance.Applicant,
+                City = instance.City,
+                Email = instance.Email,
+                FieldOfAcivity = instance.FieldOfAcivity,
+                HeadOfTheUnit = instance.HeadOfTheUnit,
+                Mobile = instance.Mobile,
+                Phone = instance.Phone,
+                ProvinceId = instance.ProvinceId,
+                UnitName = instance.UnitName,
+                UserName = instance.UserName
+            };
+        }
     }
 }

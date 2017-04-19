@@ -7,6 +7,8 @@ namespace Apadana.Entities.StaticObjects
 {
     public class MaritalStatusType : ITypeObject
     {
+        public const int GetMaximumId = 3;
+        public  const int GetMinimumId = 1;
         private static readonly MaritalStatusType instance = new MaritalStatusType();
 
         // Explicit static constructor to tell C# compiler
@@ -17,6 +19,10 @@ namespace Apadana.Entities.StaticObjects
 
         private MaritalStatusType()
         {
+            if (GetMaximumId != Objects.Last().Id)
+                throw new Exception(this.GetType().Name + " GetMaximumId is wrong");
+            if (GetMinimumId != Objects.First().Id)
+                throw new Exception(this.GetType().Name + " GetMinimumId is wrong");
         }
 
         public static MaritalStatusType Instance

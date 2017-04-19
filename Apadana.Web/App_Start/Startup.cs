@@ -60,7 +60,7 @@ namespace Apadana.Web.App_Start
         public void ConfigureServices(IServiceCollection services)
         {
             // Add application services.
-            services.AddTransient<ISMS_Service, SMS_Service_Demo>();
+            services.AddTransient<ISMS_Service, Ghasedak_SMS_Service>();
 
 
             //this line of code is for DI for controller and services 

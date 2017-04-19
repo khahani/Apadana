@@ -144,5 +144,6 @@ C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\obj\Debug\Apadana.Web.csproj.G
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\Apadana.Entities.dll
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\Apadana.Entities.pdb
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\obj\Debug\Apadana.Web.ViewModels.Resources.resources
-C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\obj\Debug\Apadana.Web.Migrations.InitialCreate.resources
-C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\obj\Debug\Apadana.Web.Migrations.asdfasdf.resources
+C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\obj\Debug\Apadana.Web.Migrations.initdb.resources
+C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\RestSharp.dll
+C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\RestSharp.xml

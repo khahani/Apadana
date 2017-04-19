@@ -7,6 +7,8 @@ namespace Apadana.Entities.StaticObjects
 {
     public class GenderType : ITypeObject
     {
+        public const int GetMaximumId = 3;
+        public const int GetMinimumId = 1;
         private static readonly GenderType instance = new GenderType();
 
         static GenderType()
@@ -15,6 +17,10 @@ namespace Apadana.Entities.StaticObjects
 
         private GenderType()
         {
+            if (GetMaximumId != Objects.Last().Id)
+                throw new Exception(this.GetType().Name + " GetMaximumId is wrong");
+            if (GetMinimumId != Objects.First().Id)
+                throw new Exception(this.GetType().Name + " GetMinimumId is wrong");
         }
         public static GenderType Instance
         {

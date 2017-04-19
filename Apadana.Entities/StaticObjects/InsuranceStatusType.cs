@@ -7,9 +7,17 @@ namespace Apadana.Entities.StaticObjects
 {
     public class InsuranceStatusType : ITypeObject
     {
+        public const int GetMaximumId = 3;
+        public const int GetMinimumId = 1;
         private static readonly InsuranceStatusType instance = new InsuranceStatusType();
         static InsuranceStatusType() { }
-        private InsuranceStatusType() { }
+        private InsuranceStatusType()
+        {
+            if (GetMaximumId != Objects.Last().Id)
+                throw new Exception(this.GetType().Name + " GetMaximumId is wrong");
+            if (GetMinimumId != Objects.First().Id)
+                throw new Exception(this.GetType().Name + " GetMinimumId is wrong");
+        }
         public static InsuranceStatusType Instance { get { return instance; } }
 
         public List<TypeObject> Objects

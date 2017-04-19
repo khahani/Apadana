@@ -120,11 +120,17 @@
   <data name="DisName_Address" xml:space="preserve">
     <value>آدرس</value>
   </data>
+  <data name="DisName_AdsValidityPeriod" xml:space="preserve">
+    <value>مدت اعتبار آگهی</value>
+  </data>
   <data name="DisName_Applicant" xml:space="preserve">
     <value>درخواست دهنده</value>
   </data>
   <data name="DisName_City" xml:space="preserve">
     <value>شهر</value>
+  </data>
+  <data name="DisName_Count" xml:space="preserve">
+    <value>تعداد</value>
   </data>
   <data name="DisName_Email" xml:space="preserve">
     <value>ایمیل</value>
@@ -132,8 +138,29 @@
   <data name="DisName_FieldOfAcivity" xml:space="preserve">
     <value>زمینه فعالیت</value>
   </data>
+  <data name="DisName_FieldOfStudy" xml:space="preserve">
+    <value>رشته تحصیلی</value>
+  </data>
+  <data name="DisName_Gender" xml:space="preserve">
+    <value>جنسیت</value>
+  </data>
+  <data name="DisName_HasService" xml:space="preserve">
+    <value>سرویس</value>
+  </data>
   <data name="DisName_HeadOfTheUnit" xml:space="preserve">
     <value>مسئول واحد</value>
+  </data>
+  <data name="DisName_InsuranceStatus" xml:space="preserve">
+    <value>وضعیت بیمه</value>
+  </data>
+  <data name="DisName_JobTitle" xml:space="preserve">
+    <value>عنوان شغلی</value>
+  </data>
+  <data name="DisName_MaxAge" xml:space="preserve">
+    <value>حداکثر سن</value>
+  </data>
+  <data name="DisName_MinimumEducation" xml:space="preserve">
+    <value>حداقل تحصیلات</value>
   </data>
   <data name="DisName_Mobile" xml:space="preserve">
     <value>موبایل</value>
@@ -144,14 +171,29 @@
   <data name="DisName_Province" xml:space="preserve">
     <value>استان</value>
   </data>
+  <data name="DisName_RelatedWorkExperience" xml:space="preserve">
+    <value>سابقه کار مرتبط</value>
+  </data>
+  <data name="DisName_Salary" xml:space="preserve">
+    <value>میزان حقوق</value>
+  </data>
+  <data name="DisName_ServiceDescription" xml:space="preserve">
+    <value>توضیحات سرویس</value>
+  </data>
   <data name="DisName_UnitName" xml:space="preserve">
     <value>نام واحد</value>
   </data>
   <data name="DisName_UserName" xml:space="preserve">
     <value>نام کاربری</value>
   </data>
+  <data name="DisName_WorkingHours" xml:space="preserve">
+    <value>ساعات کاری</value>
+  </data>
   <data name="Val_confirm_is_not_the_same" xml:space="preserve">
     <value>{0} و {1} یکسان نیستند</value>
+  </data>
+  <data name="Val_enter_a_valid_number" xml:space="preserve">
+    <value>باید بین {0} و {1} باشد</value>
   </data>
   <data name="Val_this_field_is_required" xml:space="preserve">
     <value>فیلد {0} اجباری است</value>

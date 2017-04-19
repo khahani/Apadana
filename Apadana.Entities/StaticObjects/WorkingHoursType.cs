@@ -7,9 +7,17 @@ namespace Apadana.Entities.StaticObjects
 {
     public class WorkingHoursType : ITypeObject
     {
+        public const int GetMaximumId = 4;
+        public const int GetMinimumId = 1;
         private static readonly WorkingHoursType instance = new WorkingHoursType();
         static WorkingHoursType() { }
-        private WorkingHoursType() { }
+        private WorkingHoursType()
+        {
+            if (GetMaximumId != Objects.Last().Id)
+                throw new Exception(this.GetType().Name + " GetMaximumId is wrong");
+            if (GetMinimumId != Objects.First().Id)
+                throw new Exception(this.GetType().Name + " GetMinimumId is wrong");
+        }
         public static WorkingHoursType Instance
         {
             get { return instance; }
