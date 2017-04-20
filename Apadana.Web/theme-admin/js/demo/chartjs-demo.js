@@ -123,8 +123,8 @@ $(function () {
 
     };
 
-    var ctx = document.getElementById("polarChart").getContext("2d");
-    var myNewChart = new Chart(ctx).PolarArea(polarData, polarOptions);
+    //var ctx = document.getElementById("polarChart").getContext("2d");
+   // var myNewChart = new Chart(ctx).PolarArea(polarData, polarOptions);
 
     var doughnutData = [
         {

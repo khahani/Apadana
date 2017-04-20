@@ -37,8 +37,9 @@ $(function () {
                 fail: serverConnectingFailed
             };
 
+            console.log("before ajax send.");
             $.ajax(options);
-
+            console.log("ajax send.");
             e.preventDefault(); // avoid to execute the actual submit of the form.
 
         }catch(error){

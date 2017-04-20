@@ -32,7 +32,7 @@ namespace Apadana.Web
                 "~/theme-admin/js/plugins/toastr/toastr.min.js",
                 "~/Scripts/jquery.unobtrusive-ajax.js",
                 "~/Scripts/jquery.validate.js",
-                "~/Scripts/jquery.validate.unobtrusive.min.js",
+                "~/Scripts/jquery.validate.unobtrusive.js",
                 "~/theme-admin/js/plugins/sweetalert/sweetalert.min.js",
                 "~/AppScripts/app.js",
                 "~/AppScripts/userFunctions.js"));
