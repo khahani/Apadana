@@ -73,9 +73,6 @@
     <Compile Include="StaticObjects\TypeObject.cs" />
     <Compile Include="StaticObjects\WorkingHoursType.cs" />
     <Compile Include="StaticObjects\YesOrNoType.cs" />
-    <Compile Include="ViewModels\Employer\VmCreate.cs" />
-    <Compile Include="ViewModels\Employer\VmEdit.cs" />
-    <Compile Include="ViewModels\Job\VmCreate.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

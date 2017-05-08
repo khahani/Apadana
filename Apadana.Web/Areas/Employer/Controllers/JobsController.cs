@@ -7,6 +7,7 @@ using System.Web.Mvc;
 using Apadana.Entities;
 using Apadana.Web.DataContext;
 using Apadana.Entities.StaticObjects;
+using System;
 
 namespace Apadana.Web.Areas.Employer.Controllers
 {
@@ -71,14 +72,21 @@ namespace Apadana.Web.Areas.Employer.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "Id,JobTitle,Count,RelatedWorkExperience,MinimumEducation,FieldOfStudy,MaxAge,WorkingHours,Salary,MaritalStatus,Gender,InsuranceStatus,HasService,ServiceDescription,Address,AdsValidityPeriod")] Apadana.Entities.ViewModels.Job.VmCreate model)
+        public async Task<ActionResult> Create([Bind(Include = "Id,JobTitle,Count,RelatedWorkExperience,MinimumEducation,FieldOfStudy,MaxAge,WorkingHours,Salary,MaritalStatus,Gender,InsuranceStatus,HasService,ServiceDescription,Address,AdsValidityPeriod")] Apadana.Entities.Job model)
         {
             if (ModelState.IsValid)
             {
-                Job job = (Job)model;
+                model.Owner = CurrentEmployer;
+                model.Accepted = false;
+                db.Jobs.Add(model);
+                try
+                {
+                    await db.SaveChangesAsync();
 
-                db.Jobs.Add(job);
-                await db.SaveChangesAsync();
+                }catch(Exception ex)
+                {
+
+                }
                 return RedirectToAction("Index");
             }
 
@@ -88,6 +96,7 @@ namespace Apadana.Web.Areas.Employer.Controllers
         // GET: Employer/Jobs/Edit/5
         public async Task<ActionResult> Edit(int? id)
         {
+           
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -97,6 +106,18 @@ namespace Apadana.Web.Areas.Employer.Controllers
             {
                 return HttpNotFound();
             }
+
+            ViewData["SelectedRelatedWorkExperience"] = RelatedWorkExperienceType.Instance.Objects.First(m=>m.Id == job.RelatedWorkExperience).Id;
+            ViewData["SelectedEducation"] = EducationType.Instance.Objects.First(m=> m.Id == job.MinimumEducation).Id;
+            ViewData["SelectedMaximumAge"] = MaximumAgeType.Instance.Objects.First(m => m.Id == job.MaxAge).Id;
+            ViewData["SelectedWorkingHours"] = WorkingHoursType.Instance.Objects.First(m => m.Id == job.WorkingHours).Id;
+            ViewData["SelectedSalary"] = SalaryType.Instance.Objects.First(m => m.Id == job.Salary).Id;
+            ViewData["SelectedMaritalStatus"] = MaritalStatusType.Instance.Objects.First(m => m.Id == job.MaritalStatus).Id;
+            ViewData["SelectedGender"] = GenderType.Instance.Objects.First(m => m.Id == job.Gender).Id;
+            ViewData["SelectedInsuranceStatus"] = InsuranceStatusType.Instance.Objects.First(m => m.Id == job.InsuranceStatus).Id;
+            ViewData["SelectedHasService"] = YesOrNoType.Instance.Objects.First(m => m.Id == job.HasService).Id;
+            ViewData["SelectedAdsValidityPeriod"] = AdsValidityPeriodType.Instance.Objects.First(m => m.Id == job.AdsValidityPeriod).Id;
+
             return View(job);
         }
 
@@ -105,14 +126,26 @@ namespace Apadana.Web.Areas.Employer.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "Id,JobTitle,Count,RelatedWorkExperience,MinimumEducation,FieldOfStudy,MaxAge,WorkingHours,Salary,MaritalStatus,Gender,InsuranceStatus,HasService,ServiceDescription,Address,AdsValidityPeriod,CreatedBy,CreatedDate,UpdatedBy,UpdatedDate")] Job job)
+        public async Task<ActionResult> Edit([Bind(Include = "Id,JobTitle,Count,RelatedWorkExperience,MinimumEducation,FieldOfStudy,MaxAge,WorkingHours,Salary,MaritalStatus,Gender,InsuranceStatus,HasService,ServiceDescription,Address,AdsValidityPeriod")] Job job)
         {
             if (ModelState.IsValid)
             {
+                job.Accepted = false;
                 db.Entry(job).State = EntityState.Modified;
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
+            ViewData["SelectedRelatedWorkExperience"] = RelatedWorkExperienceType.Instance.Objects.First(m => m.Id == job.RelatedWorkExperience).Id;
+            ViewData["SelectedEducation"] = EducationType.Instance.Objects.First(m => m.Id == job.MinimumEducation).Id;
+            ViewData["SelectedMaximumAge"] = MaximumAgeType.Instance.Objects.First(m => m.Id == job.MaxAge).Id;
+            ViewData["SelectedWorkingHours"] = WorkingHoursType.Instance.Objects.First(m => m.Id == job.WorkingHours).Id;
+            ViewData["SelectedSalary"] = SalaryType.Instance.Objects.First(m => m.Id == job.Salary).Id;
+            ViewData["SelectedMaritalStatus"] = MaritalStatusType.Instance.Objects.First(m => m.Id == job.MaritalStatus).Id;
+            ViewData["SelectedGender"] = GenderType.Instance.Objects.First(m => m.Id == job.Gender).Id;
+            ViewData["SelectedInsuranceStatus"] = InsuranceStatusType.Instance.Objects.First(m => m.Id == job.InsuranceStatus).Id;
+            ViewData["SelectedHasService"] = YesOrNoType.Instance.Objects.First(m => m.Id == job.HasService).Id;
+            ViewData["SelectedAdsValidityPeriod"] = AdsValidityPeriodType.Instance.Objects.First(m => m.Id == job.AdsValidityPeriod).Id;
+
             return View(job);
         }
 

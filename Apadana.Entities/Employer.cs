@@ -80,34 +80,14 @@ namespace Apadana.Entities
         [Key]
         public int Id { get; set; }
 
-        [Required]
         public string CreatedBy { get; set; }
-        [Required]
-        [DataType(DataType.DateTime)]
-        public DateTime CreatedDate { get; set; }
-        [Required]
+        
+        public string CreatedDate { get; set; }
+        
         public string UpdatedBy { get; set; }
-        [Required]
-        [DataType(DataType.DateTime)]
-        public DateTime UpdatedDate { get; set; }
+        
+        public string UpdatedDate { get; set; }
 
-        public static explicit operator ViewModels.Employer.VmEdit(Employer instance)
-        {
-            return new ViewModels.Employer.VmEdit
-            {
-                Id = instance.Id,
-                Address = instance.Address,
-                Applicant = instance.Applicant,
-                City = instance.City,
-                Email = instance.Email,
-                FieldOfAcivity = instance.FieldOfAcivity,
-                HeadOfTheUnit = instance.HeadOfTheUnit,
-                Mobile = instance.Mobile,
-                Phone = instance.Phone,
-                ProvinceId = instance.ProvinceId,
-                UnitName = instance.UnitName,
-                UserName = instance.UserName
-            };
-        }
+       
     }
 }

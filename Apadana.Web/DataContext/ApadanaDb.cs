@@ -42,7 +42,7 @@ namespace Apadana.Web.DataContext
         // and logic code for both come here
         private void SaveChangesSequence()
         {
-            EntityChangeRequiredChangesOnUser();
+            //EntityChangeRequiredChangesOnUser();
             SaveUserInfoAndTimeForEachTuple();
         }
 
@@ -83,7 +83,7 @@ namespace Apadana.Web.DataContext
                 if (entity.State == EntityState.Added)
                 {
                     ((IBaseObject)entity.Entity).CreatedBy = userId.ToString();
-                    ((IBaseObject)entity.Entity).CreatedDate = currentDate;
+                    ((IBaseObject)entity.Entity).CreatedDate = currentDate.ToString();
 
                 }
                 if (entity.State == EntityState.Modified)
@@ -92,7 +92,7 @@ namespace Apadana.Web.DataContext
                     
                 }
                 ((IBaseObject)entity.Entity).UpdatedBy = userId.ToString();
-                ((IBaseObject)entity.Entity).UpdatedDate = currentDate;
+                ((IBaseObject)entity.Entity).UpdatedDate = currentDate.ToString();
             }
         }
 

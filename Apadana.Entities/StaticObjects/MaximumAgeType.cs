@@ -32,6 +32,13 @@ namespace Apadana.Entities.StaticObjects
                 return instance;
             }
         }
+
+        public TypeObject Get(int id)
+        {
+            return Instance.Objects.FirstOrDefault(m => m.Id == id);
+        }
+
+
         public List<TypeObject> Objects
         {
             get

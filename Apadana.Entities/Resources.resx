@@ -156,6 +156,9 @@
   <data name="DisName_JobTitle" xml:space="preserve">
     <value>عنوان شغلی</value>
   </data>
+  <data name="DisName_MaritalStatus" xml:space="preserve">
+    <value>وضعیت تاهل</value>
+  </data>
   <data name="DisName_MaxAge" xml:space="preserve">
     <value>حداکثر سن</value>
   </data>

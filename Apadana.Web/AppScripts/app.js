@@ -16,40 +16,41 @@ $(function () {
             ignore: []
         });
 
-    function ajaxFormSubmit(e) {
-        try {
+    //function ajaxFormSubmit(e) {
+    //    try {
 
-            $.validator.unobtrusive.parse($("form[data-ajax='true']"));
+    //        console.log('inside');
+    //        $.validator.unobtrusive.parse($("form[data-ajax='true']"));
 
-            var isValid = $(this).valid();
+    //        var isValid = $(this).valid();
 
-            if (!isValid) {
-                return false;
-            }
-            var $form = $(this);
+    //        if (!isValid) {
+    //            return false;
+    //        }
+    //        var $form = $(this);
 
-            var options = {
-                beforeSend: disable_form,
-                url: $form.attr("action"),
-                type: $form.attr("method"),
-                data: $form.serialize(),
-                timeout: config_ajax_timeout,
-                fail: serverConnectingFailed
-            };
+    //        var options = {
+    //            beforeSend: disable_form,
+    //            url: $form.attr("action"),
+    //            type: $form.attr("method"),
+    //            data: $form.serialize(),
+    //            timeout: config_ajax_timeout,
+    //            fail: serverConnectingFailed
+    //        };
 
-            console.log("before ajax send.");
-            $.ajax(options);
-            console.log("ajax send.");
-            e.preventDefault(); // avoid to execute the actual submit of the form.
+    //        console.log("before ajax send.");
+    //        //$.ajax(options);            
+    //        console.log("ajax send.");
+    //        e.preventDefault(); // avoid to execute the actual submit of the form.
 
-        }catch(error){
-            console.log(error);
-        }finally{
-            enable_form();
-        }
-    }
+    //    }catch(error){
+    //        console.log(error);
+    //    }finally{
+    //        enable_form();
+    //    }
+    //}
 
-    $("form[data-ajax='true']").submit(ajaxFormSubmit);
+   // $("form[data-ajax='true']").submit(ajaxFormSubmit);
    
 });
 /* ---------------- END     -----------------------------*/
@@ -101,11 +102,15 @@ function disable_form() {
     form_is_disable = true;
 
     setTimeout(function () { }, 0);
+
+    console.log('form disabled');
 }
 
 function enable_form() {
-    if (!form_is_disable)
+    if (!form_is_disable) {
+        console.log('form is not disable!');
         return;
+    }
     switch (config_disable_form_type) {
         case "form":
             $("form[data-ajax='true'] :input").attr("disabled", false);
@@ -113,8 +118,10 @@ function enable_form() {
         case "button":
             $("form[data-ajax='true'] :button[data-disable-onsubmit='true']").attr("disabled", false);
             break;
+        default:
+            break;
     }
-        
+    console.log('form is enabled');
 }
 
 /* ---------------- END    -----------------------------*/

@@ -45,5 +45,10 @@ namespace Apadana.Entities.StaticObjects
                 return objects;
             }
         }
+
+        public TypeObject Get(int id)
+        {
+            return Instance.Objects.FirstOrDefault(m => m.Id == id);
+        }
     }
 }

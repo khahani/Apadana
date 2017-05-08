@@ -1,0 +1,710 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آپادانا | داشبورد</title>
+    @Styles.Render("~/content/styles")
+    <link href="~/theme-admin/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/theme-admin/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link href="~/theme-admin/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <!-- Toastr style -->
+    <link href="~/theme-admin/css/plugins/toastr/toastr.min.css" rel="stylesheet">
+    <!-- Gritter -->
+    <link href="~/theme-admin/js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+    <link href="~/theme-admin/css/animate.css" rel="stylesheet">
+    <link href="~/theme-admin/css/style.rtl.css" rel="stylesheet">
+    <link href="~/theme-admin/css/app-style.css" rel="stylesheet" />
+    <link href="~/theme-admin/css/plugins/sweetalert/sweetalert.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element">
+                            <span>
+                                <img alt="image" class="img-circle" src="~/theme-admin/img/profile_small.jpg" />
+                            </span>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <span class="clear">
+                                    <span class="block m-t-xs">
+                                        <strong class="font-bold">@CurrentUser.Name</strong>
+                                    </span> <span class="text-muted text-xs block">پرسنل <b class="caret"></b></span>
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu animated fadeInLeft m-t-xs">
+                                @*<li><a href="@Url.Action("create", null, new { area = "employer", controller = "employers" }, Request.Url.Scheme)">پروفایل</a></li>*@
+                                <li><a href="@Url.Action("changepassword", null, new { area = AppDefaults.AREA_PERSONEL, controller = "auth" }, Request.Url.Scheme)">تغییر رمز عبور</a></li>
+                                <li class="divider"></li>
+                                <li><a href="@Url.Action("logout", null, new { area = AppDefaults.AREA_PERSONEL, controller = "auth" }, Request.Url.Scheme)">خروج</a></li>
+                            </ul>
+                        </div>
+                        <div class="logo-element">
+                            لوگو
+                        </div>
+                    </li>
+                    <li class="active">
+                        <a href="index-2.html"><i class="fa fa-handshake-o"></i> <span class="nav-label">فرصت های شغلی</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li class="active"><a href="@Url.Action("create", null, new { area = AppDefaults.AREA_PERSONEL, controller = "jobs" }, Request.Url.Scheme)">فرصت شغلی جدید</a></li>
+                            @*<li><a href="@Url.Action("index", null, new { area = AppDefaults.AREA_PERSONEL, controller = "jobs" }, Request.Url.Scheme)">فرصت های شغلی من</a></li>*@
+                            <li><a href="@Url.Action("NotAccepted", null, new { area = AppDefaults.AREA_PERSONEL, controller = "jobs" }, Request.Url.Scheme)">تایید نشده</a></li>
+                            <li><a href="@Url.Action("Accepted", null, new { area = AppDefaults.AREA_PERSONEL, controller = "jobs" }, Request.Url.Scheme)">تایید شده</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-address-book-o"></i> <span class="nav-label">کارجویان</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="#">همه کارجویان</a></li>
+                            <li><a href="#">تایید نشده</a></li>
+                            <li><a href="#">تایید شده</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-address-book-o"></i> <span class="nav-label">کارفرمایان</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="#">همه کارفرمایان</a></li>
+                            <li><a href="#">تایید نشده</a></li>
+                            <li><a href="#">تایید شده</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-address-book-o"></i> <span class="nav-label">معرفی نامه ها</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="#">ثبت معرفی نامه</a></li>
+                            <li><a href="#">همه معرفی نامه ها</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-address-book-o"></i> <span class="nav-label">پست ها</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="#">همه</a></li>
+                            <li><a href="#">پست جدید</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-address-book-o"></i> <span class="nav-label">گالری تصاویر</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="#">همه</a></li>
+                            <li><a href="#">تصویر جدید</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#"><i class="fa fa-address-book-o"></i> <span class="nav-label">تنظیمات</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="#">شبکه های اجتماعی</a></li>
+                            <li><a href="#">لوگو سایت</a></li>
+                            <li><a href="#">درباره ما</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div id="page-wrapper" class="gray-bg dashbard-1">
+            @RenderBody()
+        </div>
+        <div class="small-chat-box fadeInRight animated">
+            <div class="heading" draggable="true">
+                <small class="chat-date pull-left">
+                    1394.10.20
+                </small>
+                گفتگو زنده
+            </div>
+            <div class="content">
+                <div class="left">
+                    <div class="author-name">
+                        ایمن <small class="chat-date">
+                            10:02 ق.ظ
+                        </small>
+                    </div>
+                    <div class="chat-message active">
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده.
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="author-name">
+                        نیک
+                        <small class="chat-date">
+                            11:24 ق.ظ
+                        </small>
+                    </div>
+                    <div class="chat-message">
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم.
+                    </div>
+                </div>
+                <div class="left">
+                    <div class="author-name">
+                        آلیس
+                        <small class="chat-date">
+                            08:45 ب.ظ
+                        </small>
+                    </div>
+                    <div class="chat-message active">
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده.
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="author-name">
+                        آنا
+                        <small class="chat-date">
+                            11:24 ق.ظ
+                        </small>
+                    </div>
+                    <div class="chat-message">
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
+                    </div>
+                </div>
+                <div class="left">
+                    <div class="author-name">
+                        نیک
+                        <small class="chat-date">
+                            08:45 ب.ظ
+                        </small>
+                    </div>
+                    <div class="chat-message active">
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده.
+                    </div>
+                </div>
+
+            </div>
+            <div class="form-chat">
+                <div class="input-group input-group-sm">
+                    <input type="text" class="form-control"> <span class="input-group-btn">
+                        <button class="btn btn-primary" type="button">
+                            ارسال
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div id="small-chat">
+            <span class="badge badge-warning pull-right">5</span>
+            <a class="open-small-chat">
+                <i class="fa fa-comments"></i>
+            </a>
+        </div>
+        <div id="left-sidebar">
+            <div class="sidebar-container">
+                <ul class="nav nav-tabs navs-3">
+                    <li class="active">
+                        <a data-toggle="tab" href="#tab-1">
+                            یادداشت ها
+                        </a>
+                    </li>
+                    <li>
+                        <a data-toggle="tab" href="#tab-2">
+                            پروژه ها
+                        </a>
+                    </li>
+                    <li class="">
+                        <a data-toggle="tab" href="#tab-3">
+                            <i class="fa fa-gear"></i>
+                        </a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div id="tab-1" class="tab-pane active">
+                        <div class="sidebar-title">
+                            <h3> <i class="fa fa-comments-o"></i> آخرین یادداشت ها</h3>
+                            <small><i class="fa fa-tim"></i> شما 10 پیغام جدید دارید.</small>
+                        </div>
+                        <div>
+                            <div class="sidebar-message">
+                                <a href="#">
+                                    <div class="pull-right text-center">
+                                        <img alt="image" class="img-circle message-avatar" src="~/theme-admin/~/theme-admin/img/a1.jpg">
+                                        <div class="m-t-xs">
+                                            <i class="fa fa-star text-warning"></i>
+                                            <i class="fa fa-star text-warning"></i>
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده.
+                                        <br>
+                                        <small class="text-muted">امروز 4:21 ب.ظ</small>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="sidebar-message">
+                                <a href="#">
+                                    <div class="pull-right text-center">
+                                        <img alt="image" class="img-circle message-avatar" src="~/theme-admin/~/theme-admin/img/a2.jpg">
+                                    </div>
+                                    <div class="media-body">
+                                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده.
+                                        <br>
+                                        <small class="text-muted">دیروز 2:45 ب.ظ</small>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="sidebar-message">
+                                <a href="#">
+                                    <div class="pull-right text-center">
+                                        <img alt="image" class="img-circle message-avatar" src="~/theme-admin/~/theme-admin/img/a3.jpg">
+                                        <div class="m-t-xs">
+                                            <i class="fa fa-star text-warning"></i>
+                                            <i class="fa fa-star text-warning"></i>
+                                            <i class="fa fa-star text-warning"></i>
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده.
+                                        <br>
+                                        <small class="text-muted">دیروز 1:10 ب.ظ</small>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="sidebar-message">
+                                <a href="#">
+                                    <div class="pull-right text-center">
+                                        <img alt="image" class="img-circle message-avatar" src="~/theme-admin/~/theme-admin/img/a4.jpg">
+                                    </div>
+                                    <div class="media-body">
+                                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده.
+                                        <br>
+                                        <small class="text-muted">دوشنبه 8:37 ب.ظ</small>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="sidebar-message">
+                                <a href="#">
+                                    <div class="pull-right text-center">
+                                        <img alt="image" class="img-circle message-avatar" src="~/theme-admin/~/theme-admin/img/a8.jpg">
+                                    </div>
+                                    <div class="media-body">
+                                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده.
+                                        <br>
+                                        <small class="text-muted">امروز 4:21 ب.ظ</small>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="sidebar-message">
+                                <a href="#">
+                                    <div class="pull-right text-center">
+                                        <img alt="image" class="img-circle message-avatar" src="~/theme-admin/~/theme-admin/img/a7.jpg">
+                                    </div>
+                                    <div class="media-body">
+                                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده.
+                                        <br>
+                                        <small class="text-muted">دیروز 2:45 ب.ظ</small>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="sidebar-message">
+                                <a href="#">
+                                    <div class="pull-right text-center">
+                                        <img alt="image" class="img-circle message-avatar" src="~/theme-admin/~/theme-admin/img/a3.jpg">
+                                        <div class="m-t-xs">
+                                            <i class="fa fa-star text-warning"></i>
+                                            <i class="fa fa-star text-warning"></i>
+                                            <i class="fa fa-star text-warning"></i>
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده.
+                                        <br>
+                                        <small class="text-muted">دیروز 1:10 ب.ظ</small>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="sidebar-message">
+                                <a href="#">
+                                    <div class="pull-right text-center">
+                                        <img alt="image" class="img-circle message-avatar" src="~/theme-admin/~/theme-admin/img/a4.jpg">
+                                    </div>
+                                    <div class="media-body">
+                                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده.
+                                        <br>
+                                        <small class="text-muted">دوشنبه 8:37 ب.ظ</small>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-2" class="tab-pane">
+                        <div class="sidebar-title">
+                            <h3> <i class="fa fa-cube"></i> آخریم پروژه ها</h3>
+                            <small><i class="fa fa-tim"></i> شما 14 پروژه دارید که 10 تای آن نا تمام است.</small>
+                        </div>
+                        <ul class="sidebar-list">
+                            <li>
+                                <a href="#">
+                                    <div class="small pull-left m-t-xs">9 ساعت پیش</div>
+                                    <h4>پروژه ی لورم</h4>
+                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده.
+                                    <div class="small">درصد پیشرفت: 22%</div>
+                                    <div class="progress progress-mini">
+                                        <div style="width: 22%;" class="progress-bar progress-bar-warning"></div>
+                                    </div>
+                                    <div class="small text-muted m-t-xs">تاریخ پایان: 4:00 ب.ظ - 1394/06/10</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="small pull-left m-t-xs">9 ساعت پیش</div>
+                                    <h4>قرارداد با شرکت </h4>
+                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                                    <div class="small">درصد پیشرفت: 48%</div>
+                                    <div class="progress progress-mini">
+                                        <div style="width: 48%;" class="progress-bar"></div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="small pull-left m-t-xs">9 ساعت پیش</div>
+                                    <h4>جلسه</h4>
+                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                                    <div class="small">درصد پیشرفت: 14%</div>
+                                    <div class="progress progress-mini">
+                                        <div style="width: 14%;" class="progress-bar progress-bar-info"></div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="label label-primary pull-left">جدید</span>
+                                    <h4>تولید</h4>
+                                    <!--<div class="small pull-right m-t-xs">9 ساعت پیش</div>-->
+                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                                    <div class="small">درصد پیشرفت: 22%</div>
+                                    <div class="small text-muted m-t-xs">تاریخ پایان: 4:00 ب.ظ - 1394/05/31</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="small pull-left m-t-xs">9 ساعت پیش</div>
+                                    <h4>پروژه</h4>
+                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                                    <div class="small">درصد پیشرفت: 22%</div>
+                                    <div class="progress progress-mini">
+                                        <div style="width: 22%;" class="progress-bar progress-bar-warning"></div>
+                                    </div>
+                                    <div class="small text-muted m-t-xs">تاریخ پایان: 4:00 ب.ظ - 1394/02/14</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="small pull-left m-t-xs">9 ساعت پیش</div>
+                                    <h4>قرارداد مجدد </h4>
+                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                                    <div class="small">درصد پیشرفت: 48%</div>
+                                    <div class="progress progress-mini">
+                                        <div style="width: 48%;" class="progress-bar"></div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="small pull-left m-t-xs">9 ساعت پیش</div>
+                                    <h4>جلسه</h4>
+                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                                    <div class="small">درصد پیشرفت: 14%</div>
+                                    <div class="progress progress-mini">
+                                        <div style="width: 14%;" class="progress-bar progress-bar-info"></div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="label label-primary pull-left">جدید</span>
+                                    <h4>تولید</h4>
+                                    <!--<div class="small pull-right m-t-xs">9 ساعت پیش</div>-->
+                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                                    <div class="small">درصد پیشرفت: 22%</div>
+                                    <div class="small text-muted m-t-xs">تاریخ پایان: 4:00 ب.ظ - 1394/06/14</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="tab-3" class="tab-pane">
+                        <div class="sidebar-title">
+                            <h3><i class="fa fa-gears"></i> تنظیمات</h3>
+                            <small><i class="fa fa-tim"></i>  شما 14 پروژه دارید که 10 تای آن نا تمام است.</small>
+                        </div>
+                        <div class="setings-item">
+                            <span>
+                                نمایش اطلاع رسانی
+                            </span>
+                            <div class="switch">
+                                <div class="onoffswitch">
+                                    <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example">
+                                    <label class="onoffswitch-label" for="example">
+                                        <span class="onoffswitch-inner"></span>
+                                        <span class="onoffswitch-switch"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="setings-item">
+                            <span>
+                                غیرفعال کردن گفتگو
+                            </span>
+                            <div class="switch">
+                                <div class="onoffswitch">
+                                    <input type="checkbox" name="collapsemenu" checked class="onoffswitch-checkbox" id="example2">
+                                    <label class="onoffswitch-label" for="example2">
+                                        <span class="onoffswitch-inner"></span>
+                                        <span class="onoffswitch-switch"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="setings-item">
+                            <span>
+                                فعال سازی تاریخچه
+                            </span>
+                            <div class="switch">
+                                <div class="onoffswitch">
+                                    <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example3">
+                                    <label class="onoffswitch-label" for="example3">
+                                        <span class="onoffswitch-inner"></span>
+                                        <span class="onoffswitch-switch"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="setings-item">
+                            <span>
+                                نمایش چارت ها
+                            </span>
+                            <div class="switch">
+                                <div class="onoffswitch">
+                                    <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example4">
+                                    <label class="onoffswitch-label" for="example4">
+                                        <span class="onoffswitch-inner"></span>
+                                        <span class="onoffswitch-switch"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="setings-item">
+                            <span>
+                                کاربران آفلاین
+                            </span>
+                            <div class="switch">
+                                <div class="onoffswitch">
+                                    <input type="checkbox" checked name="collapsemenu" class="onoffswitch-checkbox" id="example5">
+                                    <label class="onoffswitch-label" for="example5">
+                                        <span class="onoffswitch-inner"></span>
+                                        <span class="onoffswitch-switch"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="setings-item">
+                            <span>
+                                جستجوی عمومی
+                            </span>
+                            <div class="switch">
+                                <div class="onoffswitch">
+                                    <input type="checkbox" checked name="collapsemenu" class="onoffswitch-checkbox" id="example6">
+                                    <label class="onoffswitch-label" for="example6">
+                                        <span class="onoffswitch-inner"></span>
+                                        <span class="onoffswitch-switch"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="setings-item">
+                            <span>
+                                بروزرسانی روزانه
+                            </span>
+                            <div class="switch">
+                                <div class="onoffswitch">
+                                    <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example7">
+                                    <label class="onoffswitch-label" for="example7">
+                                        <span class="onoffswitch-inner"></span>
+                                        <span class="onoffswitch-switch"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sidebar-content">
+                            <h4>تنظیمات</h4>
+                            <div class="small">
+                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @*<!-- Mainly scripts -->
+    <script src="~/theme-admin/js/jquery-2.1.1.js"></script>
+    <script src="~/theme-admin/js/bootstrap.min.js"></script>
+    <script src="~/theme-admin/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="~/theme-admin/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <!-- Flot -->
+    <script src="~/theme-admin/js/plugins/flot/jquery.flot.js"></script>
+    <script src="~/theme-admin/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="~/theme-admin/js/plugins/flot/jquery.flot.spline.js"></script>
+    <script src="~/theme-admin/js/plugins/flot/jquery.flot.resize.js"></script>
+    <script src="~/theme-admin/js/plugins/flot/jquery.flot.pie.js"></script>
+    <!-- Peity -->
+    <script src="~/theme-admin/js/plugins/peity/jquery.peity.min.js"></script>
+    <script src="~/theme-admin/js/demo/peity-demo.js"></script>
+    <!-- Custom and plugin javascript -->
+    <script src="~/theme-admin/js/rada.js"></script>
+    <script src="~/theme-admin/js/plugins/pace/pace.min.js"></script>
+    <!-- jQuery UI -->
+    <script src="~/theme-admin/js/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- GITTER -->
+    <script src="~/theme-admin/js/plugins/gritter/jquery.gritter.min.js"></script>
+    <!-- Sparkline -->
+    <script src="~/theme-admin/js/plugins/sparkline/jquery.sparkline.min.js"></script>
+    <!-- Sparkline demo data  -->
+    <script src="~/theme-admin/js/demo/sparkline-demo.js"></script>
+    <!-- ChartJS-->
+    <script src="~/theme-admin/js/plugins/chartJs/Chart.min.js"></script>
+    <!-- Toastr -->
+    <script src="~/theme-admin/js/plugins/toastr/toastr.min.js"></script>*@
+
+    @Scripts.Render("~/bundles/bottom-panel")
+
+    <script>
+            $(document).ready(function() {
+                //setTimeout(function() {
+                //    toastr.options = {
+                //        closeButton: true,
+                //        progressBar: true,
+                //        showMethod: 'slideDown',
+                //        positionClass: 'toast-top-left',
+                //        timeOut: 4000
+                //    };
+                //    toastr.success('لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ', 'به قسمت مدیریت خوش آمدید');
+
+                //}, 1300);
+
+
+                var data1 = [
+                    [0,4],[1,8],[2,5],[3,10],[4,4],[5,16],[6,5],[7,11],[8,6],[9,11],[10,30],[11,10],[12,13],[13,4],[14,3],[15,3],[16,6]
+                ];
+                var data2 = [
+                    [0,1],[1,0],[2,2],[3,0],[4,1],[5,3],[6,1],[7,5],[8,2],[9,3],[10,2],[11,1],[12,0],[13,2],[14,8],[15,0],[16,0]
+                ];
+                $("#flot-dashboard-chart").length && $.plot($("#flot-dashboard-chart"), [
+                    data1, data2
+                ],
+                        {
+                            series: {
+                                lines: {
+                                    show: false,
+                                    fill: true
+                                },
+                                splines: {
+                                    show: true,
+                                    tension: 0.4,
+                                    lineWidth: 1,
+                                    fill: 0.4
+                                },
+                                points: {
+                                    radius: 0,
+                                    show: true
+                                },
+                                shadowSize: 2
+                            },
+                            grid: {
+                                hoverable: true,
+                                clickable: true,
+                                tickColor: "#d5d5d5",
+                                borderWidth: 1,
+                                color: '#d5d5d5'
+                            },
+                            colors: ["#1ab394", "#464f88"],
+                            xaxis:{
+                            },
+                            yaxis: {
+                                ticks: 4
+                            },
+                            tooltip: false
+                        }
+                );
+
+                //var doughnutData = [
+                //    {
+                //        value: 300,
+                //        color: "#a3e1d4",
+                //        highlight: "#1ab394",
+                //        label: "App"
+                //    },
+                //    {
+                //        value: 50,
+                //        color: "#dedede",
+                //        highlight: "#1ab394",
+                //        label: "Software"
+                //    },
+                //    {
+                //        value: 100,
+                //        color: "#b5b8cf",
+                //        highlight: "#1ab394",
+                //        label: "Laptop"
+                //    }
+                //];
+
+                //var doughnutOptions = {
+                //    segmentShowStroke: true,
+                //    segmentStrokeColor: "#fff",
+                //    segmentStrokeWidth: 2,
+                //    percentageInnerCutout: 45, // This is 0 for Pie charts
+                //    animationSteps: 100,
+                //    animationEasing: "easeOutBounce",
+                //    animateRotate: true,
+                //    animateScale: false
+                //};
+
+                //var ctx = document.getElementById("doughnutChart").getContext("2d");
+                //var DoughnutChart = new Chart(ctx).Doughnut(doughnutData, doughnutOptions);
+
+                var polarData = [
+                    {
+                        value: 300,
+                        color: "#a3e1d4",
+                        highlight: "#1ab394",
+                        label: "App"
+                    },
+                    {
+                        value: 140,
+                        color: "#dedede",
+                        highlight: "#1ab394",
+                        label: "Software"
+                    },
+                    {
+                        value: 200,
+                        color: "#b5b8cf",
+                        highlight: "#1ab394",
+                        label: "Laptop"
+                    }
+                ];
+
+                var polarOptions = {
+                    scaleShowLabelBackdrop: true,
+                    scaleBackdropColor: "rgba(255,255,255,0.75)",
+                    scaleBeginAtZero: true,
+                    scaleBackdropPaddingY: 1,
+                    scaleBackdropPaddingX: 1,
+                    scaleShowLine: true,
+                    segmentShowStroke: true,
+                    segmentStrokeColor: "#fff",
+                    segmentStrokeWidth: 2,
+                    animationSteps: 100,
+                    animationEasing: "easeOutBounce",
+                    animateRotate: true,
+                    animateScale: false
+                };
+                //var ctx = document.getElementById("polarChart").getContext("2d");
+                //var Polarchart = new Chart(ctx).PolarArea(polarData, polarOptions);
+
+            });
+    </script>
+
+    @RenderSection("BeforeEndBody", required: false)
+</body>
+</html>

@@ -14,10 +14,10 @@ namespace Apadana.Entities
    
         string CreatedBy { get; set; }
 
-        DateTime CreatedDate { get; set; }
+        string CreatedDate { get; set; }
         
         string UpdatedBy { get; set; }
         
-        DateTime UpdatedDate { get; set; }
+        string UpdatedDate { get; set; }
     }
 }

@@ -279,7 +279,8 @@ namespace Apadana.Web.Controllers
 
             if (CurrentUser.IsInRole(AppDefaults.ROLE_EMPLOYER))
                 return RedirectToAction("index", "home", new { area = AppDefaults.AREA_EMPLOYER });
-
+            else if (CurrentUser.IsInRole(AppDefaults.ROLE_PERSONEL))
+                return RedirectToAction("index", "home", new { area = AppDefaults.AREA_PERSONEL });
             return RedirectToAction("index", "home");
         }
 

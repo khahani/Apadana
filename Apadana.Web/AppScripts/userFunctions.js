@@ -30,8 +30,15 @@ var changePasswordResult = function (data, status, xhr) {
 /* Area/Employer/Employers/Create */
 
 var createEmployer = function (data, status, xhr) {
-    try{
+    try {
+        console.log('response receieved');
         console.log(data.responseJSON.success);
+        console.log(data.responseJSON.resultType);
+
+        if (data.responseJSON.resultType == "redirect") {
+            console.log("it is redirect");
+            window.location = data.responseJSON.url;
+        }
 
         var message = "", header = "";
 

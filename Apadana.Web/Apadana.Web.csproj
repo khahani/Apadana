@@ -398,6 +398,46 @@
     <Content Include="Areas\Employer\Views\Shared\EditorTemplates\InsuranceStatus.cshtml" />
     <Content Include="Areas\Employer\Views\Shared\EditorTemplates\HasService.cshtml" />
     <Content Include="Areas\Employer\Views\Shared\EditorTemplates\AdsValidityPeriod.cshtml" />
+    <Content Include="Areas\Personel\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Personel\Views\Jobs\NotAccepted.cshtml" />
+    <Content Include="Areas\Personel\Views\Jobs\Accepted.cshtml" />
+    <Content Include="Areas\Personel\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Personel\Views\Auth\ChangePassword.cshtml" />
+    <Content Include="Areas\Personel\Views\Home\Index.cshtml" />
+    <Content Include="Areas\Personel\Views\Shared\EditorTemplates\AdsValidityPeriod.cshtml" />
+    <Content Include="Areas\Personel\Views\Shared\EditorTemplates\Education.cshtml" />
+    <Content Include="Areas\Personel\Views\Shared\EditorTemplates\Gender.cshtml" />
+    <Content Include="Areas\Personel\Views\Shared\EditorTemplates\HasService.cshtml" />
+    <Content Include="Areas\Personel\Views\Shared\EditorTemplates\InsuranceStatus.cshtml" />
+    <Content Include="Areas\Personel\Views\Shared\EditorTemplates\MaritalStatus.cshtml" />
+    <Content Include="Areas\Personel\Views\Shared\EditorTemplates\MaximumAge.cshtml" />
+    <Content Include="Areas\Personel\Views\Shared\EditorTemplates\Province.cshtml" />
+    <Content Include="Areas\Personel\Views\Shared\EditorTemplates\RelatedWorkExperience.cshtml" />
+    <Content Include="Areas\Personel\Views\Shared\EditorTemplates\Salary.cshtml" />
+    <Content Include="Areas\Personel\Views\Shared\EditorTemplates\WorkingHours.cshtml" />
+    <Content Include="Areas\Employer\Views\Shared\DisplayTemplates\AdsValidityPeriod.cshtml" />
+    <Content Include="Areas\Employer\Views\Shared\DisplayTemplates\Education.cshtml" />
+    <Content Include="Areas\Employer\Views\Shared\DisplayTemplates\Gender.cshtml" />
+    <Content Include="Areas\Employer\Views\Shared\DisplayTemplates\HasService.cshtml" />
+    <Content Include="Areas\Employer\Views\Shared\DisplayTemplates\InsuranceStatus.cshtml" />
+    <Content Include="Areas\Employer\Views\Shared\DisplayTemplates\MaritalStatus.cshtml" />
+    <Content Include="Areas\Employer\Views\Shared\DisplayTemplates\MaximumAge.cshtml" />
+    <Content Include="Areas\Employer\Views\Shared\DisplayTemplates\Province.cshtml" />
+    <Content Include="Areas\Employer\Views\Shared\DisplayTemplates\RelatedWorkExperience.cshtml" />
+    <Content Include="Areas\Employer\Views\Shared\DisplayTemplates\Salary.cshtml" />
+    <Content Include="Areas\Employer\Views\Shared\DisplayTemplates\WorkingHours.cshtml" />
+    <Content Include="Areas\Personel\Views\Shared\DisplayTemplates\AdsValidityPeriod.cshtml" />
+    <Content Include="Areas\Personel\Views\Shared\DisplayTemplates\Education.cshtml" />
+    <Content Include="Areas\Personel\Views\Shared\DisplayTemplates\Gender.cshtml" />
+    <Content Include="Areas\Personel\Views\Shared\DisplayTemplates\HasService.cshtml" />
+    <Content Include="Areas\Personel\Views\Shared\DisplayTemplates\InsuranceStatus.cshtml" />
+    <Content Include="Areas\Personel\Views\Shared\DisplayTemplates\MaritalStatus.cshtml" />
+    <Content Include="Areas\Personel\Views\Shared\DisplayTemplates\MaximumAge.cshtml" />
+    <Content Include="Areas\Personel\Views\Shared\DisplayTemplates\Province.cshtml" />
+    <Content Include="Areas\Personel\Views\Shared\DisplayTemplates\RelatedWorkExperience.cshtml" />
+    <Content Include="Areas\Personel\Views\Shared\DisplayTemplates\Salary.cshtml" />
+    <Content Include="Areas\Personel\Views\Shared\DisplayTemplates\WorkingHours.cshtml" />
+    <Content Include="Areas\Personel\Views\Employers\Index.cshtml" />
     <None Include="Properties\PublishProfiles\p.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -763,6 +803,15 @@
     <Compile Include="Areas\Employer\Controllers\HomeController.cs" />
     <Compile Include="Areas\Employer\Controllers\JobsController.cs" />
     <Compile Include="Areas\Employer\EmployerAreaRegistration.cs" />
+    <Compile Include="Areas\Personel\Controllers\AuthController.cs" />
+    <Compile Include="Areas\Personel\Controllers\EmployersController.cs" />
+    <Compile Include="Areas\Personel\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Personel\Controllers\JobsController.cs" />
+    <Compile Include="Migrations\201705060657126_add_accepted_job.cs" />
+    <Compile Include="Migrations\201705060657126_add_accepted_job.Designer.cs">
+      <DependentUpon>201705060657126_add_accepted_job.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\HomePageViewModel.cs" />
     <Compile Include="Areas\Employer\ViewModels\ViewModelChangePassword.cs" />
     <Compile Include="Areas\Employer\Localization\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -793,8 +842,17 @@
     <Compile Include="Migrations\201704081204547_init-db.Designer.cs">
       <DependentUpon>201704081204547_init-db.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705040820340_sdfsdf.cs" />
+    <Compile Include="Migrations\201705040820340_sdfsdf.Designer.cs">
+      <DependentUpon>201705040820340_sdfsdf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705040846205_sdfsdf2.cs" />
+    <Compile Include="Migrations\201705040846205_sdfsdf2.Designer.cs">
+      <DependentUpon>201705040846205_sdfsdf2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\JobSeeker.cs" />
+    <Compile Include="Repository\JobRepo.cs" />
     <Compile Include="Security\BaseSyncUser.cs" />
     <Compile Include="Security\ISyncUser.cs" />
     <Compile Include="Security\SyncUserFactory.cs" />
@@ -906,13 +964,10 @@
     <Folder Include="Areas\Colleague\Models\" />
     <Folder Include="Areas\Colleague\Views\Shared\" />
     <Folder Include="Areas\Employer\Models\" />
-    <Folder Include="Areas\Employer\Views\Shared\DisplayTemplates\" />
     <Folder Include="Areas\JobSeeker\Controllers\" />
     <Folder Include="Areas\JobSeeker\Models\" />
     <Folder Include="Areas\JobSeeker\Views\Shared\" />
-    <Folder Include="Areas\Personel\Controllers\" />
     <Folder Include="Areas\Personel\Models\" />
-    <Folder Include="Areas\Personel\Views\Shared\" />
     <Folder Include="css\images\" />
   </ItemGroup>
   <ItemGroup>
@@ -922,6 +977,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201704081204547_init-db.resx">
       <DependentUpon>201704081204547_init-db.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705040820340_sdfsdf.resx">
+      <DependentUpon>201705040820340_sdfsdf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705040846205_sdfsdf2.resx">
+      <DependentUpon>201705040846205_sdfsdf2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705060657126_add_accepted_job.resx">
+      <DependentUpon>201705060657126_add_accepted_job.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewModels\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

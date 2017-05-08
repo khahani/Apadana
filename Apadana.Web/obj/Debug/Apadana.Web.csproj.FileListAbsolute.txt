@@ -61,6 +61,7 @@ C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\Apadana.Web.dll.config
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\Apadana.Web.dll
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\Apadana.Web.pdb
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\Antlr3.Runtime.dll
+C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\Apadana.Entities.dll
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\EntityFramework.dll
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\EntityFramework.SqlServer.dll
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\Microsoft.AI.Agent.Intercept.dll
@@ -85,6 +86,7 @@ C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\Microsoft.Web.Infrastructu
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\Microsoft.Win32.Primitives.dll
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\Newtonsoft.Json.dll
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\Owin.dll
+C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\RestSharp.dll
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\System.AppContext.dll
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\System.Console.dll
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\System.Diagnostics.DiagnosticSource.dll
@@ -108,6 +110,7 @@ C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\System.Web.Webpages.Deploy
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\System.Web.Webpages.dll
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\System.Web.Webpages.Razor.dll
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\WebGrease.dll
+C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\Apadana.Entities.pdb
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\Antlr3.Runtime.pdb
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\EntityFramework.xml
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\EntityFramework.SqlServer.xml
@@ -128,6 +131,7 @@ C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\Microsoft.Owin.Security.xm
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\Microsoft.Owin.Security.Cookies.xml
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\Newtonsoft.Json.xml
+C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\RestSharp.xml
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\System.Diagnostics.DiagnosticSource.xml
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\System.Web.Optimization.xml
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\System.Web.Razor.xml
@@ -136,14 +140,13 @@ C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\System.Web.Webpages.Deploy
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\System.Web.Webpages.Razor.xml
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\System.Web.Helpers.xml
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\System.Web.Mvc.xml
-C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\obj\Debug\Apadana.Web.dll
-C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\obj\Debug\Apadana.Web.pdb
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\obj\Debug\Apadana.Web.csprojResolveAssemblyReference.cache
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\obj\Debug\Apadana.Web.Areas.Employer.Localization.Resources.resources
-C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\obj\Debug\Apadana.Web.csproj.GenerateResource.Cache
-C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\Apadana.Entities.dll
-C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\Apadana.Entities.pdb
-C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\obj\Debug\Apadana.Web.ViewModels.Resources.resources
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\obj\Debug\Apadana.Web.Migrations.initdb.resources
-C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\RestSharp.dll
-C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\RestSharp.xml
+C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\obj\Debug\Apadana.Web.Migrations.sdfsdf.resources
+C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\obj\Debug\Apadana.Web.Migrations.sdfsdf2.resources
+C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\obj\Debug\Apadana.Web.Migrations.add_accepted_job.resources
+C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\obj\Debug\Apadana.Web.ViewModels.Resources.resources
+C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\obj\Debug\Apadana.Web.csproj.GenerateResource.Cache
+C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\obj\Debug\Apadana.Web.dll
+C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\obj\Debug\Apadana.Web.pdb

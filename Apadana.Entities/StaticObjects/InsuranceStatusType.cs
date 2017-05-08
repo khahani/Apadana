@@ -20,6 +20,11 @@ namespace Apadana.Entities.StaticObjects
         }
         public static InsuranceStatusType Instance { get { return instance; } }
 
+        public TypeObject Get(int id)
+        {
+            return Instance.Objects.FirstOrDefault(m => m.Id == id);
+        }
+
         public List<TypeObject> Objects
         {
             get

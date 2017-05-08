@@ -5,13 +5,15 @@ using System.Web;
 using System.Web.Mvc;
 using Apadana.Web.Infrastructure;
 using Microsoft.AspNet.Identity;
-using Apadana.Web.Areas.Employer.ViewModels;
 using System.Threading.Tasks;
+using Apadana.Web.Repository;
+using Apadana.Web.ViewModels;
 
 namespace Apadana.Web.Areas.Employer.Controllers
 {
     public class HomeController : AppController
     {
+        
         public ActionResult Index()
         {
             return View();

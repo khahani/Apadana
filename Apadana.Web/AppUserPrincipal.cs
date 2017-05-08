@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Apadana.Web.DataContext;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
@@ -25,7 +26,9 @@ namespace Apadana.Web
         {
             get
             {
-                return this.FindFirst(ClaimTypes.MobilePhone).Value;
+                AppDbContext db = new AppDbContext();
+                return db.Users.Where(m => m.UserName == Name).FirstOrDefault().PhoneNumber;
+                //return this.FindFirst(ClaimTypes.MobilePhone).Value;
             }
         }
     }

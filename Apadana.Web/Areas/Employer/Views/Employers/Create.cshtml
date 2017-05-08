@@ -1,5 +1,4 @@
-﻿@model Apadana.Entities.ViewModels.Employer.VmCreate
-
+﻿@model Apadana.Entities.Employer 
 @{
     ViewBag.Title = "Create";
 }
@@ -26,7 +25,8 @@
 
 
                     <form method="post" action="@Url.Action("create")" data-ajax="true" data-ajax-method="post"
-                          data-ajax-complete="createEmployer" data-ajax-loading=".loading" class="form-horizontal">
+                          data-ajax-complete="createEmployer" data-ajax-loading=".loading" data-ajax-begin="disable_form"
+                          data-ajax-success="enable_form" data-ajax-failure="serverConnectingFailed" class="form-horizontal">
 
                         <div class="form-horizontal">
                             @Html.ValidationSummary(true, "", new { @class = "text-danger" })

@@ -11,7 +11,7 @@ namespace Apadana.Entities.StaticObjects
 
         public const int GetMinimumId = 1;
         public const int GetMaximumId = 7;
-        
+
         // Explicit static constructor to tell C# compiler
         // not to mark type as beforefieldinit
         static EducationType()
@@ -54,6 +54,11 @@ namespace Apadana.Entities.StaticObjects
 
                 return objects;
             }
+        }
+
+        public TypeObject Get(int id)
+        {
+            return Instance.Objects.FirstOrDefault(m => m.Id == id);
         }
     }
 }

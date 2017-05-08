@@ -178,6 +178,15 @@ namespace Apadana.Entities {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to وضعیت تاهل.
+        /// </summary>
+        public static string DisName_MaritalStatus {
+            get {
+                return ResourceManager.GetString("DisName_MaritalStatus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to حداکثر سن.
         /// </summary>
         public static string DisName_MaxAge {

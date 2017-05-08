@@ -5,5 +5,6 @@ namespace Apadana.Entities.StaticObjects
     public interface ITypeObject
     {
         List<TypeObject> Objects { get; }
+        TypeObject Get(int id);
     }
 }

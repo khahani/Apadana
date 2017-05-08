@@ -1,0 +1,141 @@
+﻿@model IEnumerable<Apadana.Entities.Job>
+
+@{
+    ViewBag.Title = "NotAccepted";
+}
+
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>فرصت های شغلی تایید نشده <small></small></h5>
+                    <div class="ibox-tools">
+                        <a class="collapse-link">
+                            <i class="fa fa-chevron-up"></i>
+                        </a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="fa fa-wrench"></i>
+                        </a>
+                        <a class="close-link">
+                            <i class="fa fa-times"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="ibox-content">
+
+
+
+                    <table class="table">
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.JobTitle)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Count)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.RelatedWorkExperience)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.MinimumEducation)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.FieldOfStudy)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.MaxAge)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.WorkingHours)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Salary)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.MaritalStatus)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Gender)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.InsuranceStatus)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.HasService)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.ServiceDescription)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Address)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.AdsValidityPeriod)
+                            </th>
+                            <th></th>
+                        </tr>
+
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.JobTitle)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Count)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.RelatedWorkExperience)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.MinimumEducation)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.FieldOfStudy)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.MaxAge)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.WorkingHours)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Salary)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.MaritalStatus)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Gender)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.InsuranceStatus)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.HasService)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ServiceDescription)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Address)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.AdsValidityPeriod)
+                                </td>
+                                <td>
+                                    @Html.ActionLink("تایید", "Accept", new { id = item.Id })
+                                </td>
+                            </tr>
+                        }
+
+                    </table>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

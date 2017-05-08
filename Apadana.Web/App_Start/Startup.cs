@@ -87,6 +87,13 @@ namespace Apadana.Web.App_Start
                 role.Name = AppDefaults.ROLE_EMPLOYER;
                 roleManager.Create(role);
             }
+            // creating Creating Employer role  and default user
+            if (!roleManager.RoleExists(AppDefaults.ROLE_PERSONEL))
+            {
+                var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();
+                role.Name = AppDefaults.ROLE_PERSONEL;
+                roleManager.Create(role);
+            }
 
             var user = UserManager.Users.Where(m => m.PhoneNumber == "09394412792").FirstOrDefault();
 
@@ -94,7 +101,7 @@ namespace Apadana.Web.App_Start
             {
                 user = new AppUser();
                 user.PhoneNumber = "09394412792";
-                user.UserName = "محمدرضا خواهانی";
+                user.UserName = "mr.khahani";
 
                 string password = "123456";
 
@@ -110,6 +117,31 @@ namespace Apadana.Web.App_Start
                 if (!UserManager.IsInRole(user.Id, AppDefaults.ROLE_EMPLOYER))
                 {
                     IdentityResult result = UserManager.AddToRole(user.Id, AppDefaults.ROLE_EMPLOYER);
+                }
+            }
+
+            var personelUser = UserManager.Users.Where(m => m.PhoneNumber == "09335039916").FirstOrDefault();
+
+            if (personelUser == null)
+            {
+                personelUser = new AppUser();
+                personelUser.PhoneNumber = "09335039916";
+                personelUser.UserName = "personel";
+
+                string password = "123456";
+
+                var chkUser = UserManager.Create(personelUser, password);
+
+                if (chkUser.Succeeded)
+                {
+                    UserManager.AddToRole(personelUser.Id, AppDefaults.ROLE_PERSONEL);
+                }
+            }
+            else
+            {
+                if (!UserManager.IsInRole(personelUser.Id, AppDefaults.ROLE_PERSONEL))
+                {
+                    IdentityResult result = UserManager.AddToRole(personelUser.Id, AppDefaults.ROLE_PERSONEL);
                 }
             }
         }

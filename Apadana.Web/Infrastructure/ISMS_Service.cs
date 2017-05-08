@@ -9,5 +9,6 @@ namespace Apadana.Web.Infrastructure
     public interface ISMS_Service
     {
         Task<bool> SendAsync(string number, string messageFormat, params string[] parameters);
+        Task<bool> SendAsync(string number, string message);
     }
 }

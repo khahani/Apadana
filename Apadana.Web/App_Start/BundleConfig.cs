@@ -12,6 +12,10 @@ namespace Apadana.Web
         {
             bundles.Add(new ScriptBundle("~/bundles/bottom-panel").Include(
                 "~/theme-admin/js/jquery-2.1.1.js",
+                //"~/Scripts/jquery-{version}.js",
+                "~/Scripts/jquery.validate.js",
+                "~/Scripts/jquery.validate.unobtrusive.js",
+                "~/Scripts/jquery.unobtrusive-ajax.js",
                 "~/theme-admin/js/bootstrap.min.js",
                 "~/theme-admin/js/plugins/metisMenu/jquery.metisMenu.js",
                 "~/theme-admin/js/plugins/slimscroll/jquery.slimscroll.min.js",
@@ -30,9 +34,6 @@ namespace Apadana.Web
                 "~/theme-admin/js/demo/sparkline-demo.js",
                 "~/theme-admin/js/plugins/chartJs/Chart.min.js",
                 "~/theme-admin/js/plugins/toastr/toastr.min.js",
-                "~/Scripts/jquery.unobtrusive-ajax.js",
-                "~/Scripts/jquery.validate.js",
-                "~/Scripts/jquery.validate.unobtrusive.js",
                 "~/theme-admin/js/plugins/sweetalert/sweetalert.min.js",
                 "~/AppScripts/app.js",
                 "~/AppScripts/userFunctions.js"));

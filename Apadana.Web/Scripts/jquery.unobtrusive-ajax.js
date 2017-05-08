@@ -165,6 +165,7 @@
             target = $(evt.target),
             form = $(target.parents("form")[0]);
 
+       
         form.data(data_click, name ? [{ name: name, value: evt.currentTarget.value }] : []);
         form.data(data_target, target);
 
@@ -175,6 +176,7 @@
     });
 
     $(document).on("submit", "form[data-ajax=true]", function (evt) {
+        //console.log("I cause the problem.");
         var clickInfo = $(this).data(data_click) || [],
             clickTarget = $(this).data(data_target),
             isCancel = clickTarget && clickTarget.hasClass("cancel");
