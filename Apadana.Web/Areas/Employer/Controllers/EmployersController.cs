@@ -57,8 +57,7 @@ namespace Apadana.Web.Areas.Employer.Controllers
                 UserName = user.UserName,
                 Mobile = user.PhoneNumber
             };
-
-            ViewData["SelectedProvince"] = 0;
+            
             ViewData["SystemMessage"] = systemMessage;
             return View(model);
         }
@@ -84,8 +83,7 @@ namespace Apadana.Web.Areas.Employer.Controllers
 
             CheckSystemRules(employer);
 
-            ViewData["SelectedProvince"] = employer.ProvinceId;
-
+          
             if (!ModelState.IsValid)
                 return View(model);
 
@@ -123,8 +121,6 @@ namespace Apadana.Web.Areas.Employer.Controllers
 
             Ent.Employer model = await db.Employers.FindAsync(id);
 
-            ViewData["SelectedProvince"] = model.ProvinceId;
-
             if (model == null)
             {
                 return HttpNotFound();
@@ -159,8 +155,6 @@ namespace Apadana.Web.Areas.Employer.Controllers
             
             CheckSystemRules(model);
 
-            ViewData["SelectedProvince"] = model.ProvinceId;
-            
             if (!ModelState.IsValid)
             {
                 if (Request.IsAjaxRequest())
@@ -192,31 +186,6 @@ namespace Apadana.Web.Areas.Employer.Controllers
             return View(model);
         }
 
-        //// GET: Employer/Employers/Delete/5
-        //public async Task<ActionResult> Delete(int? id)
-        //{
-        //    if (id == null)
-        //    {
-        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-        //    }
-        //    Ent.Employer employer = await db.Employers.FindAsync(id);
-        //    if (employer == null)
-        //    {
-        //        return HttpNotFound();
-        //    }
-        //    return View(employer);
-        //}
-
-        //// POST: Employer/Employers/Delete/5
-        //[HttpPost, ActionName("Delete")]
-        //[ValidateAntiForgeryToken]
-        //public async Task<ActionResult> DeleteConfirmed(int id)
-        //{
-        //    Ent.Employer employer = await db.Employers.FindAsync(id);
-        //    db.Employers.Remove(employer);
-        //    await db.SaveChangesAsync();
-        //    return RedirectToAction("Index");
-        //}
 
         protected override void Dispose(bool disposing)
         {

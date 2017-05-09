@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Data.Entity;
 using System.Web;
+using System.Threading.Tasks;
 
 namespace Apadana.Web.Repository
 {
@@ -18,7 +19,7 @@ namespace Apadana.Web.Repository
 
             for (int i = 0; i < jobs.Count(); i++)
             {
-                jobs[i].Address = new string(jobs[i].Address.Take(10).ToArray());
+                jobs[i].Address = new string(jobs[i].Address.Take(5).ToArray());
             }
 
             return jobs;
@@ -36,5 +37,26 @@ namespace Apadana.Web.Repository
 
             return string.Format("شماره تماس: {0} آدرس: {1}", job.Owner.Phone, job.Address);
         }
+
+        public Job Create(Job job)
+        {
+            db.Jobs.Add(job);
+
+            db.SaveChanges();
+
+            return job;
+        }
+
+        public async Task<Job> CreateAsync(Job job, int owner_Id)
+        {
+            job.Owner = db.Employers.Find(owner_Id);
+
+            db.Jobs.Add(job);
+
+            await db.SaveChangesAsync();
+
+            return job;
+        }
+
     }
 }

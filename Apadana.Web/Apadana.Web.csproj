@@ -438,6 +438,7 @@
     <Content Include="Areas\Personel\Views\Shared\DisplayTemplates\Salary.cshtml" />
     <Content Include="Areas\Personel\Views\Shared\DisplayTemplates\WorkingHours.cshtml" />
     <Content Include="Areas\Personel\Views\Employers\Index.cshtml" />
+    <Content Include="Areas\Personel\Views\Jobs\Create.cshtml" />
     <None Include="Properties\PublishProfiles\p.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -807,10 +808,12 @@
     <Compile Include="Areas\Personel\Controllers\EmployersController.cs" />
     <Compile Include="Areas\Personel\Controllers\HomeController.cs" />
     <Compile Include="Areas\Personel\Controllers\JobsController.cs" />
+    <Compile Include="Controllers\JobSeekerController.cs" />
     <Compile Include="Migrations\201705060657126_add_accepted_job.cs" />
     <Compile Include="Migrations\201705060657126_add_accepted_job.Designer.cs">
       <DependentUpon>201705060657126_add_accepted_job.cs</DependentUpon>
     </Compile>
+    <Compile Include="Repository\EmployerRepo.cs" />
     <Compile Include="ViewModels\HomePageViewModel.cs" />
     <Compile Include="Areas\Employer\ViewModels\ViewModelChangePassword.cs" />
     <Compile Include="Areas\Employer\Localization\Resources.Designer.cs">
@@ -824,7 +827,6 @@
     <Compile Include="Controllers\GalleryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\JobController.cs" />
-    <Compile Include="Controllers\JobSeekerController.cs" />
     <Compile Include="Controllers\PostController.cs" />
     <Compile Include="AppDefaults.cs" />
     <Compile Include="DataContext\ApadanaDb.cs" />

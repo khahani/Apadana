@@ -13,7 +13,7 @@ namespace Apadana.Web.Areas.Personel.Controllers
     {
         private ApadanaDb db = new ApadanaDb();
         // GET: Personel/Employers
-        public async Task<ActionResult> Index(string searchString)
+        public async Task<ActionResult> Index(string searchString, string message)
         {
             var employers = db.Employers.Select(m=>m);
 
@@ -22,9 +22,18 @@ namespace Apadana.Web.Areas.Personel.Controllers
                 employers = employers.Where(m => m.UnitName.Contains(searchString));
             }
 
+            ViewBag.SearchString = searchString;
+            ViewBag.Message = message;
+
             return View(await employers.ToListAsync());
         }
 
-        public ActionResult Create(int id)
+        public ActionResult Select(int id)
+        {
+            Session[AppDefaults.SESSION_SELECTED_EMPLOYER] = id;
+            string message = "کارفرما انتخاب شد.";
+            return RedirectToAction("Index", new { message = message });
+        }
+        
     }
 }

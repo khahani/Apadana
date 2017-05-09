@@ -18,5 +18,7 @@ namespace Apadana.Web
         public const string AREA_PERSONEL = "personel";
         public const string AREA_JOBSEEKER = "jobseeker";
         public const string AREA_COLLEAGUE = "colleague";
+
+        public const string SESSION_SELECTED_EMPLOYER = "SelectedEmployer";
     }
 }

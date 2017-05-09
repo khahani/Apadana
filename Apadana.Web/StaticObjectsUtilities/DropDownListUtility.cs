@@ -12,7 +12,12 @@ namespace Apadana.Web.StaticObjectsUtilities
 
             foreach (var item in objects.Objects)
             {
-                result.Add(new SelectListItem { Text = item.Value, Value = item.Id.ToString(), Selected = item.Id.ToString() == selectedValue.ToString() });
+                SelectListItem selectListItem = new SelectListItem { Text = item.Value, Value = item.Id.ToString() };
+
+                if (selectedValue != null)
+                    selectListItem.Selected = item.Id.ToString() == selectedValue.ToString();
+
+                result.Add(selectListItem);
             }
 
             return result;

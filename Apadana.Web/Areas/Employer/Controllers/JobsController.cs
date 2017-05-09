@@ -8,12 +8,14 @@ using Apadana.Entities;
 using Apadana.Web.DataContext;
 using Apadana.Entities.StaticObjects;
 using System;
+using Apadana.Web.Repository;
 
 namespace Apadana.Web.Areas.Employer.Controllers
 {
     public class JobsController : AppController
     {
         private ApadanaDb db = new ApadanaDb();
+        private JobRepo JobRepo = new JobRepo();
         private Apadana.Entities.Employer CurrentEmployer
         {
             get { return db.Employers.Where(m => m.UserName == CurrentUser.Name).FirstOrDefault(); }
@@ -43,17 +45,6 @@ namespace Apadana.Web.Areas.Employer.Controllers
         // GET: Employer/Jobs/Create
         public ActionResult Create()
         {
-            ViewData["SelectedRelatedWorkExperience"] = RelatedWorkExperienceType.Instance.Objects.First().Id;
-            ViewData["SelectedEducation"] = EducationType.Instance.Objects.First().Id;
-            ViewData["SelectedMaximumAge"] = MaximumAgeType.Instance.Objects.First().Id;
-            ViewData["SelectedWorkingHours"] = WorkingHoursType.Instance.Objects.First().Id;
-            ViewData["SelectedSalary"] = SalaryType.Instance.Objects.First().Id;
-            ViewData["SelectedMaritalStatus"] = MaritalStatusType.Instance.Objects.First().Id;
-            ViewData["SelectedGender"] = GenderType.Instance.Objects.First().Id;
-            ViewData["SelectedInsuranceStatus"] = InsuranceStatusType.Instance.Objects.First().Id;
-            ViewData["SelectedHasService"] = YesOrNoType.Instance.Objects.First().Id;
-            ViewData["SelectedAdsValidityPeriod"] = AdsValidityPeriodType.Instance.Objects.First().Id;
-
             return View();
         }
 
@@ -76,12 +67,11 @@ namespace Apadana.Web.Areas.Employer.Controllers
         {
             if (ModelState.IsValid)
             {
-                model.Owner = CurrentEmployer;
+                //model.Owner = CurrentEmployer;
                 model.Accepted = false;
-                db.Jobs.Add(model);
                 try
                 {
-                    await db.SaveChangesAsync();
+                    await JobRepo.CreateAsync(model, CurrentEmployer.Id);
 
                 }catch(Exception ex)
                 {
@@ -107,17 +97,7 @@ namespace Apadana.Web.Areas.Employer.Controllers
                 return HttpNotFound();
             }
 
-            ViewData["SelectedRelatedWorkExperience"] = RelatedWorkExperienceType.Instance.Objects.First(m=>m.Id == job.RelatedWorkExperience).Id;
-            ViewData["SelectedEducation"] = EducationType.Instance.Objects.First(m=> m.Id == job.MinimumEducation).Id;
-            ViewData["SelectedMaximumAge"] = MaximumAgeType.Instance.Objects.First(m => m.Id == job.MaxAge).Id;
-            ViewData["SelectedWorkingHours"] = WorkingHoursType.Instance.Objects.First(m => m.Id == job.WorkingHours).Id;
-            ViewData["SelectedSalary"] = SalaryType.Instance.Objects.First(m => m.Id == job.Salary).Id;
-            ViewData["SelectedMaritalStatus"] = MaritalStatusType.Instance.Objects.First(m => m.Id == job.MaritalStatus).Id;
-            ViewData["SelectedGender"] = GenderType.Instance.Objects.First(m => m.Id == job.Gender).Id;
-            ViewData["SelectedInsuranceStatus"] = InsuranceStatusType.Instance.Objects.First(m => m.Id == job.InsuranceStatus).Id;
-            ViewData["SelectedHasService"] = YesOrNoType.Instance.Objects.First(m => m.Id == job.HasService).Id;
-            ViewData["SelectedAdsValidityPeriod"] = AdsValidityPeriodType.Instance.Objects.First(m => m.Id == job.AdsValidityPeriod).Id;
-
+           
             return View(job);
         }
 
@@ -135,16 +115,7 @@ namespace Apadana.Web.Areas.Employer.Controllers
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
-            ViewData["SelectedRelatedWorkExperience"] = RelatedWorkExperienceType.Instance.Objects.First(m => m.Id == job.RelatedWorkExperience).Id;
-            ViewData["SelectedEducation"] = EducationType.Instance.Objects.First(m => m.Id == job.MinimumEducation).Id;
-            ViewData["SelectedMaximumAge"] = MaximumAgeType.Instance.Objects.First(m => m.Id == job.MaxAge).Id;
-            ViewData["SelectedWorkingHours"] = WorkingHoursType.Instance.Objects.First(m => m.Id == job.WorkingHours).Id;
-            ViewData["SelectedSalary"] = SalaryType.Instance.Objects.First(m => m.Id == job.Salary).Id;
-            ViewData["SelectedMaritalStatus"] = MaritalStatusType.Instance.Objects.First(m => m.Id == job.MaritalStatus).Id;
-            ViewData["SelectedGender"] = GenderType.Instance.Objects.First(m => m.Id == job.Gender).Id;
-            ViewData["SelectedInsuranceStatus"] = InsuranceStatusType.Instance.Objects.First(m => m.Id == job.InsuranceStatus).Id;
-            ViewData["SelectedHasService"] = YesOrNoType.Instance.Objects.First(m => m.Id == job.HasService).Id;
-            ViewData["SelectedAdsValidityPeriod"] = AdsValidityPeriodType.Instance.Objects.First(m => m.Id == job.AdsValidityPeriod).Id;
+           
 
             return View(job);
         }

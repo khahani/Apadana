@@ -9,7 +9,7 @@
         <div class="col-lg-12">
             <div class="ibox float-e-margins">
                 <div class="ibox-title">
-                    <h5>ایجاد فرصت شغلی <small></small></h5>
+                    <h5> ایجاد فرصت شغلی برای @ViewBag.SelectedEmployer<small></small></h5>
                     <div class="ibox-tools">
                         <a class="collapse-link">
                             <i class="fa fa-chevron-up"></i>
@@ -51,7 +51,7 @@
                             <div class="form-group">
                                 @Html.LabelFor(model => model.RelatedWorkExperience, htmlAttributes: new { @class = "control-label col-md-2" })
                                 <div class="col-md-10">
-                                    @Html.EditorFor(model => model.RelatedWorkExperience)
+                                    @Html.EditorFor(model => model.RelatedWorkExperience, new { Selected = ViewData["SelectedRelatedWorkExperience"] })
                                     @Html.ValidationMessageFor(model => model.RelatedWorkExperience, "", new { @class = "text-danger" })
                                 </div>
                             </div>
@@ -59,7 +59,7 @@
                             <div class="form-group">
                                 @Html.LabelFor(model => model.MinimumEducation, htmlAttributes: new { @class = "control-label col-md-2" })
                                 <div class="col-md-10">
-                                    @Html.EditorFor(model => model.MinimumEducation)
+                                    @Html.EditorFor(model => model.MinimumEducation, new { Selected = ViewData["SelectedEducation"] })
                                     @Html.ValidationMessageFor(model => model.MinimumEducation, "", new { @class = "text-danger" })
                                 </div>
                             </div>
@@ -75,7 +75,7 @@
                             <div class="form-group">
                                 @Html.LabelFor(model => model.MaxAge, htmlAttributes: new { @class = "control-label col-md-2" })
                                 <div class="col-md-10">
-                                    @Html.EditorFor(model => model.MaxAge)
+                                    @Html.EditorFor(model => model.MaxAge, new { Selected = ViewData["SelectedMaximumAge"] })
                                     @Html.ValidationMessageFor(model => model.MaxAge, "", new { @class = "text-danger" })
                                 </div>
                             </div>
@@ -83,7 +83,7 @@
                             <div class="form-group">
                                 @Html.LabelFor(model => model.WorkingHours, htmlAttributes: new { @class = "control-label col-md-2" })
                                 <div class="col-md-10">
-                                    @Html.EditorFor(model => model.WorkingHours)
+                                    @Html.EditorFor(model => model.WorkingHours, new { Selected = ViewData["SelectedWorkingHours"] })
                                     @Html.ValidationMessageFor(model => model.WorkingHours, "", new { @class = "text-danger" })
                                 </div>
                             </div>
@@ -91,7 +91,7 @@
                             <div class="form-group">
                                 @Html.LabelFor(model => model.Salary, htmlAttributes: new { @class = "control-label col-md-2" })
                                 <div class="col-md-10">
-                                    @Html.EditorFor(model => model.Salary)
+                                    @Html.EditorFor(model => model.Salary, new { Selected = ViewData["SelectedSalary"] })
                                     @Html.ValidationMessageFor(model => model.Salary, "", new { @class = "text-danger" })
                                 </div>
                             </div>
@@ -99,7 +99,7 @@
                             <div class="form-group">
                                 @Html.LabelFor(model => model.MaritalStatus, htmlAttributes: new { @class = "control-label col-md-2" })
                                 <div class="col-md-10">
-                                    @Html.EditorFor(model => model.MaritalStatus)
+                                    @Html.EditorFor(model => model.MaritalStatus, new { Selected = ViewData["SelectedMaritalStatus"] })
                                     @Html.ValidationMessageFor(model => model.MaritalStatus, "", new { @class = "text-danger" })
                                 </div>
                             </div>
@@ -107,7 +107,7 @@
                             <div class="form-group">
                                 @Html.LabelFor(model => model.Gender, htmlAttributes: new { @class = "control-label col-md-2" })
                                 <div class="col-md-10">
-                                    @Html.EditorFor(model => model.Gender)
+                                    @Html.EditorFor(model => model.Gender, new { Selected = ViewData["SelectedGender"] })
                                     @Html.ValidationMessageFor(model => model.Gender, "", new { @class = "text-danger" })
                                 </div>
                             </div>
@@ -115,7 +115,7 @@
                             <div class="form-group">
                                 @Html.LabelFor(model => model.InsuranceStatus, htmlAttributes: new { @class = "control-label col-md-2" })
                                 <div class="col-md-10">
-                                    @Html.EditorFor(model => model.InsuranceStatus)
+                                    @Html.EditorFor(model => model.InsuranceStatus, new { Selected = ViewData["SelectedInsuranceStatus"] })
                                     @Html.ValidationMessageFor(model => model.InsuranceStatus, "", new { @class = "text-danger" })
                                 </div>
                             </div>
@@ -123,7 +123,7 @@
                             <div class="form-group">
                                 @Html.LabelFor(model => model.HasService, htmlAttributes: new { @class = "control-label col-md-2" })
                                 <div class="col-md-10">
-                                    @Html.EditorFor(model => model.HasService)
+                                    @Html.EditorFor(model => model.HasService, new { Selected = ViewData["SelectedHasService"] })
                                     @Html.ValidationMessageFor(model => model.HasService, "", new { @class = "text-danger" })
                                 </div>
                             </div>
@@ -147,7 +147,7 @@
                             <div class="form-group">
                                 @Html.LabelFor(model => model.AdsValidityPeriod, htmlAttributes: new { @class = "control-label col-md-2" })
                                 <div class="col-md-10">
-                                    @Html.EditorFor(model => model.AdsValidityPeriod)
+                                    @Html.EditorFor(model => model.AdsValidityPeriod, new { Selected = ViewData["SelectedAdsValidityPeriod"] })
                                     @Html.ValidationMessageFor(model => model.AdsValidityPeriod, "", new { @class = "text-danger" })
                                 </div>
                             </div>

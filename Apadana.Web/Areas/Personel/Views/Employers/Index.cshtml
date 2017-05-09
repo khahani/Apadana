@@ -24,9 +24,15 @@
                 </div>
                 <div class="ibox-content">
 
+                    @if (ViewBag.Message != null)
+                    {
+                        <div class="alert alert-success">
+                            @ViewBag.Message
+                        </div>
+                    }
                     <form method="post" action="@Url.Action("Index")" class="form-horizontal">
                             <p>
-                                جستجو: <input type="text" name="SearchString">
+                                جستجو: <input type="text" name="SearchString" value="@ViewBag.SearchString">
                                 <input type="submit" value="برو..." />
                             </p>
                         </form>
