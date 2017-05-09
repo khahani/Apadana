@@ -6,10 +6,8 @@ using System.Web.Mvc;
 
 namespace Apadana.Web.Controllers
 {
-    [AllowAnonymous]
-    public class JobSeekerController : AppController
+    public class JobSeekersController : Controller
     {
-        // GET: JobSeeker
         public ActionResult Index()
         {
             return View();
