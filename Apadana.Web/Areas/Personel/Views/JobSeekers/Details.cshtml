@@ -1,0 +1,467 @@
+﻿@model Apadana.Entities.JobSeeker
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>JobSeeker</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FatherName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FatherName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Birthdate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Birthdate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NationalCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NationalCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PersonalId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PersonalId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaritalStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaritalStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MilitaryStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MilitaryStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LatestDegree)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LatestDegree)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FieldOfStudy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FieldOfStudy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UniversityName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UniversityName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UniversityType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UniversityType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CityOfDegree)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CityOfDegree)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.YearOfGraduation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YearOfGraduation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GradePointAverage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GradePointAverage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MinimumRelatedExperience)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MinimumRelatedExperience)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AboutSpeciality)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AboutSpeciality)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DescriptionForSpeciality)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DescriptionForSpeciality)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrganizationName1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrganizationName1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrganizationFieldOfActivity1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrganizationFieldOfActivity1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrganizationJobTitle1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrganizationJobTitle1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrganizationBeginDate1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrganizationBeginDate1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrganizationEndDate1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrganizationEndDate1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrganizationReasonForLeave1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrganizationReasonForLeave1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrganizationName2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrganizationName2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrganizationFieldOfActivity2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrganizationFieldOfActivity2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrganizationJobTitle2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrganizationJobTitle2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrganizationBeginDate2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrganizationBeginDate2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrganizationEndDate2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrganizationEndDate2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrganizationReasonForLeave2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrganizationReasonForLeave2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrganizationName3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrganizationName3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrganizationFieldOfActivity3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrganizationFieldOfActivity3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrganizationJobTitle3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrganizationJobTitle3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrganizationBeginDate3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrganizationBeginDate3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrganizationEndDate3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrganizationEndDate3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrganizationReasonForLeave3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrganizationReasonForLeave3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrganizationName4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrganizationName4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrganizationFieldOfActivity4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrganizationFieldOfActivity4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrganizationJobTitle4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrganizationJobTitle4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrganizationBeginDate4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrganizationBeginDate4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrganizationEndDate4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrganizationEndDate4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrganizationReasonForLeave4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrganizationReasonForLeave4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrganizationName5)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrganizationName5)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrganizationFieldOfActivity5)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrganizationFieldOfActivity5)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrganizationJobTitle5)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrganizationJobTitle5)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrganizationBeginDate5)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrganizationBeginDate5)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrganizationEndDate5)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrganizationEndDate5)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrganizationReasonForLeave5)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrganizationReasonForLeave5)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Province)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Province)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.City)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.City)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mobile)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mobile)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobTitle)
+        </dd>
+
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("ویرایش", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("بازگشب به لیست", "Index")
+</p>

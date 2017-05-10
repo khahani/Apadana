@@ -1,2 +1,2 @@
-﻿
-@Html.DropDownList("", DropDownListUtility.GetStaticObjectDropDown(ViewData["SelectedProvince"], ProvinceType.Instance), new { @class = "form-control" })
+﻿@model int?
+@Html.DropDownList("", DropDownListUtility.GetStaticObjectDropDown(Model, ProvinceType.Instance), new { @class = "form-control" })

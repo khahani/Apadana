@@ -60,9 +60,10 @@
                     <li>
                         <a href="#"><i class="fa fa-address-book-o"></i> <span class="nav-label">کارجویان</span> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="#">همه کارجویان</a></li>
-                            <li><a href="#">تایید نشده</a></li>
-                            <li><a href="#">تایید شده</a></li>
+                            <li><a href="@Url.Action("create", null, new { area = AppDefaults.AREA_PERSONEL, controller = "jobseekers" }, Request.Url.Scheme)">کارجو جدید</a></li>
+                            <li><a href="@Url.Action("index", null, new { area = AppDefaults.AREA_PERSONEL, controller = "jobseekers" }, Request.Url.Scheme)">همه کارجویان</a></li>
+                            @*<li><a href="#">تایید نشده</a></li>
+                            <li><a href="#">تایید شده</a></li>*@
                         </ul>
                     </li>
                     <li>

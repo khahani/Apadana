@@ -1,2 +1,2 @@
-﻿
-@Html.DropDownList("", DropDownListUtility.GetStaticObjectDropDown(ViewData["SelectedMaximumAge"], MaximumAgeType.Instance), new { @class = "form-control" })
+﻿@model int?
+@Html.DropDownList("", DropDownListUtility.GetStaticObjectDropDown(Model, MaximumAgeType.Instance), new { @class = "form-control" })

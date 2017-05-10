@@ -52,6 +52,7 @@
     <Compile Include="BaseObject.cs" />
     <Compile Include="Employer.cs" />
     <Compile Include="Job.cs" />
+    <Compile Include="JobSeeker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -64,6 +65,7 @@
     <Compile Include="StaticObjects\GenderType.cs" />
     <Compile Include="StaticObjects\InsuranceStatusType.cs" />
     <Compile Include="StaticObjects\ITypeObject.cs" />
+    <Compile Include="StaticObjects\MilitaryStatusType.cs" />
     <Compile Include="StaticObjects\MaritalStatusType.cs" />
     <Compile Include="StaticObjects\MaximumAgeType.cs" />
     <Compile Include="StaticObjects\ProvinceType.cs" />
@@ -71,6 +73,7 @@
     <Compile Include="StaticObjects\SalaryType.cs" />
     <Compile Include="StaticObjects\SimpleTypeObject.cs" />
     <Compile Include="StaticObjects\TypeObject.cs" />
+    <Compile Include="StaticObjects\UniversityType.cs" />
     <Compile Include="StaticObjects\WorkingHoursType.cs" />
     <Compile Include="StaticObjects\YesOrNoType.cs" />
   </ItemGroup>

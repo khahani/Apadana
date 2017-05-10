@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="DisName_AboutSpeciality" xml:space="preserve">
+    <value>کلیه مشاغل , مهارت ها و تخصص ها به صورت کلمات کلیدی</value>
+  </data>
   <data name="DisName_Address" xml:space="preserve">
     <value>آدرس</value>
   </data>
@@ -126,14 +129,26 @@
   <data name="DisName_Applicant" xml:space="preserve">
     <value>درخواست دهنده</value>
   </data>
+  <data name="DisName_Birthdate" xml:space="preserve">
+    <value>تاریخ تولد</value>
+  </data>
   <data name="DisName_City" xml:space="preserve">
     <value>شهر</value>
+  </data>
+  <data name="DisName_CityOfDegree" xml:space="preserve">
+    <value>شهر فارغ التحصیلی</value>
   </data>
   <data name="DisName_Count" xml:space="preserve">
     <value>تعداد</value>
   </data>
+  <data name="DisName_DescriptionForSpeciality" xml:space="preserve">
+    <value>توضیحات مهارت ها و تخصص ها</value>
+  </data>
   <data name="DisName_Email" xml:space="preserve">
     <value>ایمیل</value>
+  </data>
+  <data name="DisName_FatherName" xml:space="preserve">
+    <value>نام پدر</value>
   </data>
   <data name="DisName_FieldOfAcivity" xml:space="preserve">
     <value>زمینه فعالیت</value>
@@ -143,6 +158,9 @@
   </data>
   <data name="DisName_Gender" xml:space="preserve">
     <value>جنسیت</value>
+  </data>
+  <data name="DisName_GradePointAverage" xml:space="preserve">
+    <value>معدل</value>
   </data>
   <data name="DisName_HasService" xml:space="preserve">
     <value>سرویس</value>
@@ -156,17 +174,56 @@
   <data name="DisName_JobTitle" xml:space="preserve">
     <value>عنوان شغلی</value>
   </data>
+  <data name="DisName_LastName" xml:space="preserve">
+    <value>نام خانوادگی</value>
+  </data>
+  <data name="DisName_LatestDegree" xml:space="preserve">
+    <value>آخرین مدرک تحصیلی</value>
+  </data>
   <data name="DisName_MaritalStatus" xml:space="preserve">
     <value>وضعیت تاهل</value>
   </data>
   <data name="DisName_MaxAge" xml:space="preserve">
     <value>حداکثر سن</value>
   </data>
+  <data name="DisName_MilitaryStatus" xml:space="preserve">
+    <value>وضعیت خدمت</value>
+  </data>
   <data name="DisName_MinimumEducation" xml:space="preserve">
     <value>حداقل تحصیلات</value>
   </data>
+  <data name="DisName_MinimumRelatedExperience" xml:space="preserve">
+    <value>حداقل مدت سابقه كار در حوزه تحصيلات يا مهارت تخصصي</value>
+  </data>
   <data name="DisName_Mobile" xml:space="preserve">
     <value>موبایل</value>
+  </data>
+  <data name="DisName_Name" xml:space="preserve">
+    <value>نام</value>
+  </data>
+  <data name="DisName_NationalCode" xml:space="preserve">
+    <value>کدملی</value>
+  </data>
+  <data name="DisName_OrganizationBeginDate" xml:space="preserve">
+    <value>تاریخ شروع</value>
+  </data>
+  <data name="DisName_OrganizationEndDate" xml:space="preserve">
+    <value>تاریخ پایان</value>
+  </data>
+  <data name="DisName_OrganizationFieldOfActivity" xml:space="preserve">
+    <value>زمینه فعالیت سازمان</value>
+  </data>
+  <data name="DisName_OrganizationJobTitle" xml:space="preserve">
+    <value>عنوان و سمت شغلی</value>
+  </data>
+  <data name="DisName_OrganizationName" xml:space="preserve">
+    <value>نام سازمان</value>
+  </data>
+  <data name="DisName_OrganizationReasonForLeave" xml:space="preserve">
+    <value>علت ترک شغل</value>
+  </data>
+  <data name="DisName_PersonalId" xml:space="preserve">
+    <value>شماره شناسنامه</value>
   </data>
   <data name="DisName_Phone" xml:space="preserve">
     <value>تلفن</value>
@@ -186,11 +243,20 @@
   <data name="DisName_UnitName" xml:space="preserve">
     <value>نام واحد</value>
   </data>
+  <data name="DisName_UniversityName" xml:space="preserve">
+    <value>نام دانشگاه</value>
+  </data>
+  <data name="DisName_UniversityType" xml:space="preserve">
+    <value>نوع دانشگاه</value>
+  </data>
   <data name="DisName_UserName" xml:space="preserve">
     <value>نام کاربری</value>
   </data>
   <data name="DisName_WorkingHours" xml:space="preserve">
     <value>ساعات کاری</value>
+  </data>
+  <data name="DisName_YearOfGraduation" xml:space="preserve">
+    <value>سال فارغ التحصیلی</value>
   </data>
   <data name="Val_confirm_is_not_the_same" xml:space="preserve">
     <value>{0} و {1} یکسان نیستند</value>
