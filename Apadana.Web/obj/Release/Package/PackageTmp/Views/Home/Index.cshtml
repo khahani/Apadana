@@ -1,4 +1,4 @@
-﻿
+﻿@model Apadana.Web.ViewModels.HomePageViewModel
 
 @{
     ViewBag.Title = "Index";
@@ -40,7 +40,7 @@
 </div>
 <!-- End banner section -->
 
-@Html.Partial("~/Views/Job/_SimpleList.cshtml")
+@Html.Partial("~/Views/Job/_SimpleList.cshtml", Model.Jobs)
 
 <!-- unik-line section
                 ================================================== -->
@@ -62,7 +62,7 @@
 <!-- End banner section -->
 
 
-@Html.Partial("~/Views/JobSeeker/_SimpleList.cshtml")
+@Html.Partial("~/Views/JobSeekers/_SimpleList.cshtml", Model.JobSeekers)
 
 <!-- unik-line section
                 ================================================== -->

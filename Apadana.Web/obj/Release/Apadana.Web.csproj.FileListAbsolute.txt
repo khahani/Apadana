@@ -142,8 +142,8 @@ C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\Newtonsoft.Json.xml
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\System.Diagnostics.DiagnosticSource.xml
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\System.Web.Optimization.xml
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\obj\Release\Apadana.Web.Areas.Employer.Localization.Resources.resources
-C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\obj\Release\Apadana.Web.Migrations.initdb.resources
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\obj\Release\Apadana.Web.ViewModels.Resources.resources
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\obj\Release\Apadana.Web.csproj.GenerateResource.Cache
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\RestSharp.dll
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\RestSharp.xml
+C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\obj\Release\Apadana.Web.Migrations.init.resources

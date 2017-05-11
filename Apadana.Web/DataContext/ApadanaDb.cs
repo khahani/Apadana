@@ -28,7 +28,7 @@ namespace Apadana.Web.DataContext
         public override int SaveChanges()
         {
             //Before running update-database must comment SaveChangesSequence()
-            SaveChangesSequence();
+            //SaveChangesSequence();
             return base.SaveChanges();
         }
 

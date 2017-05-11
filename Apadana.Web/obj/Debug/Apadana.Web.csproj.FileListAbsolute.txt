@@ -142,12 +142,8 @@ C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\System.Web.Helpers.xml
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\bin\System.Web.Mvc.xml
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\obj\Debug\Apadana.Web.csprojResolveAssemblyReference.cache
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\obj\Debug\Apadana.Web.Areas.Employer.Localization.Resources.resources
-C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\obj\Debug\Apadana.Web.Migrations.initdb.resources
-C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\obj\Debug\Apadana.Web.Migrations.sdfsdf.resources
-C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\obj\Debug\Apadana.Web.Migrations.sdfsdf2.resources
-C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\obj\Debug\Apadana.Web.Migrations.add_accepted_job.resources
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\obj\Debug\Apadana.Web.ViewModels.Resources.resources
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\obj\Debug\Apadana.Web.csproj.GenerateResource.Cache
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\obj\Debug\Apadana.Web.dll
 C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\obj\Debug\Apadana.Web.pdb
-C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\obj\Debug\Apadana.Web.Migrations.jobseeker.resources
+C:\Users\Khahani\Source\Repos\Apadana\Apadana.Web\obj\Debug\Apadana.Web.Migrations.init.resources

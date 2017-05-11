@@ -1,4 +1,5 @@
-﻿
+﻿@model IEnumerable<JobSeeker>
+
 @{
     ViewBag.Title = "Index";
 }
@@ -86,7 +87,7 @@
 </div>
 <!-- end search job seeker -->
 
-@Html.Partial("_SimpleList")
+@Html.Partial("_SimpleList", Model)
 
 <!-- pagination list
     ================================================== -->

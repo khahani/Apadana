@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Apadana.Entities;
+using Apadana.Web.DataContext;
+using Apadana.Web.Repository;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,9 +12,14 @@ namespace Apadana.Web.Controllers
     [AllowAnonymous]
     public class JobSeekersController : Controller
     {
+        ApadanaDb db = new ApadanaDb();
+
+        JobSeekerRepo JobSeekerRepo = new JobSeekerRepo();
+
         public ActionResult Index()
         {
-            return View();
+            var jobseekers = JobSeekerRepo.TakeFirsts(10);
+            return View(jobseekers);
         }
 
         [HttpGet]
@@ -22,7 +30,8 @@ namespace Apadana.Web.Controllers
 
         public ActionResult Check(int id)
         {
-            return View();
+            JobSeeker jobSeeker = JobSeekerRepo.Get(id);
+            return View(jobSeeker);
 
         }
     }

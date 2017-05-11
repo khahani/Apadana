@@ -742,6 +742,7 @@
     <Content Include="upload\blog\6.jpg" />
     <Content Include="upload\blog\7.jpg" />
     <Content Include="upload\blog\8.jpg" />
+    <Content Include="upload\blog\job-opening.jpg" />
     <Content Include="upload\blog\qc.jpg" />
     <Content Include="upload\blog\single-post.jpg" />
     <Content Include="upload\blog\success.jpg" />
@@ -758,6 +759,7 @@
     <Content Include="upload\flickr\flickr7.jpg" />
     <Content Include="upload\flickr\flickr8.jpg" />
     <Content Include="upload\help.jpg" />
+    <Content Include="upload\hire-me-sign.jpg" />
     <Content Include="upload\image1.jpg" />
     <Content Include="upload\img1.jpg" />
     <Content Include="upload\member1.jpg" />
@@ -822,15 +824,13 @@
     <Compile Include="Areas\Personel\Controllers\JobsController.cs" />
     <Compile Include="Areas\Personel\Controllers\JobSeekersController.cs" />
     <Compile Include="Controllers\JobSeekersController.cs" />
-    <Compile Include="Migrations\201705060657126_add_accepted_job.cs" />
-    <Compile Include="Migrations\201705060657126_add_accepted_job.Designer.cs">
-      <DependentUpon>201705060657126_add_accepted_job.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705100650400_jobseeker.cs" />
-    <Compile Include="Migrations\201705100650400_jobseeker.Designer.cs">
-      <DependentUpon>201705100650400_jobseeker.cs</DependentUpon>
+    <Compile Include="Migrations\201705110730092_init.cs" />
+    <Compile Include="Migrations\201705110730092_init.Designer.cs">
+      <DependentUpon>201705110730092_init.cs</DependentUpon>
     </Compile>
     <Compile Include="Repository\EmployerRepo.cs" />
+    <Compile Include="Repository\JobSeekerRepo.cs" />
+    <Compile Include="Repository\UserRepo.cs" />
     <Compile Include="ViewModels\HomePageViewModel.cs" />
     <Compile Include="Areas\Employer\ViewModels\ViewModelChangePassword.cs" />
     <Compile Include="Areas\Employer\Localization\Resources.Designer.cs">
@@ -857,18 +857,6 @@
     <Compile Include="Infrastructure\ISMS_Service.cs" />
     <Compile Include="Infrastructure\SMS_Service_Demo.cs" />
     <Compile Include="Infrastructure\AppSettings.cs" />
-    <Compile Include="Migrations\201704081204547_init-db.cs" />
-    <Compile Include="Migrations\201704081204547_init-db.Designer.cs">
-      <DependentUpon>201704081204547_init-db.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705040820340_sdfsdf.cs" />
-    <Compile Include="Migrations\201705040820340_sdfsdf.Designer.cs">
-      <DependentUpon>201705040820340_sdfsdf.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705040846205_sdfsdf2.cs" />
-    <Compile Include="Migrations\201705040846205_sdfsdf2.Designer.cs">
-      <DependentUpon>201705040846205_sdfsdf2.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\JobSeeker.cs" />
     <Compile Include="Repository\JobRepo.cs" />
@@ -995,20 +983,8 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201704081204547_init-db.resx">
-      <DependentUpon>201704081204547_init-db.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705040820340_sdfsdf.resx">
-      <DependentUpon>201705040820340_sdfsdf.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705040846205_sdfsdf2.resx">
-      <DependentUpon>201705040846205_sdfsdf2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705060657126_add_accepted_job.resx">
-      <DependentUpon>201705060657126_add_accepted_job.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705100650400_jobseeker.resx">
-      <DependentUpon>201705100650400_jobseeker.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201705110730092_init.resx">
+      <DependentUpon>201705110730092_init.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewModels\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

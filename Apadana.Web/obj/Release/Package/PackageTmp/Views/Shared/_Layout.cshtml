@@ -67,15 +67,15 @@
                         <li>
                             <a class="@(ViewContext.RouteData.Values["Action"].ToString() == "Index" && ViewContext.RouteData.Values["Controller"].ToString() == "Job" ? "active" : "")" href="@Url.Action("Index", null, new { area = string.Empty, controller = "Job" }, Request.Url.Scheme)"><i class="fa fa-handshake-o"></i>فرصت های شغلی</a>
                         </li>
-                        <li>
+                        @*<li>
                             <a class="@(ViewContext.RouteData.Values["Action"].ToString() == "Register" && ViewContext.RouteData.Values["Controller"].ToString() == "Job" ? "active" : "")" href="@Url.Action("Register", null, new { area = string.Empty, controller = "Job" }, Request.Url.Scheme)"><i class="fa fa-plus"></i>ثبت فرصت شغلی</a>
-                        </li>
+                        </li>*@
                         <li>
                             <a class="@(ViewContext.RouteData.Values["Action"].ToString() == "Index" && ViewContext.RouteData.Values["Controller"].ToString() == "JobSeeker" ? "active" : "")" href="@Url.Action("Index", null, new { area = string.Empty, controller = "JobSeeker" }, Request.Url.Scheme)"><i class="fa fa-address-book-o"></i>کارجویان</a>
                         </li>
-                        <li>
+                        @*<li>
                             <a class="@(ViewContext.RouteData.Values["Action"].ToString() == "Register" && ViewContext.RouteData.Values["Controller"].ToString() == "JobSeeker" ? "active" : "")" href="@Url.Action("Register", null, new { area = string.Empty, controller = "JobSeeker" }, Request.Url.Scheme)"><i class="fa fa-plus"></i>ثبت کارجویان</a>
-                        </li>
+                        </li>*@
                         <li><a class="@(ViewContext.RouteData.Values["Action"].ToString() == "About" ? "active" : "")" href="@Url.Action("About", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)"><i class="fa fa-user"></i>درباره ما</a></li>
 
                         <li><a class="@(ViewContext.RouteData.Values["Action"].ToString() == "Contact" ? "active" : "")" href="@Url.Action("Contact", null, new { area = string.Empty, controller = "Home" }, Request.Url.Scheme)"><i class="fa fa-envelope"></i>ارتباط با ما</a></li>
@@ -108,7 +108,7 @@
                         <h2>اطلاعات کاربری</h2>
                         <ul class="recent-list">
                             <li>
-                                <img class="img-circle" src="~/upload/member1.jpg" style="width:50px;" />
+                                @*<img class="img-circle" src="~/upload/member1.jpg" style="width:50px;" />*@
                                 <p>سلام, @CurrentUser.Name - <a href="@Url.Action("logout", "auth")">خروج</a></p>
                             </li>
                             <li>

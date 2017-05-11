@@ -19,19 +19,19 @@
 
 
                 <div class="post-box">
-                    @*<ul class="post-tags">
-                            <li>
-                                <i class="fa fa-calendar-o"></i>
-                                <span>@job.UpdatedDate</span>
-                            </li>
-                            <li>
-                                <i class="fa fa-user"></i>
-                                <span>مدیر</span>
-                            </li>
+                    <ul class="post-tags">
+                        <li>
+                            <i class="fa fa-calendar-o"></i>
+                            <span>@Convert.ToDateTime(job.UpdatedDate).ToPersianDate()</span>
+                        </li>
+                        <li>
+                            <i class="fa fa-user"></i>
+                            <span>@UserRepo.GetUserNameById(job.UpdatedBy)</span>
+                        </li>
 
-                        </ul>*@
+                    </ul>
                     <div class="post-gal">
-                        @*<img alt="" src="~/upload/blog/qc.jpg">*@
+                        <img alt="" src="~/upload/blog/job-opening.jpg">
                         <div class="hover-post">
                             <a href="@Url.Action("Check", null, new { area = string.Empty, controller = "Job", id=job.Id }, Request.Url.Scheme)">بیشتر بخوانید</a>
                         </div>
@@ -65,193 +65,18 @@
             </div>
         </div>
 
-        if (i % 2 == 0)
+        if (i % 2 != 0)
         {
             @:</div>
-            }
+        }
 
         i++;
     }
 
-    @*<div class="row">
-            <div class="col-md-6">
-                <div class="blog-post">
-                    <div class="post-box">
-                        <ul class="post-tags">
-                            <li>
-                                <i class="fa fa-calendar-o"></i>
-                                <span>10 فروردین</span>
-                            </li>
-                            <li>
-                                <i class="fa fa-user"></i>
-                                <span>مدیر</span>
-                            </li>
-                        </ul>
-                        <div class="post-gal">
-                            <img alt="" src="~/upload/blog/3.jpg">
-                            <div class="hover-post">
-                                <a href="single-post.html">بیشتر بخوانید</a>
-                            </div>
-                        </div>
-                    </div>
-                    <h2><a href="#"></a>ارتقاء فروشگاه ها - دوشنبه 17 آذر</h2>
-                    <div class="blog-labels">
-                        <span class="label label-default">فوق دیپلم</span>
-                        <span class="label label-default">بیمه</span>
-                        <span class="label label-default">سرویس</span>
-                        <span class="label label-default">مشهد</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="blog-post">
-                    <div class="post-box">
-                        <ul class="post-tags">
-                            <li>
-                                <i class="fa fa-calendar-o"></i>
-                                <span>10 فروردین</span>
-                            </li>
-                            <li>
-                                <i class="fa fa-user"></i>
-                                <span>مدیر</span>
-                            </li>
-                        </ul>
-                        <div class="post-gal">
-                            <img alt="" src="~/upload/blog/4.jpg">
-                            <div class="hover-post">
-                                <a href="single-post.html">بیشتر بخوانید</a>
-                            </div>
-                        </div>
-                    </div>
-                    <h2><a href="#">ارتقاء فروشگاه ها - دوشنبه 17 آذر</a></h2>
-                    <div class="blog-labels">
-                        <span class="label label-default">فوق دیپلم</span>
-                        <span class="label label-default">بیمه</span>
-                        <span class="label label-default">سرویس</span>
-                        <span class="label label-default">مشهد</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="blog-post">
-                    <div class="post-box">
-                        <ul class="post-tags">
-                            <li>
-                                <i class="fa fa-calendar-o"></i>
-                                <span>10 فروردین</span>
-                            </li>
-                            <li>
-                                <i class="fa fa-user"></i>
-                                <span>مدیر</span>
-                            </li>
-                        </ul>
-                        <div class="post-gal">
-                            <img alt="" src="~/upload/blog/5.jpg">
-                            <div class="hover-post">
-                                <a href="single-post.html">بیشتر بخوانید</a>
-                            </div>
-                        </div>
-                    </div>
-                    <h2><a href="#">ارتقاء فروشگاه ها - دوشنبه 17 آذر</a></h2>
-                    <div class="blog-labels">
-                        <span class="label label-default">فوق دیپلم</span>
-                        <span class="label label-default">بیمه</span>
-                        <span class="label label-default">سرویس</span>
-                        <span class="label label-default">مشهد</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="blog-post">
-                    <div class="post-box">
-                        <ul class="post-tags">
-                            <li>
-                                <i class="fa fa-calendar-o"></i>
-                                <span>10 فروردین</span>
-                            </li>
-                            <li>
-                                <i class="fa fa-user"></i>
-                                <span>مدیر</span>
-                            </li>
-                        </ul>
-                        <div class="post-gal">
-                            <img alt="" src="~/upload/blog/6.jpg">
-                            <div class="hover-post">
-                                <a href="single-post.html">بیشتر بخوانید</a>
-                            </div>
-                        </div>
-                    </div>
-                    <h2><a href="#">ارتقاء فروشگاه ها - دوشنبه 17 آذر</a></h2>
-                    <div class="blog-labels">
-                        <span class="label label-default">فوق دیپلم</span>
-                        <span class="label label-default">بیمه</span>
-                        <span class="label label-default">سرویس</span>
-                        <span class="label label-default">مشهد</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="blog-post">
-                    <div class="post-box">
-                        <ul class="post-tags">
-                            <li>
-                                <i class="fa fa-calendar-o"></i>
-                                <span>10 فروردین</span>
-                            </li>
-                            <li>
-                                <i class="fa fa-user"></i>
-                                <span>مدیر</span>
-                            </li>
-                        </ul>
-                        <div class="post-gal">
-                            <img alt="" src="~/upload/blog/7.jpg">
-                            <div class="hover-post">
-                                <a href="single-post.html">بیشتر بخوانید</a>
-                            </div>
-                        </div>
-                    </div>
-                    <h2><a href="#">ارتقاء فروشگاه ها - دوشنبه 17 آذر</a></h2>
-                    <div class="blog-labels">
-                        <span class="label label-default">فوق دیپلم</span>
-                        <span class="label label-default">بیمه</span>
-                        <span class="label label-default">سرویس</span>
-                        <span class="label label-default">مشهد</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="blog-post">
-                    <div class="post-box">
-                        <ul class="post-tags">
-                            <li>
-                                <i class="fa fa-calendar-o"></i>
-                                <span>10 فروردین</span>
-                            </li>
-                            <li>
-                                <i class="fa fa-user"></i>
-                                <span>مدیر</span>
-                            </li>
-                        </ul>
-                        <div class="post-gal">
-                            <img alt="" src="~/upload/blog/8.jpg">
-                            <div class="hover-post">
-                                <a href="single-post.html">بیشتر بخوانید</a>
-                            </div>
-                        </div>
-                    </div>
-                    <h2><a href="#">ارتقاء فروشگاه ها - دوشنبه 17 آذر</a></h2>
-                    <div class="blog-labels">
-                        <span class="label label-default">فوق دیپلم</span>
-                        <span class="label label-default">بیمه</span>
-                        <span class="label label-default">سرویس</span>
-                        <span class="label label-default">مشهد</span>
-                    </div>
-                </div>
-            </div>
-        </div>*@
+    @if (Model.Count() % 2 != 0)
+    {
+        @:</div>
+    }
 </div>
 <!-- blog section -->
+

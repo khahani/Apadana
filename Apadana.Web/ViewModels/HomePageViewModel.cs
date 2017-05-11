@@ -9,5 +9,7 @@ namespace Apadana.Web.ViewModels
     public class HomePageViewModel
     {
         public IEnumerable<Job> Jobs { get; set; }
+
+        public IEnumerable<JobSeeker> JobSeekers { get; set; }
     }
 }

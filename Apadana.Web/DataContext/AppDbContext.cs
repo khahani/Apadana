@@ -15,6 +15,6 @@ namespace Apadana.Web.DataContext
         //Trick for publish version not use in real code
         public DbSet<Employer> Employers { get; set; }
         public DbSet<Job> Jobs { get; set; }
-
+        public DbSet<JobSeeker> JobSeeker { get; set; }
     }
 }

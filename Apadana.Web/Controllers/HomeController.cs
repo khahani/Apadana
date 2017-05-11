@@ -13,6 +13,7 @@ namespace Apadana.Web.Controllers
     public class HomeController : AppController
     {
         JobRepo JobRepo = new JobRepo();
+        JobSeekerRepo JobSeekerRepo = new JobSeekerRepo();
 
         public HomeController()
         {
@@ -24,6 +25,7 @@ namespace Apadana.Web.Controllers
             HomePageViewModel model = new HomePageViewModel();
 
             model.Jobs = JobRepo.TakeFirsts(6);
+            model.JobSeekers = JobSeekerRepo.TakeFirsts(6);
             return View(model);
         }
         public ActionResult About()

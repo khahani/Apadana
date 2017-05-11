@@ -28,20 +28,20 @@
                     <li class="nav-header">
                         <div class="dropdown profile-element">
                             <span>
-                                <img alt="image" class="img-circle" src="~/theme-admin/img/profile_small.jpg" />
+                                @*<img alt="image" class="img-circle" src="~/theme-admin/img/profile_small.jpg" />*@
                             </span>
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                                 <span class="clear">
                                     <span class="block m-t-xs">
                                         <strong class="font-bold">@CurrentUser.Name</strong>
-                                    </span> <span class="text-muted text-xs block">پرسنل <b class="caret"></b></span>
+                                    </span> <span class="text-muted text-xs block">کارفرما <b class="caret"></b></span>
                                 </span>
                             </a>
                             <ul class="dropdown-menu animated fadeInLeft m-t-xs">
-                                @*<li><a href="@Url.Action("create", null, new { area = "employer", controller = "employers" }, Request.Url.Scheme)">پروفایل</a></li>*@
-                                <li><a href="@Url.Action("changepassword", null, new { area = AppDefaults.AREA_PERSONEL, controller = "auth" }, Request.Url.Scheme)">تغییر رمز عبور</a></li>
+                                <li><a href="@Url.Action("create", null, new { area = AppDefaults.AREA_EMPLOYER, controller = "employers" }, Request.Url.Scheme)">پروفایل</a></li>
+                                <li><a href="@Url.Action("changepassword", null, new { area = AppDefaults.AREA_EMPLOYER, controller = "auth" }, Request.Url.Scheme)">تغییر رمز عبور</a></li>
                                 <li class="divider"></li>
-                                <li><a href="@Url.Action("logout", null, new { area = AppDefaults.AREA_PERSONEL, controller = "auth" }, Request.Url.Scheme)">خروج</a></li>
+                                <li><a href="@Url.Action("logout", null, new { area = AppDefaults.AREA_EMPLOYER, controller = "auth" }, Request.Url.Scheme)">خروج</a></li>
                             </ul>
                         </div>
                         <div class="logo-element">
@@ -51,59 +51,10 @@
                     <li class="active">
                         <a href="index-2.html"><i class="fa fa-handshake-o"></i> <span class="nav-label">فرصت های شغلی</span> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li class="active"><a href="@Url.Action("create", null, new { area = AppDefaults.AREA_PERSONEL, controller = "jobs" }, Request.Url.Scheme)">فرصت شغلی جدید</a></li>
-                            @*<li><a href="@Url.Action("index", null, new { area = AppDefaults.AREA_PERSONEL, controller = "jobs" }, Request.Url.Scheme)">فرصت های شغلی من</a></li>*@
-                            <li><a href="@Url.Action("NotAccepted", null, new { area = AppDefaults.AREA_PERSONEL, controller = "jobs" }, Request.Url.Scheme)">تایید نشده</a></li>
-                            <li><a href="@Url.Action("Accepted", null, new { area = AppDefaults.AREA_PERSONEL, controller = "jobs" }, Request.Url.Scheme)">تایید شده</a></li>
+                            <li class="active"><a href="@Url.Action("create", null, new { area = AppDefaults.AREA_EMPLOYER, controller = "jobs" }, Request.Url.Scheme)">فرصت شغلی جدید</a></li>
+                            <li><a href="@Url.Action("index", null, new { area = AppDefaults.AREA_EMPLOYER, controller = "jobs" }, Request.Url.Scheme)">فرصت های شغلی من</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="#"><i class="fa fa-address-book-o"></i> <span class="nav-label">کارجویان</span> <span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level collapse">
-                            <li><a href="#">همه کارجویان</a></li>
-                            <li><a href="#">تایید نشده</a></li>
-                            <li><a href="#">تایید شده</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-address-book-o"></i> <span class="nav-label">کارفرمایان</span> <span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level collapse">
-                            <li><a href="#">همه کارفرمایان</a></li>
-                            <li><a href="#">تایید نشده</a></li>
-                            <li><a href="#">تایید شده</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-address-book-o"></i> <span class="nav-label">معرفی نامه ها</span> <span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level collapse">
-                            <li><a href="#">ثبت معرفی نامه</a></li>
-                            <li><a href="#">همه معرفی نامه ها</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-address-book-o"></i> <span class="nav-label">پست ها</span> <span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level collapse">
-                            <li><a href="#">همه</a></li>
-                            <li><a href="#">پست جدید</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-address-book-o"></i> <span class="nav-label">گالری تصاویر</span> <span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level collapse">
-                            <li><a href="#">همه</a></li>
-                            <li><a href="#">تصویر جدید</a></li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <a href="#"><i class="fa fa-address-book-o"></i> <span class="nav-label">تنظیمات</span> <span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level collapse">
-                            <li><a href="#">شبکه های اجتماعی</a></li>
-                            <li><a href="#">لوگو سایت</a></li>
-                            <li><a href="#">درباره ما</a></li>
-                        </ul>
-                    </li>
-                </ul>
             </div>
         </nav>
         <div id="page-wrapper" class="gray-bg dashbard-1">
