@@ -12,6 +12,7 @@ using Apadana.Web.Repository;
 
 namespace Apadana.Web.Areas.Employer.Controllers
 {
+    [Authorize(Roles = AppDefaults.ROLE_EMPLOYER)]
     public class JobsController : AppController
     {
         private ApadanaDb db = new ApadanaDb();

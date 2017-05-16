@@ -13,9 +13,13 @@
           <useCaseMoniker Id="39c49847-502c-461c-a1eb-9cf83477d6ba" LastKnownName="تایید یا رد صلاحیت کارفرما" />
           <relativeChildShapes />
         </useCaseShape>
+        <useCaseShape Id="35a008f1-c32b-413f-8170-f31a28204371" absoluteBounds="4.5, 2.875, 1, 0.5" customColor="192, 255, 192" heightOffset="0">
+          <useCaseMoniker Id="18359987-018d-4a6a-a4ba-8e6110514549" LastKnownName="تایید فرصت های شغلی" />
+          <relativeChildShapes />
+        </useCaseShape>
       </nestedChildShapes>
     </SubsystemShape>
-    <useCaseAssociationConnector edgePoints="[(2.125 : 2.14722222222222); (4 : 2.31388888888889)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+    <useCaseAssociationConnector edgePoints="[(2.125 : 2.14722222222222); (4 : 2.31388888888889)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
       <associationMoniker Id="a2150a7c-87b7-4ad6-8f7b-813463e819ba" />
       <relativeChildShapes />
       <nodes>

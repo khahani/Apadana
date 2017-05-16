@@ -18,5 +18,6 @@ namespace Apadana.Web.ViewModels
         [RegularExpression(@"^\d{11}$", ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = "Val_wrong_type")]
         public string Mobile { get; set; }
         
+        public string Role { get; set; }
     }
 }

@@ -54,6 +54,7 @@
     <Compile Include="Job.cs" />
     <Compile Include="JobSeeker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="JobApplication.cs" />
     <Compile Include="Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

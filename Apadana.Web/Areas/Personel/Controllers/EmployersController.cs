@@ -9,6 +9,7 @@ using System.Web.Mvc;
 
 namespace Apadana.Web.Areas.Personel.Controllers
 {
+    [Authorize(Roles = AppDefaults.ROLE_PERSONEL)]
     public class EmployersController : Controller
     {
         private ApadanaDb db = new ApadanaDb();

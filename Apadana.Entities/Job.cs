@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using Apadana.Entities.StaticObjects;
+using System.Collections.Generic;
 
 namespace Apadana.Entities
 {
@@ -109,7 +110,7 @@ namespace Apadana.Entities
         public bool Accepted { get; set; }
 
         public virtual Employer Owner { get; set; }
-
+        public virtual ICollection<JobApplication> JobApplications { get; set; }
 
         [Key]
         public int Id { get; set; }

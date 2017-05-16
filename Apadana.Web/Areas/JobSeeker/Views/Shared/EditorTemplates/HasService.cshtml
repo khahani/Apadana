@@ -1,0 +1,3 @@
+﻿@model int?
+
+@Html.DropDownList("", DropDownListUtility.GetStaticObjectDropDown(Model, YesOrNoType.Instance), new { @class = "form-control" })

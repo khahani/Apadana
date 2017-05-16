@@ -10,7 +10,7 @@ namespace Apadana.Web
         public const string ROLE_EMPLOYER = "کارفرما";
         public const string ROLE_ADMIN = "مدیر سایت";
         public const string ROLE_PERSONEL = "پرسنل";
-        public const string ROLE_JOBSEELER = "کارجو";
+        public const string ROLE_JOBSEEKER = "کارجو";
         public const string ROLE_COLLEAGUE = "کاریابی همکار";
 
         public const string AREA_ADMIN = "admin";

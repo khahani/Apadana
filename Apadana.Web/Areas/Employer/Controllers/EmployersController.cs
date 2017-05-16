@@ -13,6 +13,7 @@ using System.Data.Entity.Migrations;
 
 namespace Apadana.Web.Areas.Employer.Controllers
 {
+    [Authorize(Roles = AppDefaults.ROLE_EMPLOYER)]
     public class EmployersController : AppController
     {
         private ApadanaDb db = new ApadanaDb();

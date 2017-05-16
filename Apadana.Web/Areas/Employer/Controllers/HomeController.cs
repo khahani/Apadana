@@ -11,6 +11,7 @@ using Apadana.Web.ViewModels;
 
 namespace Apadana.Web.Areas.Employer.Controllers
 {
+    [Authorize(Roles = AppDefaults.ROLE_EMPLOYER)]
     public class HomeController : AppController
     {
         

@@ -11,6 +11,7 @@ using Apadana.Web.DataContext;
 
 namespace Apadana.Web.Areas.Personel.Controllers
 {
+    [Authorize(Roles = AppDefaults.ROLE_PERSONEL)]
     public class JobSeekersController : Controller
     {
         private ApadanaDb db = new ApadanaDb();

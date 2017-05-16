@@ -99,11 +99,21 @@ namespace Apadana.Web.Controllers
             }
 
             var result = await userManager.CreateAsync(user, password);
-
-            userManager.AddToRole(user.Id, AppDefaults.ROLE_EMPLOYER);
-
+            
             if (result.Succeeded)
             {
+
+                switch (model.Role)
+                {
+                    case AppDefaults.ROLE_EMPLOYER:
+                    case AppDefaults.ROLE_JOBSEEKER:
+                        userManager.AddToRole(user.Id, model.Role);
+                        break;
+                    default:
+                        return HttpNotFound();
+                }
+
+
                 await SignIn(user);
                 return RedirectToAction("index", "home");
             }
@@ -181,12 +191,7 @@ namespace Apadana.Web.Controllers
 
                 GetAuthenticationManager().SignIn(identity);
 
-                if (userManager.IsInRole(user.Id, AppDefaults.ROLE_EMPLOYER))
-                {
-                    return RedirectToAction("Index", "Home", new { area = AppDefaults.AREA_EMPLOYER });
-                }
-
-                return Redirect(GetRedirectUrl(model.ReturnUrl));
+                return RedirectToAction("RedirectToPanel");
             }
 
             // user authN failed
@@ -281,6 +286,8 @@ namespace Apadana.Web.Controllers
                 return RedirectToAction("index", "home", new { area = AppDefaults.AREA_EMPLOYER });
             else if (CurrentUser.IsInRole(AppDefaults.ROLE_PERSONEL))
                 return RedirectToAction("index", "home", new { area = AppDefaults.AREA_PERSONEL });
+            else if (CurrentUser.IsInRole(AppDefaults.ROLE_JOBSEEKER))
+                return RedirectToAction("index", "home", new { area = AppDefaults.AREA_JOBSEEKER });
             return RedirectToAction("index", "home");
         }
 

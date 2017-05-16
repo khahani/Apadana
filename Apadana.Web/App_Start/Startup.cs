@@ -95,6 +95,14 @@ namespace Apadana.Web.App_Start
                 roleManager.Create(role);
             }
 
+            // creating Creating Employer role  and default user
+            if (!roleManager.RoleExists(AppDefaults.ROLE_JOBSEEKER))
+            {
+                var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();
+                role.Name = AppDefaults.ROLE_JOBSEEKER;
+                roleManager.Create(role);
+            }
+
             var user = UserManager.Users.Where(m => m.PhoneNumber == "09394412792").FirstOrDefault();
 
             if (user == null)
@@ -142,6 +150,31 @@ namespace Apadana.Web.App_Start
                 if (!UserManager.IsInRole(personelUser.Id, AppDefaults.ROLE_PERSONEL))
                 {
                     IdentityResult result = UserManager.AddToRole(personelUser.Id, AppDefaults.ROLE_PERSONEL);
+                }
+            }
+
+            var jobSeekerUser = UserManager.Users.Where(m => m.PhoneNumber == "09389566967").FirstOrDefault();
+
+            if (jobSeekerUser == null)
+            {
+                jobSeekerUser = new AppUser();
+                jobSeekerUser.PhoneNumber = "09389566967";
+                jobSeekerUser.UserName = "jobseeker";
+
+                string password = "123456";
+
+                var chkUser = UserManager.Create(jobSeekerUser, password);
+
+                if (chkUser.Succeeded)
+                {
+                    UserManager.AddToRole(jobSeekerUser.Id, AppDefaults.ROLE_JOBSEEKER);
+                }
+            }
+            else
+            {
+                if (!UserManager.IsInRole(jobSeekerUser.Id, AppDefaults.ROLE_JOBSEEKER))
+                {
+                    IdentityResult result = UserManager.AddToRole(jobSeekerUser.Id, AppDefaults.ROLE_JOBSEEKER);
                 }
             }
         }

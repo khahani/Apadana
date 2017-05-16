@@ -12,6 +12,7 @@ using System.Web.Mvc;
 
 namespace Apadana.Web.Areas.Employer.Controllers
 {
+    [Authorize(Roles =AppDefaults.ROLE_EMPLOYER)]
     public class AuthController : AppController
     {
         private readonly ISMS_Service _sms_service;

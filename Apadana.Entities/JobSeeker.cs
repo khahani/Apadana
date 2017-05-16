@@ -295,14 +295,16 @@ namespace Apadana.Entities
         [DataType(DataType.Text)]
         [Display(ResourceType = typeof(Resources), Name = "DisName_JobTitle")]
         public string JobTitle { get; set; }
+        
+        public string UserName { get; set; }
 
-
-
+        public virtual ICollection<JobApplication> JobApplications { get; set; }
 
         public string CreatedBy { get; set; }
         
         public string CreatedDate { get; set; }
 
+        [Key]
         public int Id { get; set; }
 
         public string UpdatedBy { get; set; }
