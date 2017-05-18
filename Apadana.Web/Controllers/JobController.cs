@@ -18,6 +18,8 @@ namespace Apadana.Web.Controllers
         private readonly ISMS_Service _smsService;
         private readonly UserManager<AppUser> _userManager;
 
+        ApadanaDb db = new ApadanaDb();
+
         public JobController(ISMS_Service sms_service)
             : this(App_Start.Startup.UserManagerFactory.Invoke(), sms_service)
         {
@@ -58,6 +60,36 @@ namespace Apadana.Web.Controllers
             }
             _smsService.SendAsync(CurrentUser.Mobile, JobRepo.JobDetailForSMS(id));
             return RedirectToAction("Check", new { Id = id });
+        }
+
+        // GET: JobApplicant
+        public ActionResult Apply(int? id)
+        {
+            if (!CurrentUser.IsInRole(AppDefaults.ROLE_JOBSEEKER) || id == null)
+                return HttpNotFound();
+
+            JobApplication jobApplication = new JobApplication();
+            jobApplication.JobSeeker = db.JobSeekers.Where(m => m.UserName == CurrentUser.Name).FirstOrDefault();
+            jobApplication.Job = db.Jobs.Where(m => m.Id == id).FirstOrDefault();
+            jobApplication.Date = DateTime.Now.ToPersianDate();
+            var number = db.JobApplications.OrderByDescending(m => m.Number).FirstOrDefault();
+
+            int newNumber = 0;
+
+            if (number == null)
+                newNumber = 10000;
+            else
+                newNumber += Convert.ToInt32(number) + 1;
+
+            jobApplication.Number = newNumber.ToString();
+
+            db.JobApplications.Add(jobApplication);
+
+            db.SaveChanges();
+
+            ViewBag.Success = true;
+
+            return View("Check");
         }
     }
 }

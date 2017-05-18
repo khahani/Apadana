@@ -26,6 +26,14 @@
             کارجو گرامی اگر عضو سایت هستید میتوانید اطلاعات تماس کارفرما مورد نظر را با کلیک روی دکمه های پیامک یا ایمیل دریافت کنید.
         </div>
 
+        @if (ViewBag.Success == true)
+        {
+            <div class="alert alert-success">
+                درخواست شما برای کارفرما ارسال شد. پس از بررسی توسط کارفرما نتیجه برایتان ارسال خواهد شد.
+            </div>
+        }
+        
+
         <div class="panel-group">
             <div class="panel panel-primary">
                 <div class="panel-heading">توضیحات</div>
@@ -72,6 +80,14 @@
             <button type="button" class="btn btn-danger">
                 <span class="fa fa-envelope"></span> ایمیل
             </button>
+            @if (CurrentUser.IsInRole(AppDefaults.AREA_JOBSEEKER))
+            {
+                @:<button type="button" class="btn btn-success" onclick="location.href='@Url.Action("Apply", "JobApplicant", new { id = Model.Id })'">
+                    @:<span class="fa fa-envelope"></span> درخواست معرفی نامه
+                @:</button>
+            }
+
+            
         </div>
     </div>
 </div>

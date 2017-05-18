@@ -55,6 +55,14 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="itextsharp, Version=5.5.0.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.0\lib\itextsharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="itextsharp.xmlworker, Version=5.5.0.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itextsharp.xmlworker.5.5.0\lib\itextsharp.xmlworker.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -130,6 +138,10 @@
     </Reference>
     <Reference Include="Microsoft.Win32.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Win32.Primitives.4.3.0\lib\net46\Microsoft.Win32.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvcRazorToPdf, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvcRazorToPdf.1.0.2\lib\40\MvcRazorToPdf.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -867,6 +879,10 @@
     <Compile Include="Migrations\201705160832206_add-job-application.Designer.cs">
       <DependentUpon>201705160832206_add-job-application.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705170419483_update-job-application.cs" />
+    <Compile Include="Migrations\201705170419483_update-job-application.Designer.cs">
+      <DependentUpon>201705170419483_update-job-application.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Repository\EmployerRepo.cs" />
     <Compile Include="Repository\JobSeekerRepo.cs" />
@@ -1014,6 +1030,7 @@
     <Folder Include="Areas\JobSeeker\Models\" />
     <Folder Include="Areas\Personel\Models\" />
     <Folder Include="css\images\" />
+    <Folder Include="Views\JobApplicant\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Areas\Employer\Localization\Resources.resx">
@@ -1025,6 +1042,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705160832206_add-job-application.resx">
       <DependentUpon>201705160832206_add-job-application.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705170419483_update-job-application.resx">
+      <DependentUpon>201705170419483_update-job-application.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewModels\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
